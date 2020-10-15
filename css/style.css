@@ -220,6 +220,19 @@ input[type="submit"] {
 /* footer */
 .footer-page {
     background-color: var(--dark-bg);
+    display: flex;
+    align-items: center;
+    padding: 25px 15px 25px 40px;
+    color: var(--white-text);
+}
+
+.logo-footer {
+    width: 220px;
+}
+
+.copyright {
+    flex: 1;
+    text-align: center;
 }
 /* footer end */
 

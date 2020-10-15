@@ -9,3 +9,9 @@
 * Создай новую ветку с именем, отражающим суть внедряемой фичи;
 * Сохрани свои изменения в этой ветке;
 * Сделай пуш в репозиторий.
+
+### Информация о проекте
+[Ссылка](https://github.com/Aspirants-FS-FE/SheduliZZZer/wiki)
+
+### Kanban-доска проекта
+[Ссылка](https://github.com/orgs/Aspirants-FS-FE/projects/1)
