@@ -7,11 +7,7 @@ export default class Form {
 
   init() {}
 
-  close() {
-
-
-    
-  }
+  close() {}
 
   sent() {}
 }
