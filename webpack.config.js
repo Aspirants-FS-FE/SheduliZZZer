@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 // const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
@@ -31,7 +30,7 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
-        test: /\.(png|jpg|gif)$/i,
+        test: /\.(png|jpg|svg|gif)$/i,
         use: [
           {
             loader: 'url-loader',
@@ -40,14 +39,6 @@ module.exports = {
             },
           },
         ],
-      },
-      {
-        test: /\.svg$/,
-        loader: 'svg-sprite-loader',
-        options: {
-          extract: true,
-          spriteFilename: (svgPath) => `sprite${svgPath.substr(-4)}`,
-        },
       },
     ],
   },
@@ -60,7 +51,6 @@ module.exports = {
       filename: '[name].css',
       chunkFilename: '[id].css',
     }),
-    new SpriteLoaderPlugin(),
     // new FaviconsWebpackPlugin('./src/img/characters/daemon.png'),
   ],
 };
