@@ -1,4 +1,6 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/hh1adgw2ngiqy6rh/branch/main?svg=true)](https://ci.appveyor.com/project/homutovan/shedulizzzer/branch/main)
+[![CodeScene Code Health](https://codescene.io/projects/10004/status-badges/code-health)](https://codescene.io/projects/10004)
+[![CodeScene general](https://codescene.io/images/analyzed-by-codescene-badge.svg)](https://codescene.io/projects/10004)
 
 # SheduliZZZer
 
