@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/hh1adgw2ngiqy6rh/branch/main?svg=true)](https://ci.appveyor.com/project/homutovan/shedulizzzer/branch/main)
+
 # SheduliZZZer
 
 ## Веб-приложение для автоматизированного составления и оптимизации расписания лекций
@@ -34,7 +36,7 @@
 - **npm run jslint** - запуск линтера для **JS**;
 - **npm run lint-html** - запуск линтера для **HTML**;
 - **npm run stylelint** - запуск линтера для **CSS**;
-- **npm run test** - запуск тестов;
+- **npm test** - запуск тестов;
 - **npm run coverage** - запуск проверки покрытия кода тестами;
 - **npm run prettier** - запуск автоформаттера кода.
 
