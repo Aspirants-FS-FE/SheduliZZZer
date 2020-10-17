@@ -8,7 +8,7 @@
     "build": "webpack --mode development",
     "lint": "eslint . && linthtml . && stylelint '**/*.css'",
     "jslint": "eslint .",
-    "lint-html": "linthtml .",
+    "lint-html": "linthtml '**/*.html'",
     "stylelint": "stylelint '**/*.css'",
     "test": "jest",
     "coverage": "jest --coverage",
@@ -16,9 +16,9 @@
     "show:coverage": "live-server coverage/lcov-report",
     "preshow:dist": "npm run build",
     "show:dist": "live-server dist",
-    "prettier": "prettier --write .",
+    "prettier": "prettier --write '**/*.{js,css,md,html}'",
     "stylelint-check": "stylelint-config-prettier-check",
-    "postinstall": "husky install",
+    "postinstall": "npx husky install",
     "precommit": "lint-staged"
   },
   "repository": {
@@ -57,10 +57,12 @@
     "stylelint": "^13.7.2",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
+    "svg-sprite-loader": "^5.0.0",
     "url-loader": "^4.1.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "file-loader": "^6.1.1"
   },
   "dependencies": {
     "core-js": "^3.6.5"
@@ -71,9 +73,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,css,md,html}": "prettier --write",
-    "*.js": "eslint --cache --fix",
-    "*.css": "stylelint --fix",
-    "*.html": "linthtml"
+    "**/*.{js,css,md,html}": "prettier --write",
+    "**/*.js": "eslint --cache --fix",
+    "**/*.css": "stylelint --fix",
+    "**/*.html": "linthtml"
   }
 }
