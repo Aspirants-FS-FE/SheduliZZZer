@@ -8,6 +8,7 @@
   --dark-bg: rgba(115, 112, 112, 0.89);
   --white-text: #e5e2e2;
   --grey-text: #736f6f;
+  --black-text: #000000;
   --white-bg: #ffffff;
   --shadow-item: 2px 2px 7px 3px rgba(0, 0, 0, 0.09);
 }
@@ -237,5 +238,68 @@ input[type='submit'] {
 /* sidebar end */
 
 /* main */
+
+/* teacher-page */
+.teachers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+.teacher-card {
+  display: flex;
+  width: 48%;
+  padding: 20px;
+  box-shadow: var(--shadow-item);
+  font-size: 12px;
+}
+
+.teacher-card:nth-child(3n) {
+  margin-top: 20px;
+}
+
+.teacher-content {
+  width: 100%;
+}
+
+.teacher-photo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.link-unit {
+  display: block;
+  color: var(--black-text);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.time {
+  color: var(--grey-text);
+}
+
+.title-entity-link {
+  color: var(--black-text);
+  text-transform: uppercase;
+}
+
+.title-entity {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  border-radius: 10px;
+}
+
+.teacher-name {
+  font-size: 1.3em;
+}
+
+/* teacher-page end */
 
 /* main end */
