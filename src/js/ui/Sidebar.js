@@ -6,6 +6,7 @@ export default class Sidebar {
       this.element = element;
     }
     this.widgets = widgets;
+    this.action = '';
     this.init();
   }
 
@@ -13,8 +14,15 @@ export default class Sidebar {
     const links = this.element.querySelectorAll('.menu-link');
     [...links].forEach((link) => {
       link.addEventListener('click', (event) => {
-        this.widgets[event.target.classList[1]].activateWidget();
+        const widgetClass = event.target.classList[1];
+        const widgetName = event.target.textContent;
+        this.widgets[widgetClass].activateWidget();
+        this.action(widgetName);
       });
     });
+  }
+
+  addAction(action) {
+    this.action = action;
   }
 }

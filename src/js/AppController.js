@@ -9,13 +9,19 @@ import ProfessionWidget from './ui/widgets/ProfessionWidget';
 export default class AppController {
   constructor(container) {
     this.container = container;
-    this.init();
   }
 
   init() {
     const sidebarElement = this.container.querySelector('.sidebar');
     this.initWidgets();
     this.sidebar = new Sidebar(sidebarElement, this.widgets);
+    this.sidebar.addAction(this.updateHeader.bind(this));
+    this.widgets.main.activateWidget();
+  }
+
+  updateHeader(name) {
+    this.headerTitle = this.container.querySelector('.header-title');
+    this.headerTitle.textContent = name;
   }
 
   initWidgets() {
