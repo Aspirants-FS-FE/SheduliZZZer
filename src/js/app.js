@@ -1,4 +1,6 @@
-import Form from './Form';
+import AppController from './AppController';
 
 /* eslint no-unused-vars: 0 */
-const form = new Form();
+
+const container = document.querySelector('.wrapper-page.container');
+const controller = new AppController(container);

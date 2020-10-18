@@ -1,4 +1,4 @@
-import Form from '../Form';
+import Form from '../ui/forms/Form';
 
 const element = 'element';
 const form = new Form(element);

@@ -270,6 +270,10 @@ input[type='submit'] {
   padding: 10px 0 10px 20px;
 }
 
+.sidebar .menu-link {
+  color: var(--white-text);
+}
+
 /* sidebar end */
 
 /* main */
@@ -338,4 +342,12 @@ input[type='submit'] {
 
 .teacher-name {
   font-size: 1.3em;
+}
+
+.widget {
+  display: none;
+}
+
+.active {
+  display: block;
 }
