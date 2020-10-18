@@ -1,15 +1,17 @@
 :root {
-    --link-color: #25ade7;
-    --link-hover: #0f3f53;
-    --btn-color: #e5e2e2;
-    --btn-bg: #6c757d;
-    --btn-bg-hover: #343a40;
-    --grey-bg: rgba(133, 131, 131, 0.89);
-    --dark-bg: rgba(115, 112, 112, 0.89);
-    --white-text: #e5e2e2;
-    --grey-text: #736f6f;
-    --white-bg: #ffffff;
-    --shadow-item: 2px 2px 7px 3px rgba(0, 0, 0, 0.09);
+  --link-color: #25ade7;
+  --link-hover: #0f3f53;
+  --btn-color: #e5e2e2;
+  --btn-bg: #6c757d;
+  --btn-bg-hover: #343a40;
+  --grey-bg: rgba(133, 131, 131, 0.89);
+  --dark-bg: rgba(115, 112, 112, 0.89);
+  --white-text: #e5e2e2;
+  --grey-text: #736f6f;
+  --black-text: #000000;
+  --white-bg: #ffffff;
+  --shadow-item: 2px 2px 7px 3px rgba(0, 0, 0, 0.09);
+  --dark-border-1px: 1px solid rgba(0, 0, 0, 0.09);
 }
 
 .visually-hidden {
@@ -269,5 +271,68 @@ input[type='submit'] {
 
 /* main */
 
+/* teacher-page */
+.teachers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
 
-/* main end */
+.teacher-card {
+  display: flex;
+  width: 48%;
+  padding: 20px;
+  box-shadow: var(--shadow-item);
+  font-size: 12px;
+}
+
+.teacher-card:nth-child(3n) {
+  margin-top: 20px;
+}
+
+.teacher-content {
+  width: calc(100% - 50px);
+  margin-left: 10px;
+}
+
+.teacher-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.link-unit {
+  display: block;
+  color: var(--black-text);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.time {
+  color: var(--grey-text);
+}
+
+.title-entity-link {
+  color: var(--black-text);
+  text-transform: uppercase;
+}
+
+.title-entity {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px 0;
+  border: var(--dark-border-1px);
+  border-radius: 10px;
+}
+
+.teacher-name {
+  font-size: 1.3em;
+}
