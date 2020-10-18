@@ -11,6 +11,7 @@
   --black-text: #000000;
   --white-bg: #ffffff;
   --shadow-item: 2px 2px 7px 3px rgba(0, 0, 0, 0.09);
+  --dark-border-1px: 1px solid rgba(0, 0, 0, 0.09);
 }
 
 .visually-hidden {
@@ -260,14 +261,19 @@ input[type='submit'] {
 }
 
 .teacher-content {
-  width: 100%;
+  width: calc(100% - 50px);
+  margin-left: 10px;
 }
 
-.teacher-photo-img {
+.teacher-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50px;
   height: 50px;
+  margin: 0 auto;
   border-radius: 50%;
-  margin-right: 15px;
+  overflow: hidden;
 }
 
 .link-unit {
@@ -292,7 +298,7 @@ input[type='submit'] {
   justify-content: space-between;
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid rgba(0, 0, 0, 0.09);
+  border: var(--dark-border-1px);
   border-radius: 10px;
 }
 
