@@ -210,6 +210,26 @@ input[type='submit'] {
 
 /* header end */
 
+/* 404 */
+.container-404 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  max-width: 1000px;
+  padding-left: 100px;
+  font-size: 24px;
+}
+
+.container-404 span {
+  font-size: 50px;
+}
+
+.main-link {
+  font-size: 16px;
+}
+
+/* 404 end */
+
 /* footer */
 
 .footer-page {
