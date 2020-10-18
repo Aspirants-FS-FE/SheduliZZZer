@@ -15,44 +15,44 @@
 }
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  height: 100%;
+    height: 100%;
 }
 
 body {
-  height: 100%;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
-  text-decoration: none;
-  transition: color 0.3s ease;
-  color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: var(--link-color);
 }
 
 a:hover {
-  color: var(--link-hover);
+    color: var(--link-hover);
 }
 
 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 h1,
@@ -60,23 +60,23 @@ h2,
 h3,
 h4,
 p {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 button {
-  outline: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
 }
 
 .btn {
-  color: var(--btn-color);
-  background-color: var(--btn-bg);
+    color: var(--btn-color);
+    background-color: var(--btn-bg);
 }
 
 .btn:hover {
-  background-color: var(--btn-bg-hover);
+    background-color: var(--btn-bg-hover);
 }
 
 input[type='text'],
@@ -84,159 +84,190 @@ input[type='tel'],
 input[type='email'],
 input[type='button'],
 input[type='submit'] {
-  -webkit-appearance: none;
-  border-radius: 0;
-  border: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    border: none;
 }
 
 .list {
-  padding-left: 0;
-  margin: 0;
-  list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .wrapper-page {
-  display: flex;
-  flex: 1;
+    display: flex;
+    flex: 1;
 }
 
 .wrapper-content {
-  flex: 1;
+    flex: 1;
 }
 
+
 /* header */
+
 .header-page {
-  display: flex;
-  align-items: center;
-  padding: 25px 27px 25px 22px;
-  background-color: var(--grey-bg);
-  color: var(--white-text);
+    display: flex;
+    align-items: center;
+    padding: 25px 27px 25px 22px;
+    background-color: var(--grey-bg);
+    color: var(--white-text);
 }
 
 .header-humb {
-  position: relative;
-  width: 45px;
-  height: 45px;
-  padding: 0;
-  margin-right: 29px;
-  background-color: transparent;
+    position: relative;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    margin-right: 29px;
+    background-color: transparent;
 }
 
 .header-humb-line {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: var(--white-bg);
-  border-radius: 4px;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--white-bg);
+    border-radius: 4px;
 }
 
 .header-humb-line::before,
 .header-humb-line::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  left: 0;
-  background-color: var(--white-bg);
-  border-radius: 4px;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    background-color: var(--white-bg);
+    border-radius: 4px;
 }
 
 .header-humb-line::before {
-  top: 0;
+    top: 0;
 }
 
 .header-humb-line::after {
-  bottom: 0;
+    bottom: 0;
 }
 
 .header-title {
-  flex: 1;
-  padding: 0;
-  margin: 0;
-  font-size: 24px;
-  line-height: 1.172;
+    flex: 1;
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.172;
 }
 
 .header-info {
-  width: 250px;
-  color: var(--white-text);
-  text-align: center;
+    width: 250px;
+    color: var(--white-text);
+    text-align: center;
 }
+
 
 /* .header-info-login {
 } */
 
 .header-meta {
-  /* display: block; */
-  color: inherit;
-  display: none;
+    /* display: block; */
+    color: inherit;
+    display: none;
 }
 
 .header-meta:hover {
-  color: inherit;
+    color: inherit;
 }
 
 .header-info-link {
-  font-size: 16px;
-  line-height: 1.171;
-  text-decoration: none;
-  color: inherit;
-  text-align: center;
+    font-size: 16px;
+    line-height: 1.171;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
 }
 
 .header-meta-picture {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 70px;
-  height: 70px;
-  margin-bottom: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 50%;
-  overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .header-meta-info {
-  font-size: 16px;
-  line-height: 1.171;
+    font-size: 16px;
+    line-height: 1.171;
 }
+
 
 /* header end */
 
+
 /* footer */
+
 .footer-page {
-  background-color: var(--dark-bg);
-  display: flex;
-  align-items: center;
-  padding: 25px 15px 25px 40px;
-  color: var(--white-text);
+    background-color: var(--dark-bg);
+    display: flex;
+    align-items: center;
+    padding: 25px 15px 25px 40px;
+    color: var(--white-text);
 }
 
 .logo-footer {
-  width: 220px;
+    width: 220px;
 }
 
 .copyright {
-  flex: 1;
-  text-align: center;
+    flex: 1;
+    text-align: center;
 }
+
 
 /* footer end */
 
+
 /* sidebar */
+
 .sidebar {
-  width: 25%;
-  background-color: var(--grey-bg);
-  border-right: 1px solid #ffffff;
+    width: 25%;
+    background-color: var(--grey-bg);
+    border-right: 1px solid #ffffff;
+    padding: 25px 20px 30px 40px;
 }
 
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar-logo {
+    width: 150px;
+}
+
+.button-sidebar {
+    width: 40px;
+    height: 22px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: url(../img/sidebar-arrow.svg);
+}
+
+
 /* sidebar end */
+
 
 /* main */
 
@@ -305,7 +336,3 @@ input[type='submit'] {
 .teacher-name {
   font-size: 1.3em;
 }
-
-/* teacher-page end */
-
-/* main end */
