@@ -9,7 +9,7 @@ export default class BaseWidget {
 
   deactivateAllWidgets() {
     const allWidgets = this.element.parentNode.querySelectorAll('.widget');
-    [...allWidgets].forEach(widget => widget.classList.remove('active'));
+    [...allWidgets].forEach((widget) => widget.classList.remove('active'));
   }
 
   activateWidget() {

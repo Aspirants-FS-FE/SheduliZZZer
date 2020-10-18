@@ -11,8 +11,10 @@ export default class Sidebar {
 
   init() {
     const links = this.element.querySelectorAll('.menu-link');
-    [...links].forEach((link) => link.addEventListener('click', (event) => {
-      this.widgets[event.target.classList[1]].activateWidget();
-    }));
+    [...links].forEach((link) => {
+      link.addEventListener('click', (event) => {
+        this.widgets[event.target.classList[1]].activateWidget();
+      });
+    });
   }
 }
