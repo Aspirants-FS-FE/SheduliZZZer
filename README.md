@@ -1,6 +1,6 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/hh1adgw2ngiqy6rh/branch/main?svg=true)](https://ci.appveyor.com/project/homutovan/shedulizzzer/branch/main)
 [![CodeScene Code Health](https://codescene.io/projects/10004/status-badges/code-health)](https://codescene.io/projects/10004)
-[![CodeScene general](https://codescene.io/images/analyzed-by-codescene-badge.svg)](https://codescene.io/projects/10004)
+[![CodeScene System Mastery](https://codescene.io/projects/10004/status-badges/system-mastery)](https://codescene.io/projects/10004)
 
 # SheduliZZZer
 
@@ -34,6 +34,7 @@
 
 - **npm start** - запуск дев-сервера;
 - **npm run build** - запуск сборки проекта;
+- **npm run show:dist** - запуск собранной версии;
 - **npm run lint** - запуск линтеров для всех типов файлов;
 - **npm run jslint** - запуск линтера для **JS**;
 - **npm run lint-html** - запуск линтера для **HTML**;
