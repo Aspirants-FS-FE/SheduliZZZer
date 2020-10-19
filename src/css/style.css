@@ -241,6 +241,10 @@ input[type='submit'] {
   padding: 25px 20px 30px 40px;
 }
 
+.sidebar-toggle {
+  display: none;
+}
+
 .sidebar-header {
   display: flex;
   align-items: center;

@@ -8,6 +8,7 @@ export default class Sidebar {
     this.widgets = widgets;
     this.action = '';
     this.init();
+    this.initToggleButton();
   }
 
   init() {
@@ -19,6 +20,16 @@ export default class Sidebar {
         this.widgets[widgetClass].activateWidget();
         this.action(widgetName);
       });
+    });
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  initToggleButton() {
+    const sidebar = document.querySelector('.sidebar');
+    const btn = document.querySelector('.header-humb');
+
+    btn.addEventListener('click', () => {
+      sidebar.classList.toggle('sidebar-toggle');
     });
   }
 
