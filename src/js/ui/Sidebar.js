@@ -23,13 +23,11 @@ export default class Sidebar {
     });
   }
 
-  // eslint-disable-next-line class-methods-use-this
   initToggleButton() {
-    const sidebar = document.querySelector('.sidebar');
     const btn = document.querySelector('.header-humb');
 
     btn.addEventListener('click', () => {
-      sidebar.classList.toggle('sidebar-toggle');
+      this.element.classList.toggle('sidebar-toggle');
     });
   }
 
