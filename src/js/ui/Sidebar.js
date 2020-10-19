@@ -8,6 +8,7 @@ export default class Sidebar {
     this.widgets = widgets;
     this.action = '';
     this.init();
+    this.initToggleButton();
   }
 
   init() {
@@ -19,6 +20,14 @@ export default class Sidebar {
         this.widgets[widgetClass].activateWidget();
         this.action(widgetName);
       });
+    });
+  }
+
+  initToggleButton() {
+    const btn = document.querySelector('.header-humb');
+
+    btn.addEventListener('click', () => {
+      this.element.classList.toggle('sidebar-toggle');
     });
   }
 
