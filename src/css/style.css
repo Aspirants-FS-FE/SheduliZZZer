@@ -103,6 +103,7 @@ input[type='submit'] {
 .wrapper-page {
   display: flex;
   flex: 1;
+  min-height: calc(100vh - 78px);
 }
 
 .wrapper-content {
