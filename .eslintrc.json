@@ -10,4 +10,6 @@
     "no-console": ["error", { "allow": ["warn", "error", "log"] }]
   },
   "plugins": ["prettier"]
+  "eslint linebreak-style": ["error", "windows"]
+  "eslint linebreak-style": ["error", "unix"]
 }
