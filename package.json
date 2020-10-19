@@ -67,6 +67,11 @@
     "core-js": "^3.6.5",
     "svg-url-loader": "^6.0.0"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
   "lint-staged": {
     "**/*.{js,css,md,html}": "prettier --write",
     "**/*.js": "eslint --cache --fix",
