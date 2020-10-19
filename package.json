@@ -67,6 +67,10 @@
     "core-js": "^3.6.5",
     "svg-url-loader": "^6.0.0"
   },
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint"
