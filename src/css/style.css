@@ -122,8 +122,8 @@ input[type='submit'] {
 
 .header-humb {
   position: relative;
-  width: 45px;
-  height: 45px;
+  width:30px;
+  height: 30px;
   padding: 0;
   margin-right: 29px;
   background-color: transparent;
@@ -239,6 +239,10 @@ input[type='submit'] {
   background-color: var(--grey-bg);
   border-right: 1px solid #ffffff;
   padding: 25px 20px 30px 40px;
+}
+
+.sidebar-toggle {
+  display: none;
 }
 
 .sidebar-header {
