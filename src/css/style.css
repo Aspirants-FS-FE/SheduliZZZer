@@ -295,6 +295,7 @@ input[type='submit'] {
   text-decoration: underline;
   margin-right: 50px;
   margin-left: 10px;
+  color: cadetblue;
 }
 
 .prof-point {
@@ -310,11 +311,11 @@ input[type='submit'] {
   margin-right: 40px;
 }
 
-.prof-point:hover {
+/* .prof-point:hover {
   background-color: cadetblue;
   margin-left: 10px;
   margin-right: 50px;
-}
+} */
 
 .prof-point:nth-child(1) {
   margin-top: 54px;
