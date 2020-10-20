@@ -286,36 +286,27 @@ input[type='submit'] {
 /* professions-pages */
 
 .prof-link {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   color: #000000;
-
+  align-items: center;
 }
 
 .prof-link:hover {
-  /* text-decoration: underline; */
-  /* margin-left: 10px; */
   color: cadetblue;
 }
 
 .prof-point {
   box-shadow: 2px 2px 7px 3px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
-  padding-top: 31px;
   padding-left: 30px;
-  padding-bottom: 19px;
   font-size: 24px;
   font-weight: 400;
   display: flex;
   flex-wrap: wrap;
-  margin-right: 40px;
   position: relative;
+  height: 87px;
 }
-
-/* .prof-point:hover {
-  background-color: cadetblue;
-  margin-left: 10px;
-  margin-right: 50px;
-} */
 
 .prof-point:nth-child(1) {
   margin-top: 54px;
@@ -338,8 +329,9 @@ input[type='submit'] {
   font-weight: normal;
   font-size: 12px;
   line-height: 14px;
-  width: 57px;
-  height: 13px;
+  width: 78px;
+  height: 22px;
+  padding: 3px 11px 6px 10px;
 }
 
 /* end profession-page */
