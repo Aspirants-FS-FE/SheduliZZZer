@@ -409,3 +409,59 @@ input[type='submit'] {
 .active {
   display: block;
 }
+
+/* table */
+.table {
+  padding: 30px 40px;
+}
+
+.table-header {
+  position: relative;
+}
+
+.table-header button{
+  position: absolute;
+  bottom: 100%;
+}
+
+.table-header .prev{
+  left: 0;
+}
+
+.table-header .next{
+  right: 0;
+}
+
+.row {
+  display: flex;
+}
+
+.table-title__item {
+  width: 10%;
+}
+
+.table-lesson-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+.table-title__item {
+  border-bottom: 1px solid gray;  
+  border: 1px solid gray;
+  font-weight: bold;
+  padding: 7px;
+}
+
+.table-lesson__item,
+.table-date__item {
+  flex: 1;
+  border: 1px solid gray;
+  text-align: center;
+  vertical-align: middle;
+  padding: 7px;
+}
+
+.table-lesson__item_active {
+  background-color: gray;
+}
+/* table end */
