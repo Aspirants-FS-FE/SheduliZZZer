@@ -283,6 +283,31 @@ input[type='submit'] {
 
 /* main */
 
+/* professions-pages */
+
+.prof-point {
+  box-shadow: 2px 2px 7px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding-top: 31px;
+  padding-left: 30px;
+  padding-bottom: 19px;
+  font-size: 24px;
+  font-weight: 400;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 40px;
+}
+
+.prof-point:nth-child(1) {
+  margin-top: 54px;
+}
+
+.prof-point:nth-child(n+2) {
+  margin-top: 31px;
+}
+
+/* end profession-page */
+
 /* teacher-page */
 .teachers-container {
   display: flex;
