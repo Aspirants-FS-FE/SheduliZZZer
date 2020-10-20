@@ -360,10 +360,10 @@ input[type='submit'] {
 
 /*courses*/
 
-.widget-wrapper {
+/* .widget-wrapper {
     width: 882px;
     margin-left: auto;
-}
+} */
 
 .courses-container {
     display: flex;
@@ -371,11 +371,12 @@ input[type='submit'] {
 }
 
 .courses-card {
-    margin: 27px 32px 0 0;
+    margin: 0  15px  15px 15px;
+    padding: 22px 29px;
     box-shadow: var(--shadow-item);
     
-    width: 408px;
-    height: 264px;
+    width: calc(100% / 2 - 30px);
+    /* height: 264px; */
     
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #FFFFFF, #FFFFFF), #FFFFFF;
     box-shadow: 2px 2px 7px 3px rgba(0, 0, 0, 0.25);
@@ -383,20 +384,17 @@ input[type='submit'] {
 }
 
 .courses h2 {
-    padding: 5px 0;
-    margin-top: 17px;
+    padding: 5px 0 5px 22px;
+    margin-bottom: 27px;
     font-weight: 400;
 }
 
 .courses h3 {
-    margin-left: 25px;
-    margin-top: 22px;
     font-weight: 400;
 }
 
 .courses .title-entity {
-    width: 363px;
-    margin: auto;
+    margin-bottom: 5px;
 }
 
 .courses {
