@@ -283,31 +283,6 @@ input[type='submit'] {
 
 /* main */
 
-/* professions-pages */
-
-.prof-point {
-  box-shadow: 2px 2px 7px 3px rgba(0, 0, 0, 0.25);
-  border-radius: 4px;
-  padding-top: 31px;
-  padding-left: 30px;
-  padding-bottom: 19px;
-  font-size: 24px;
-  font-weight: 400;
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: 40px;
-}
-
-.prof-point:nth-child(1) {
-  margin-top: 54px;
-}
-
-.prof-point:nth-child(n+2) {
-  margin-top: 31px;
-}
-
-/* end profession-page */
-
 /* teacher-page */
 .teachers-container {
   display: flex;
@@ -317,7 +292,8 @@ input[type='submit'] {
 }
 
 .teacher-card {
-  display: flex;
+    display: none;
+/*  display: flex;*/
   width: 48%;
   padding: 20px;
   box-shadow: var(--shadow-item);
@@ -381,3 +357,49 @@ input[type='submit'] {
 .active {
   display: block;
 }
+
+/*courses*/
+
+.widget-wrapper {
+    width: 882px;
+    margin-left: auto;
+}
+
+.courses-container {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.courses-card {
+    margin: 27px 32px 0 0;
+    box-shadow: var(--shadow-item);
+    
+    width: 408px;
+    height: 264px;
+    
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #FFFFFF, #FFFFFF), #FFFFFF;
+    box-shadow: 2px 2px 7px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+}
+
+.courses h2 {
+    padding: 5px 0;
+    margin-top: 17px;
+    font-weight: 400;
+}
+
+.courses h3 {
+    margin-left: 25px;
+    margin-top: 22px;
+    font-weight: 400;
+}
+
+.courses .title-entity {
+    width: 363px;
+    margin: auto;
+}
+
+.courses {
+    display: block;
+}
+    
