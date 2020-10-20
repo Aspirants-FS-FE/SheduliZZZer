@@ -12,6 +12,9 @@
   --white-bg: #ffffff;
   --shadow-item: 2px 2px 7px 3px rgba(0, 0, 0, 0.09);
   --dark-border-1px: 1px solid rgba(0, 0, 0, 0.09);
+  --overlay-bg: rgba(0, 0, 0, 0.9);
+  
+  --dark-form: #444242;
 }
 
 .visually-hidden {
@@ -381,3 +384,77 @@ input[type='submit'] {
 .active {
   display: block;
 }
+
+/* Containers Form */
+.overlay{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-bg);
+  z-index: 50;
+  display: flex;
+}
+
+.modal {
+  width: 550px;
+  margin: auto;
+  background-color: var(--white-bg);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.header-form{
+  background-color: var(--dark-form);
+  color: var(--white-text);
+  padding: 25px 20px 35px 20px;
+  text-align: center;
+  
+}
+
+.form-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-field label {
+  width: 170px;
+  margin-right: 15px;
+}
+
+.form-field input {
+  padding: 7px;
+  flex: 1;
+  border: var(--dark-border-1px);
+}
+
+.form-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.form-control button {
+  background-color: var(--dark-form);
+  padding: 7px 15px;
+  color: var(--white-text);
+}
+
+.modal .fields {
+  padding: 25px 20px 35px 20px;
+}
+
+.form-title{
+  font-size: 28px;
+  margin-bottom: 0;
+}
+
+#auth {
+  display:none;
+}
+/* End Containers Form */
+
+
