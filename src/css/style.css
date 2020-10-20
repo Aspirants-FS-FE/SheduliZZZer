@@ -4,6 +4,8 @@
   --btn-color: #e5e2e2;
   --btn-bg: #6c757d;
   --btn-bg-hover: #343a40;
+  --btn-del-bg: #EF3737;
+  --btn-del-bg-hover: #862222;
   --grey-bg: rgba(133, 131, 131, 0.89);
   --dark-bg: rgba(115, 112, 112, 0.89);
   --white-text: #e5e2e2;
@@ -285,23 +287,11 @@ input[type='submit'] {
 
 /* professions-pages */
 
-.prof-link {
-  display: flex;
-  flex-wrap: wrap;
-  color: #000000;
-  align-items: center;
-}
-
-.prof-link:hover {
-  color: cadetblue;
-}
-
 .prof-point {
-  box-shadow: 2px 2px 7px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--shadow-item);
   border-radius: 4px;
   padding-left: 30px;
   font-size: 24px;
-  font-weight: 400;
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -316,20 +306,32 @@ input[type='submit'] {
   margin-top: 31px;
 }
 
+.prof-link {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--link-color);
+  align-items: center;
+}
+
+.prof-link:hover {
+  color: var(--link-hover);
+}
+
 .prof-button {
   position: absolute;
   top: 7px;
   right: 8px;
-  z-index: 1;
-  background: #EF3737;
+  z-index: 10;
+  background-color: var(--btn-del-bg);
   border-radius: 4px;
-  color: #ffffff;
+  color: var(--white-text);
   text-transform: uppercase;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
-  line-height: 14px;
   padding: 7px 10px;
+}
+
+.prof-button:hover {
+  background-color: var(--btn-del-bg-hover);
 }
 
 /* end profession-page */
