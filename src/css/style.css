@@ -427,6 +427,8 @@ input[type='submit'] {
   display: block;
 }
 
+/* teacher-page-end */
+
 /* table */
 .table {
   padding: 30px 40px;
@@ -480,3 +482,73 @@ input[type='submit'] {
 }
 
 /* table end */
+
+/* groups-page */
+.groups-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 30px;
+}
+
+.group-card {
+  flex: 1;
+  margin: 0 10px 15px 10px;
+  flex-basis:400px;
+  min-width: 200px;
+  max-width: 30%;
+  padding: 20px;
+  box-shadow: var(--shadow-item);
+  font-size: 12px;
+}
+
+.group-content {
+  width: calc(100% - 50px);
+  margin-left: 10px;
+}
+
+.link-unit-group {
+  display: block;
+  color: var(--black-text);
+  font-weight: bold;
+  font-size: 1.2em;
+  flex: 1 ;
+  margin-bottom: 3px;
+  word-break:break-all;
+}
+
+.time-group-start {
+  color: var(--grey-text);
+  flex: 1;
+  margin-bottom: 3px;
+}
+
+.title-entity-group {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 150px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.title-link {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* end groups page */
+
+/* for groups-page************************************* */
+
+@media (max-width: 1400px) {
+  .time-group-start {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 1760px) {
+  .group-card {
+    flex-basis:30%;
+  }
+}
+
