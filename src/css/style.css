@@ -538,6 +538,22 @@ input[type='submit'] {
 
 /* end groups page */
 
+.diagram {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+}
+
+.cell {
+  outline: solid blueviolet 1px;
+  height: 2rem;
+}
+
+.cell:hover {
+  transform: scale(1.1);
+}
+
 /* for groups-page************************************* */
 
 @media (max-width: 1400px) {
@@ -551,4 +567,3 @@ input[type='submit'] {
     flex-basis:30%;
   }
 }
-
