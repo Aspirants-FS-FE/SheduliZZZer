@@ -4,7 +4,7 @@
   --btn-color: #e5e2e2;
   --btn-bg: #6c757d;
   --btn-bg-hover: #343a40;
-  --btn-del-bg: #EF3737;
+  --btn-del-bg: #ef3737;
   --btn-del-bg-hover: #862222;
   --grey-bg: rgba(133, 131, 131, 0.89);
   --dark-bg: rgba(115, 112, 112, 0.89);
@@ -302,7 +302,7 @@ input[type='submit'] {
   margin-top: 54px;
 }
 
-.prof-point:nth-child(n+2) {
+.prof-point:nth-child(n + 2) {
   margin-top: 31px;
 }
 
@@ -436,16 +436,16 @@ input[type='submit'] {
   position: relative;
 }
 
-.table-header button{
+.table-header button {
   position: absolute;
   bottom: 100%;
 }
 
-.table-header .prev{
+.table-header .prev {
   left: 0;
 }
 
-.table-header .next{
+.table-header .next {
   right: 0;
 }
 
@@ -460,7 +460,7 @@ input[type='submit'] {
 
 .table-title__item {
   width: 10%;
-  border-bottom: 1px solid gray;  
+  border-bottom: 1px solid gray;
   border: 1px solid gray;
   font-weight: bold;
   padding: 7px;
