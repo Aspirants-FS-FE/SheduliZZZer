@@ -1,4 +1,5 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/hh1adgw2ngiqy6rh/branch/main?svg=true)](https://ci.appveyor.com/project/homutovan/shedulizzzer/branch/main)
+[![Code style: airbnb](https://img.shields.io/badge/code%20style-airbnb-blue.svg?style=flat-square)](https://github.com/airbnb/javascript)
 [![CodeScene Code Health](https://codescene.io/projects/10004/status-badges/code-health)](https://codescene.io/projects/10004)
 [![CodeScene System Mastery](https://codescene.io/projects/10004/status-badges/system-mastery)](https://codescene.io/projects/10004)
 
