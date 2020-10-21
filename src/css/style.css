@@ -448,11 +448,11 @@ input[type='text'], input[type='tel'], input[type='email'], input[type='button']
 }
 
 #auth {
-  /* display: none; */
+  display: none;
 }
 
 #reg {
-  display: none;
+  /* display: none; */
 }
 
 /* End Containers Form */
