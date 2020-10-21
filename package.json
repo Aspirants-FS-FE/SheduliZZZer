@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode development",
-    "lint": "prettier --write **/*.{js,css,md,html} && eslint --fix . && linthtml . && stylelint **/*.css",
+    "lint": "eslint --fix . && linthtml . && stylelint '**/*.css'",
     "jslint": "eslint .",
     "lint-html": "linthtml **/*.html",
     "stylelint": "stylelint **/*.css",
