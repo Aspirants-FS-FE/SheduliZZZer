@@ -345,11 +345,28 @@ input[type='submit'] {
 }
 
 .teacher-card {
+  position: relative;
   display: flex;
   width: 48%;
-  padding: 20px;
+  padding: 40px 20px 20px;
   box-shadow: var(--shadow-item);
   font-size: 12px;
+}
+
+.teacher-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: var(--btn-del-bg);
+  border-radius: 4px;
+  color: var(--white-text);
+  text-transform: uppercase;
+  font-size: 10px;
+  padding: 7px 10px;
+}
+
+.teacher-btn:hover {
+  background-color: var(--btn-del-bg-hover);
 }
 
 .teacher-card:nth-child(3n) {
@@ -409,8 +426,61 @@ input[type='submit'] {
 .active {
   display: block;
 }
-
 /* teacher-page-end */
+
+/* table */
+.table {
+  padding: 30px 40px;
+}
+
+.table-header {
+  position: relative;
+}
+
+.table-header button{
+  position: absolute;
+  bottom: 100%;
+}
+
+.table-header .prev{
+  left: 0;
+}
+
+.table-header .next{
+  right: 0;
+}
+
+.row {
+  display: flex;
+}
+
+.table-lesson-wrapper {
+  display: flex;
+  flex: 1;
+}
+
+.table-title__item {
+  width: 10%;
+  border-bottom: 1px solid gray;  
+  border: 1px solid gray;
+  font-weight: bold;
+  padding: 7px;
+}
+
+.table-lesson__item,
+.table-date__item {
+  flex: 1;
+  border: 1px solid gray;
+  text-align: center;
+  vertical-align: middle;
+  padding: 7px;
+}
+
+.table-lesson__item_active {
+  background-color: gray;
+}
+
+/* table end */
 
 /* groups-page */
 .groups-container {
@@ -467,16 +537,6 @@ input[type='submit'] {
 
 /* end groups page */
 
-
-
-
-
-
-
-
-
-
-
 /* for groups-page************************************* */
 
 @media (max-width: 1400px) {
@@ -490,3 +550,4 @@ input[type='submit'] {
     flex-basis:30%;
   }
 }
+
