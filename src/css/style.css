@@ -436,16 +436,13 @@ input[type='submit'] {
   display: flex;
 }
 
-.table-title__item {
-  width: 10%;
-}
-
 .table-lesson-wrapper {
   display: flex;
   flex: 1;
 }
 
 .table-title__item {
+  width: 10%;
   border-bottom: 1px solid gray;  
   border: 1px solid gray;
   font-weight: bold;
@@ -464,4 +461,5 @@ input[type='submit'] {
 .table-lesson__item_active {
   background-color: gray;
 }
+
 /* table end */
