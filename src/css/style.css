@@ -14,6 +14,8 @@
   --white-bg: #ffffff;
   --shadow-item: 2px 2px 7px 3px rgba(0, 0, 0, 0.09);
   --dark-border-1px: 1px solid rgba(0, 0, 0, 0.09);
+  --overlay-bg: rgba(0, 0, 0, 0.9);
+  --dark-form: #444242;
 }
 
 .visually-hidden {
@@ -368,6 +370,7 @@ input[type='submit'] {
 /* end profession-page */
 
 /* teacher-page */
+
 .teachers-container {
   display: flex;
   flex-wrap: wrap;
@@ -461,6 +464,7 @@ input[type='submit'] {
 /* teacher-page-end */
 
 /* table */
+
 .table {
   padding: 30px 40px;
 }
@@ -469,16 +473,16 @@ input[type='submit'] {
   position: relative;
 }
 
-.table-header button{
+.table-header button {
   position: absolute;
   bottom: 100%;
 }
 
-.table-header .prev{
+.table-header .prev {
   left: 0;
 }
 
-.table-header .next{
+.table-header .next {
   right: 0;
 }
 
@@ -493,7 +497,7 @@ input[type='submit'] {
 
 .table-title__item {
   width: 10%;
-  border-bottom: 1px solid gray;  
+  border-bottom: 1px solid gray;
   border: 1px solid gray;
   font-weight: bold;
   padding: 7px;
@@ -515,6 +519,7 @@ input[type='submit'] {
 /* table end */
 
 /* groups-page */
+
 .groups-container {
   display: flex;
   flex-wrap: wrap;
@@ -524,7 +529,7 @@ input[type='submit'] {
 .group-card {
   flex: 1;
   margin: 0 10px 15px 10px;
-  flex-basis:400px;
+  flex-basis: 400px;
   min-width: 200px;
   max-width: 30%;
   padding: 20px;
@@ -542,9 +547,9 @@ input[type='submit'] {
   color: var(--black-text);
   font-weight: bold;
   font-size: 1.2em;
-  flex: 1 ;
+  flex: 1;
   margin-bottom: 3px;
-  word-break:break-all;
+  word-break: break-all;
 }
 
 .time-group-start {
@@ -579,7 +584,87 @@ input[type='submit'] {
 
 @media (max-width: 1760px) {
   .group-card {
-    flex-basis:30%;
+    flex-basis: 30%;
   }
 }
 
+/* Containers Form */
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-bg);
+  z-index: 50;
+  display: flex;
+}
+
+.modal {
+  width: 550px;
+  margin: auto;
+  background-color: var(--white-bg);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.header-form {
+  background-color: var(--dark-form);
+  color: var(--white-text);
+  padding: 25px 20px 25px 20px;
+  text-align: center;
+}
+
+.form-field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.form-field label {
+  width: 150px;
+  margin-right: 15px;
+}
+
+.form-field input {
+  padding: 7px;
+  flex: 1;
+  border: var(--dark-border-1px);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-control button {
+  background-color: var(--dark-form);
+  padding: 15px 40px;
+  color: var(--white-text);
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.modal .fields {
+  padding: 30px 25px 30px 25px;
+  font-size: 19px;
+}
+
+.form-title {
+  font-size: 28px;
+  margin-bottom: 0;
+}
+
+#auth {
+  display: none;
+}
+
+#reg {
+  display: none;
+}
+
+/* End Containers Form */
