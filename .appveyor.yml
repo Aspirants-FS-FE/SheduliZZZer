@@ -34,6 +34,6 @@ on_success:
   - git config --global user.email "($env:email)"
   - git config --global user.name "($env:name)"
   - git add -f dist 
-  - git commit -m "dist"
+  - git commit dist -m "dist"
   - git push origin build
 
