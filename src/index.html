@@ -1,412 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SheduliZZZer</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="wrapper-page container">
-      <aside class="sidebar">
-        <header class="sidebar-header">
-          <a class="sidebar-logo" href="#">
-            <img src="img/logo-sidebar.svg" alt="Логотип" />
-          </a>
-          <button class="button-sidebar"></button>
-        </header>
-        <nav class="menu">
-          <ul class="menu-list">
-            <li class="menu-list-item">
-              <a class="menu-link main" href="#0">Главная</a>
-            </li>
-            <li class="menu-list-item">
-              <a class="menu-link profession" href="#0">Профессии</a>
-            </li>
-            <li class="menu-list-item">
-              <a class="menu-link courses" href="#0">Курсы</a>
-            </li>
-            <li class="menu-list-item">
-              <a class="menu-link groups" href="#0">Группы</a>
-            </li>
-            <li class="menu-list-item">
-              <a class="menu-link teachers" href="#0">Преподаватели</a>
-            </li>
-            <li class="menu-list-item">
-              <a class="menu-link faq" href="#0">FAQ</a>
-            </li>
-          </ul>
-        </nav>
-      </aside>
-      <div class="wrapper-content">
-        <header class="header-page">
-          <button class="header-humb" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-            <span class="header-humb-line"></span>
-          </button>
-          <h1 class="header-title">Главная</h1>
-          <div class="header-info">
-            <div class="header-info-login">
-              <a class="header-info-link log" href="#">Авторизация</a>
-              <span> / </span>
-              <a class="header-info-link reg" href="#">Регистрация</a>
-            </div>
-            <a class="header-meta" href="#">
-              <div class="header-meta-picture">
-                <img
-                  class="meta-picture"
-                  src="img/avatar.jpg"
-                  alt="аватар пользователя"
-                />
-              </div>
-              <div class="header-meta-info">Фамилия имя отчество</div>
-            </a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SheduliZZZer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="wrapper-page container">
+    <aside class="sidebar">
+      <header class="sidebar-header">
+        <a class="sidebar-logo" href="#">
+          <img src="img/logo-sidebar.svg" alt="Логотип" />
+        </a>
+        <button class="button-sidebar"></button>
+      </header>
+      <nav class="menu">
+        <ul class="menu-list">
+          <li class="menu-list-item">
+            <a class="menu-link main" href="#0">Главная</a>
+          </li>
+          <li class="menu-list-item">
+            <a class="menu-link profession" href="#0">Профессии</a>
+          </li>
+          <li class="menu-list-item">
+            <a class="menu-link courses" href="#0">Курсы</a>
+          </li>
+          <li class="menu-list-item">
+            <a class="menu-link groups" href="#0">Группы</a>
+          </li>
+          <li class="menu-list-item">
+            <a class="menu-link teachers" href="#0">Преподаватели</a>
+          </li>
+          <li class="menu-list-item">
+            <a class="menu-link faq" href="#0">FAQ</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="wrapper-content">
+      <header class="header-page">
+        <button class="header-humb" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <span class="header-humb-line"></span>
+        </button>
+        <h1 class="header-title">Главная</h1>
+        <div class="header-info">
+          <div class="header-info-login">
+            <a class="header-info-link log" href="#">Авторизация</a>
+            <span> / </span>
+            <a class="header-info-link reg" href="#">Регистрация</a>
           </div>
-        </header>
-        <main class="main">
-          <div class="widget-container">
-            <section class="widget main">
-              <div class="table">
+          <a class="header-meta" href="#">
+            <div class="header-meta-picture">
+              <img class="meta-picture" src="img/avatar.jpg" alt="аватар пользователя" />
+            </div>
+            <div class="header-meta-info">Фамилия имя отчество</div>
+          </a>
+        </div>
+      </header>
+      <main class="main">
+        <div class="widget-container">
+          <section class="widget main">
+            <div class="table">
 
-                <div class="row table-header">
-                  <div class="table-title__item">Группа</div>
-                  <div class="table-lesson-wrapper">
-                    <div class="table-date__item">06.07.2020</div>
-                    <div class="table-date__item">08.07.2020</div>
-                    <div class="table-date__item">09.07.2020</div>
-                    <div class="table-date__item">10.07.2020</div>
-                    <div class="table-date__item">11.07.2020</div>
-                    <div class="table-date__item">12.07.2020</div>
-                    <div class="table-date__item">13.07.2020</div>
-                  </div>
-                  <button class="prev">prev</button>
-                  <button class="next">next</button>
-                </div><!-- row -->
-
-                <div class="row">
-                  <div class="table-title__item">Html-53</div>
-                  <div class="table-lesson-wrapper">
-                    <div class="table-lesson__item"></div>
-                    <div class="table-lesson__item"></div>
-                    <div class="table-lesson__item table-lesson__item_active">Название лекции</div>
-                    <div class="table-lesson__item"></div>
-                    <div class="table-lesson__item"></div>
-                    <div class="table-lesson__item table-lesson__item_active">Название лекции</div>
-                    <div class="table-lesson__item"></div>
-                  </div>
-                </div><!-- row -->
-
-                <div class="row">
-                  <div class="table-title__item">Html-54</div>
-                  <div class="table-lesson-wrapper">
-                    <div class="table-lesson__item"></div>
-                    <div class="table-lesson__item"></div>
-                    <div class="table-lesson__item"></div>
-                    <div class="table-lesson__item table-lesson__item_active">Название лекции возможно какое очень длинное название, а почему бы и нет</div>
-                    <div class="table-lesson__item"></div>
-                    <div class="table-lesson__item"></div>
-                    <div class="table-lesson__item table-lesson__item_active">Название лекции</div>
-                  </div>
-                </div><!-- row -->
-
-              </div><!-- table -->
-            </section>
-            <section class="widget profession">
-              <article class="profession-container">
-                <ul class="list">
-                  <li class="prof-point">
-                    <a href="#0" class="prof-link">
-                      Профессия Веб-разработчик
-                    </a>
-                    <button class="prof-button">удалить</button>
-                  </li>
-                  <li class="prof-point">
-                    <a href="#0" class="prof-link">
-                      Профессия Frontend-разработчик
-                    </a>
-                    <button class="prof-button">удалить</button>
-                  </li>
-                  <li class="prof-point">
-                    <a href="#0" class="prof-link">
-                      Профессия Java-разработчик
-                    </a>
-                    <button class="prof-button">удалить</button>
-                  </li>
-                </ul>
-              </article>
-            </section>
-            <section class="widget courses">courses</section>
-  
-            <section class="widget groups">
-              <div class="groups-container">
-                <article class="group-card">
-                  <div class="group-content">
-                    <ul class="list">
-                      <li>
-                        <ul class="list">
-                          <li class="title-entity-group">
-                            <a href="#0" class="link-unit-group">Название</a>
-                            <div class="time-group-start ">
-                              с:
-                              <time datetime="2020-07-01" class="time">
-                                01.07.2020
-                              </time>
-                            </div>
-                            <div class="time-group-end">
-                              по:
-                              <time datetime="2020-07-01" class="time">
-                                01.09.2020
-                              </time>
-                            </div>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </article>
-                <article class="group-card">
-                  <div class="group-content">
-                    <ul class="list">
-                      <li>
-                        <ul class="list">
-                          <li class="title-entity-group">
-                            <a href="#0" class="link-unit-group">Название</a>
-                            <div class="time-group-start ">
-                              с:
-                              <time datetime="2020-07-01" class="time">
-                                01.07.2020
-                              </time>
-                            </div>
-                            <div class="time-group-end">
-                              по:
-                              <time datetime="2020-07-01" class="time">
-                                01.09.2020
-                              </time>
-                            </div>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </article>
-                <article class="group-card">
-                  <div class="group-content">
-                    <ul class="list">
-                      <li>
-                        <ul class="list">
-                          <li class="title-entity-group">
-                            <a href="#0" class="link-unit-group">Название</a>
-                            <div class="time-group-start ">
-                              с:
-                              <time datetime="2020-07-01" class="time">
-                                01.07.2020
-                              </time>
-                            </div>
-                            <div class="time-group-end">
-                              по:
-                              <time datetime="2020-07-01" class="time">
-                                01.09.2020
-                              </time>
-                            </div>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </article>
-                <article class="group-card">
-                  <div class="group-content">
-                    <ul class="list">
-                      <li>
-                        <ul class="list">
-                          <li class="title-entity-group">
-                            <a href="#0" class="link-unit-group">Название</a>
-                            <div class="time-group-start ">
-                              с:
-                              <time datetime="2020-07-01" class="time">
-                                01.07.2020
-                              </time>
-                            </div>
-                            <div class="time-group-end">
-                              по:
-                              <time datetime="2020-07-01" class="time">
-                                01.09.2020
-                              </time>
-                            </div>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </article>
-                <article class="group-card">
-                  <div class="group-content">
-                    <ul class="list">
-                      <li>
-                        <ul class="list">
-                          <li class="title-entity-group">
-                            <a href="#0" class="link-unit-group">Название</a>
-                            <div class="time-group-start ">
-                              с:
-                              <time datetime="2020-07-01" class="time">
-                                01.07.2020
-                              </time>
-                            </div>
-                            <div class="time-group-end">
-                              по:
-                              <time datetime="2020-07-01" class="time">
-                                01.09.2020
-                              </time>
-                            </div>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </article>
-                <article class="group-card">
-                  <div class="group-content">
-                    <ul class="list">
-                      <li>
-                        <ul class="list">
-                          <li class="title-entity-group">
-                            <a href="#0" class="link-unit-group">Название</a>
-                            <div class="time-group-start ">
-                              с:
-                              <time datetime="2020-07-01" class="time">
-                                01.07.2020
-                              </time>
-                            </div>
-                            <div class="time-group-end">
-                              по:
-                              <time datetime="2020-07-01" class="time">
-                                01.09.2020
-                              </time>
-                            </div>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </article>
-                <article class="group-card">
-                  <div class="group-content">
-                    <ul class="list">
-                      <li>
-                        <ul class="list">
-                          <li class="title-entity-group">
-                            <a href="#0" class="link-unit-group">Название</a>
-                            <div class="time-group-start ">
-                              с:
-                              <time datetime="2020-07-01" class="time">
-                                01.07.2020
-                              </time>
-                            </div>
-                            <div class="time-group-end">
-                              по:
-                              <time datetime="2020-07-01" class="time">
-                                01.09.2020
-                              </time>
-                            </div>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </article>
-              </div>
-            </section>
-            
-            <section class="widget faq">faq</section>
-            <section class="widget teachers teachers-container">
-              <article class="teacher-card">
-                <div class="teacher-photo">
-                  <img
-                    src="img/avatar.jpg"
-                    class="teacher-photo-img"
-                    alt="фото преподавателя"
-                  />
+              <div class="row table-header">
+                <div class="table-title__item">Группа</div>
+                <div class="table-lesson-wrapper">
+                  <div class="table-date__item">06.07.2020</div>
+                  <div class="table-date__item">08.07.2020</div>
+                  <div class="table-date__item">09.07.2020</div>
+                  <div class="table-date__item">10.07.2020</div>
+                  <div class="table-date__item">11.07.2020</div>
+                  <div class="table-date__item">12.07.2020</div>
+                  <div class="table-date__item">13.07.2020</div>
                 </div>
-                <div class="teacher-content">
-                  <h2 class="teacher-name">
-                    <a href="#0" class="teacher-name-link link-unit">
-                      Иванов Иван Иванович
-                    </a>
-                  </h2>
+                <button class="prev">prev</button>
+                <button class="next">next</button>
+              </div><!-- row -->
+
+              <div class="row">
+                <div class="table-title__item">Html-53</div>
+                <div class="table-lesson-wrapper">
+                  <div class="table-lesson__item"></div>
+                  <div class="table-lesson__item"></div>
+                  <div class="table-lesson__item table-lesson__item_active">Название лекции</div>
+                  <div class="table-lesson__item"></div>
+                  <div class="table-lesson__item"></div>
+                  <div class="table-lesson__item table-lesson__item_active">Название лекции</div>
+                  <div class="table-lesson__item"></div>
+                </div>
+              </div><!-- row -->
+
+              <div class="row">
+                <div class="table-title__item">Html-54</div>
+                <div class="table-lesson-wrapper">
+                  <div class="table-lesson__item"></div>
+                  <div class="table-lesson__item"></div>
+                  <div class="table-lesson__item"></div>
+                  <div class="table-lesson__item table-lesson__item_active">Название лекции возможно какое очень длинное
+                    название, а почему бы и нет</div>
+                  <div class="table-lesson__item"></div>
+                  <div class="table-lesson__item"></div>
+                  <div class="table-lesson__item table-lesson__item_active">Название лекции</div>
+                </div>
+              </div><!-- row -->
+
+            </div><!-- table -->
+          </section>
+          <section class="widget profession">
+            <article class="profession-container">
+              <ul class="list">
+                <li class="prof-point">
+                  <a href="#0" class="prof-link">
+                    Профессия Веб-разработчик
+                  </a>
+                  <button class="prof-button">удалить</button>
+                </li>
+                <li class="prof-point">
+                  <a href="#0" class="prof-link">
+                    Профессия Frontend-разработчик
+                  </a>
+                  <button class="prof-button">удалить</button>
+                </li>
+                <li class="prof-point">
+                  <a href="#0" class="prof-link">
+                    Профессия Java-разработчик
+                  </a>
+                  <button class="prof-button">удалить</button>
+                </li>
+              </ul>
+            </article>
+          </section>
+          <section class="widget courses">courses</section>
+
+          <section class="widget groups">
+            <div class="groups-container">
+              <article class="group-card">
+                <div class="group-content">
                   <ul class="list">
                     <li>
-                      <a href="#0" class="link-unit">Курсы:</a>
                       <ul class="list">
-                        <li class="title-entity">
-                          <a href="#0" class="title-entity-link">Название</a>
-                          <div>
+                        <li class="title-entity-group">
+                          <a href="#0" class="link-unit-group">Название</a>
+                          <div class="time-group-start ">
                             с:
                             <time datetime="2020-07-01" class="time">
                               01.07.2020
                             </time>
                           </div>
-                          <div>
+                          <div class="time-group-end">
                             по:
                             <time datetime="2020-07-01" class="time">
                               01.09.2020
                             </time>
                           </div>
-                        </li>
-                        <li class="title-entity">
-                          <a href="#0" class="title-entity-link">Название</a>
-                          <div>
-                            с:
-                            <time datetime="2020-07-01" class="time">
-                              01.07.2020
-                            </time>
-                          </div>
-                          <div>
-                            по:
-                            <time datetime="2020-07-01" class="time">
-                              01.09.2020
-                            </time>
-                          </div>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#0" class="link-unit">Лекции:</a>
-                      <ul class="list">
-                        <li class="title-entity">
-                          <a href="#0" class="title-entity-link">Название</a>
-                          <time datetime="2020-07-01" class="time">
-                            01.07.2020
-                          </time>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="#0" class="link-unit">Дипломы:</a>
-                      <ul class="list">
-                        <li class="title-entity">
-                          <a href="#0" class="title-entity-link">Название</a>
                         </li>
                       </ul>
                     </li>
                   </ul>
                 </div>
-                <button class="teacher-btn">удалить</button>
               </article>
-            </section>
-          </div>
-        </main>
-      </div>
+              <article class="group-card">
+                <div class="group-content">
+                  <ul class="list">
+                    <li>
+                      <ul class="list">
+                        <li class="title-entity-group">
+                          <a href="#0" class="link-unit-group">Название</a>
+                          <div class="time-group-start ">
+                            с:
+                            <time datetime="2020-07-01" class="time">
+                              01.07.2020
+                            </time>
+                          </div>
+                          <div class="time-group-end">
+                            по:
+                            <time datetime="2020-07-01" class="time">
+                              01.09.2020
+                            </time>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="group-card">
+                <div class="group-content">
+                  <ul class="list">
+                    <li>
+                      <ul class="list">
+                        <li class="title-entity-group">
+                          <a href="#0" class="link-unit-group">Название</a>
+                          <div class="time-group-start ">
+                            с:
+                            <time datetime="2020-07-01" class="time">
+                              01.07.2020
+                            </time>
+                          </div>
+                          <div class="time-group-end">
+                            по:
+                            <time datetime="2020-07-01" class="time">
+                              01.09.2020
+                            </time>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="group-card">
+                <div class="group-content">
+                  <ul class="list">
+                    <li>
+                      <ul class="list">
+                        <li class="title-entity-group">
+                          <a href="#0" class="link-unit-group">Название</a>
+                          <div class="time-group-start ">
+                            с:
+                            <time datetime="2020-07-01" class="time">
+                              01.07.2020
+                            </time>
+                          </div>
+                          <div class="time-group-end">
+                            по:
+                            <time datetime="2020-07-01" class="time">
+                              01.09.2020
+                            </time>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="group-card">
+                <div class="group-content">
+                  <ul class="list">
+                    <li>
+                      <ul class="list">
+                        <li class="title-entity-group">
+                          <a href="#0" class="link-unit-group">Название</a>
+                          <div class="time-group-start ">
+                            с:
+                            <time datetime="2020-07-01" class="time">
+                              01.07.2020
+                            </time>
+                          </div>
+                          <div class="time-group-end">
+                            по:
+                            <time datetime="2020-07-01" class="time">
+                              01.09.2020
+                            </time>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="group-card">
+                <div class="group-content">
+                  <ul class="list">
+                    <li>
+                      <ul class="list">
+                        <li class="title-entity-group">
+                          <a href="#0" class="link-unit-group">Название</a>
+                          <div class="time-group-start ">
+                            с:
+                            <time datetime="2020-07-01" class="time">
+                              01.07.2020
+                            </time>
+                          </div>
+                          <div class="time-group-end">
+                            по:
+                            <time datetime="2020-07-01" class="time">
+                              01.09.2020
+                            </time>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="group-card">
+                <div class="group-content">
+                  <ul class="list">
+                    <li>
+                      <ul class="list">
+                        <li class="title-entity-group">
+                          <a href="#0" class="link-unit-group">Название</a>
+                          <div class="time-group-start ">
+                            с:
+                            <time datetime="2020-07-01" class="time">
+                              01.07.2020
+                            </time>
+                          </div>
+                          <div class="time-group-end">
+                            по:
+                            <time datetime="2020-07-01" class="time">
+                              01.09.2020
+                            </time>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="widget faq">faq</section>
+          <section class="widget teachers teachers-container">
+            <article class="teacher-card">
+              <div class="teacher-photo">
+                <img src="img/avatar.jpg" class="teacher-photo-img" alt="фото преподавателя" />
+              </div>
+              <div class="teacher-content">
+                <h2 class="teacher-name">
+                  <a href="#0" class="teacher-name-link link-unit">
+                    Иванов Иван Иванович
+                  </a>
+                </h2>
+                <ul class="list">
+                  <li>
+                    <a href="#0" class="link-unit">Курсы:</a>
+                    <ul class="list">
+                      <li class="title-entity">
+                        <a href="#0" class="title-entity-link">Название</a>
+                        <div>
+                          с:
+                          <time datetime="2020-07-01" class="time">
+                            01.07.2020
+                          </time>
+                        </div>
+                        <div>
+                          по:
+                          <time datetime="2020-07-01" class="time">
+                            01.09.2020
+                          </time>
+                        </div>
+                      </li>
+                      <li class="title-entity">
+                        <a href="#0" class="title-entity-link">Название</a>
+                        <div>
+                          с:
+                          <time datetime="2020-07-01" class="time">
+                            01.07.2020
+                          </time>
+                        </div>
+                        <div>
+                          по:
+                          <time datetime="2020-07-01" class="time">
+                            01.09.2020
+                          </time>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#0" class="link-unit">Лекции:</a>
+                    <ul class="list">
+                      <li class="title-entity">
+                        <a href="#0" class="title-entity-link">Название</a>
+                        <time datetime="2020-07-01" class="time">
+                          01.07.2020
+                        </time>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#0" class="link-unit">Дипломы:</a>
+                    <ul class="list">
+                      <li class="title-entity">
+                        <a href="#0" class="title-entity-link">Название</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <button class="teacher-btn">удалить</button>
+            </article>
+          </section>
+        </div>
+      </main>
     </div>
-    <footer class="footer-page container">
-      <a class="logo-footer" href="#">
-        <img src="img/logo-footer.svg" alt="логотип" />
-      </a>
-      <div class="copyright">&copy; 2020. Все права защищены</div>
-    </footer>
-    <!-- Containers-form -->
+  </div>
+  <footer class="footer-page container">
+    <a class="logo-footer" href="#">
+      <img src="img/logo-footer.svg" alt="логотип" />
+    </a>
+    <div class="copyright">&copy; 2020. Все права защищены</div>
+  </footer>
+  <!-- Containers-form -->
   <div class="container-form">
     <div class="overlay" id="auth">
       <form id="" class="modal">
@@ -468,5 +460,6 @@
     </div>
   </div> <!-- Reg -->
   <!-- End containers-form -->
-  </body>
+</body>
+
 </html>

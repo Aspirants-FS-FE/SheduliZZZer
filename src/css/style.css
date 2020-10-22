@@ -164,8 +164,7 @@ input[type='text'], input[type='tel'], input[type='email'], input[type='button']
   opacity: 1;
 }
 
-.header-humb-close::before,
-.header-humb-close::after {
+.header-humb-close::before, .header-humb-close::after {
   content: '';
   position: absolute;
   left: 15px;
@@ -455,6 +454,7 @@ input[type='text'], input[type='tel'], input[type='email'], input[type='button']
 /* teacher-page-end */
 
 /* table */
+
 .table {
   padding: 30px 40px;
 }
@@ -463,16 +463,16 @@ input[type='text'], input[type='tel'], input[type='email'], input[type='button']
   position: relative;
 }
 
-.table-header button{
+.table-header button {
   position: absolute;
   bottom: 100%;
 }
 
-.table-header .prev{
+.table-header .prev {
   left: 0;
 }
 
-.table-header .next{
+.table-header .next {
   right: 0;
 }
 
@@ -487,14 +487,13 @@ input[type='text'], input[type='tel'], input[type='email'], input[type='button']
 
 .table-title__item {
   width: 10%;
-  border-bottom: 1px solid gray;  
+  border-bottom: 1px solid gray;
   border: 1px solid gray;
   font-weight: bold;
   padding: 7px;
 }
 
-.table-lesson__item,
-.table-date__item {
+.table-lesson__item, .table-date__item {
   flex: 1;
   border: 1px solid gray;
   text-align: center;
@@ -509,6 +508,7 @@ input[type='text'], input[type='tel'], input[type='email'], input[type='button']
 /* table end */
 
 /* groups-page */
+
 .groups-container {
   display: flex;
   flex-wrap: wrap;
@@ -518,7 +518,7 @@ input[type='text'], input[type='tel'], input[type='email'], input[type='button']
 .group-card {
   flex: 1;
   margin: 0 10px 15px 10px;
-  flex-basis:400px;
+  flex-basis: 400px;
   min-width: 200px;
   max-width: 30%;
   padding: 20px;
@@ -536,9 +536,9 @@ input[type='text'], input[type='tel'], input[type='email'], input[type='button']
   color: var(--black-text);
   font-weight: bold;
   font-size: 1.2em;
-  flex: 1 ;
+  flex: 1;
   margin-bottom: 3px;
-  word-break:break-all;
+  word-break: break-all;
 }
 
 .time-group-start {
@@ -573,7 +573,7 @@ input[type='text'], input[type='tel'], input[type='email'], input[type='button']
 
 @media (max-width: 1760px) {
   .group-card {
-    flex-basis:30%;
+    flex-basis: 30%;
   }
 }
 
@@ -657,4 +657,3 @@ input[type='text'], input[type='tel'], input[type='email'], input[type='button']
 }
 
 /* End Containers Form */
-
