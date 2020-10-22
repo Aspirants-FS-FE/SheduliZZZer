@@ -33,6 +33,8 @@ on_success:
   - ps: Set-Content -Path "$HOME\.git-credentials" -Value "https://$($env:access_token):x-oauth-basic@github.com`n" -NoNewline
   - git config --global user.email "($env:email)"
   - git config --global user.name "($env:name)"
+  - git fetch 
+  - git checkout -b build
   - git add -f dist 
   - git commit dist -m "dist"
   - git push origin build
