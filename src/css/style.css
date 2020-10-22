@@ -653,7 +653,7 @@ input[type='text'], input[type='tel'], input[type='email'], input[type='button']
 }
 
 #reg {
-  /* display: none; */
+  display: none;
 }
 
 /* End Containers Form */
