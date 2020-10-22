@@ -59,7 +59,11 @@ img {
   height: auto;
 }
 
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
   margin-top: 0;
 }
 
@@ -79,7 +83,11 @@ button {
   background-color: var(--btn-bg-hover);
 }
 
-input[type='text'], input[type='tel'], input[type='email'], input[type='button'], input[type='submit'] {
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='button'],
+input[type='submit'] {
   -webkit-appearance: none;
   border-radius: 0;
   border: none;
@@ -133,7 +141,8 @@ input[type='text'], input[type='tel'], input[type='email'], input[type='button']
   border-radius: 4px;
 }
 
-.header-humb-line::before, .header-humb-line::after {
+.header-humb-line::before,
+.header-humb-line::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -164,7 +173,8 @@ input[type='text'], input[type='tel'], input[type='email'], input[type='button']
   opacity: 1;
 }
 
-.header-humb-close::before, .header-humb-close::after {
+.header-humb-close::before,
+.header-humb-close::after {
   content: '';
   position: absolute;
   left: 15px;
@@ -493,7 +503,8 @@ input[type='text'], input[type='tel'], input[type='email'], input[type='button']
   padding: 7px;
 }
 
-.table-lesson__item, .table-date__item {
+.table-lesson__item,
+.table-date__item {
   flex: 1;
   border: 1px solid gray;
   text-align: center;
