@@ -1,10 +1,4 @@
-environment:
-  access_token:
-    secure: oqbgO2rUPMlzkvILDB8TlQgRnY5E8C2M2OP4l24evBf2SPJNpkex17srg9SR3hu+
-  email:
-    secure: wbiqfZ/8qu/fKl/93/gNKQ==
-  name:
-    secure: lhx+pnL9RyhNybnzRrKO9A==
+
 image: Ubuntu2004 # образ для сборки
 
 stack: node 14 # окружение
@@ -27,12 +21,4 @@ build_script:
 test_script:
   - npm run lint # && npm test  # скрипт тестирования
 
-on_success:
-  - npm run build
-  - git config --global credential.helper store
-  - ps: Set-Content -Path "$HOME\.git-credentials" -Value "https://$($env:access_token):x-oauth-basic@github.com`n" -NoNewline
-  - git config --global user.email "($env:email)"
-  - git config --global user.name "($env:name)"
-  - git commit dist
-  - git push origin build
 
