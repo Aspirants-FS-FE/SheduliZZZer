@@ -4,7 +4,7 @@
   --btn-color: #e5e2e2;
   --btn-bg: #6c757d;
   --btn-bg-hover: #343a40;
-  --btn-del-bg: #EF3737;
+  --btn-del-bg: #ef3737;
   --btn-del-bg-hover: #862222;
   --grey-bg: rgba(133, 131, 131, 0.89);
   --dark-bg: rgba(115, 112, 112, 0.89);
@@ -158,6 +158,37 @@ input[type='submit'] {
   bottom: 0;
 }
 
+.header-humb-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+
+.header-humb-close:hover {
+  opacity: 1;
+}
+
+.header-humb-close::before,
+.header-humb-close::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  height: 33px;
+  width: 2px;
+  background-color: #333333;
+}
+
+.header-humb-close::before {
+  transform: rotate(45deg);
+}
+
+.header-humb-close::after {
+  transform: rotate(-45deg);
+}
+
 .header-title {
   flex: 1;
   padding: 0;
@@ -302,7 +333,7 @@ input[type='submit'] {
   margin-top: 54px;
 }
 
-.prof-point:nth-child(n+2) {
+.prof-point:nth-child(n + 2) {
   margin-top: 31px;
 }
 
