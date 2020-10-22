@@ -538,9 +538,36 @@ input[type='submit'] {
 
 /* end groups page */
 
+/* start diagram widget */
+.control-bar {
+  display: flex;
+}
+
+.controls {
+  font-weight: bold;
+  margin: 1rem;
+  /* padding: 1rem; */
+  padding-top: 0.5rem;
+  border: 2px solid blue;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align: center;
+  color: var(--white-text);
+  background-color: var(--grey-bg);
+}
+
+.controls-label {
+  margin: 1rem;
+}
+
+.controls:hover {
+  background-color: var(--btn-bg-hover);
+}
+
 .diagram {
   display: grid;
-  grid-template-columns: repeat(14, 1fr);
+  grid-template-columns: 100px repeat(7, 1fr);
   grid-column-gap: 2px;
   grid-row-gap: 2px;
 }
