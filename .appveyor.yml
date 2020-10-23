@@ -32,12 +32,13 @@ test_script:
   - npm run lint # && npm test  # скрипт тестирования
 
 after_test:
-  - npm run build
   - git config --global credential.helper store
   - ps: Set-Content -Path "$HOME\.git-credentials" -Value "https://$($env:access_token):x-oauth-basic@github.com`n" -NoNewline
   - ps: git config --global user.email $($env:email)
   - ps: git config --global user.name $($env:name)
   - ps: git branch  $($env:build_name)
   - ps: git checkout  $($env:build_name)
-  - ps: git status
+  - npm run build
+  - ps: git add -f dist
+  - git status
 
