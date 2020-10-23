@@ -30,10 +30,11 @@ build_script:
 test_script:
   - npm run lint # && npm test  # скрипт тестирования
 
-before_deploy:
-  - ps: |
-  git config --global credential.helper store
-  Set-Content -Path "$HOME\.git-credentials" -Value "https://$($env:access_token):x-oauth-basic@github.com`n" -NoNewline
-  git config --global user.email "$env:email)"
-  git config --global user.name "$env:name"
-  git fetch 
+on_success:
+  - npm run build
+  - git config --global credential.helper store
+  - ps: Set-Content -Path "$HOME\.git-credentials" -Value "https://$($env:access_token):x-oauth-basic@github.com`n" -NoNewline
+  - ps: git config --global user.email $env:email
+  - ps: git config --global user.name $env:name
+  - git fetch 
+
