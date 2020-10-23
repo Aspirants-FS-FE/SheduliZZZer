@@ -108,8 +108,8 @@ export default class MainWidget extends BaseWidget {
     });
   }
 
-  mapLessions(rowNumber, lessions) {
-    for (const lession of lessions) {
+  mapLessions(rowNumber, lessionList) {
+    for (const lession of lessionList) {
       const {
         date,
         lecture,
@@ -126,7 +126,7 @@ export default class MainWidget extends BaseWidget {
           element.innerText = lecture;
           element.title = teacher;
         }
-      })
+      });
     }
   }
 
@@ -140,7 +140,7 @@ export default class MainWidget extends BaseWidget {
         teacher,
       } = lession;
       if (!groupObj[group]) {
-        groupObj[group] = []
+        groupObj[group] = [];
       }
       groupObj[group].push({
         date,
@@ -180,6 +180,6 @@ export default class MainWidget extends BaseWidget {
         month: 'numeric',
         day: 'numeric',
       },
-    )
+    );
   }
 }

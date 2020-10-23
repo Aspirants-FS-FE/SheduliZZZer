@@ -545,6 +545,18 @@ input[type='submit'] {
   justify-content: space-between;
 }
 
+.controls {
+  font-weight: bold;
+  margin: 1rem;
+  padding-top: 0.5rem;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align: center;
+  color: var(--white-text);
+  background-color: var(--grey-bg);
+}
+
 .vertical {
   display: flex;
   flex-direction: column;
@@ -557,7 +569,6 @@ input[type='submit'] {
   width: 1.5rem;
   height: 1.5rem;
   font-size: 0.5rem;
-
 }
 
 .control-bar {
@@ -565,20 +576,6 @@ input[type='submit'] {
   align-items: center;
   justify-content: space-between;
   border-bottom: solid 1px aquamarine;
-}
-
-.controls {
-  font-weight: bold;
-  margin: 1rem;
-  /* padding: 1rem; */
-  padding-top: 0.5rem;
-  /* border: 2px solid blue; */
-  border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-  text-align: center;
-  color: var(--white-text);
-  background-color: var(--grey-bg);
 }
 
 .controls-label {
@@ -597,9 +594,6 @@ input[type='date'] {
 .diagram {
   width: 97%;
   display: grid;
-  /* grid-template-columns: 100px repeat(7, 1fr); */
-  /* grid-column-gap: 2px; */
-  /* grid-row-gap: 2px; */
   grid-auto-rows: auto;
 }
 
@@ -607,7 +601,6 @@ input[type='date'] {
   height: 2rem;
   border-right: dotted pink 1px;
   border-bottom: dotted lightblue 1px;
-  /* outline: solid red 1px; */
 }
 
 .date {
