@@ -37,9 +37,22 @@ after_test:
   - ps: git config --global user.name $($env:name)
   - git fetch 
   - git checkout -b pre
+  - git pull
   - git add -f dist
   - ps: Move-Item -Path ./dist/* -Destination ./
   - ps: Remove-Item -Path dist
   - ps: git commit -m $($env:build_name)
   - ps: git push --set-upstream origin pre
   
+deploy:
+  release: myproduct-v$(APPVEYOR_BUILD_VERSION)
+  description: 'Release description'
+  provider: GitHub
+  auth_token:
+    secure: m1zGMpElPHc3J+yo4jw/xs8qVOVDQ3pDfac9nNANIZnFGam1YMtzBwkppr7GStH2 # your encrypted token from GitHub
+  artifact: *           # upload all NuGet packages to release assets
+  draft: false
+  prerelease: false
+  on:
+    branch: pre                 # release from master branch only
+    APPVEYOR_REPO_TAG: true        # deploy on tag push only
