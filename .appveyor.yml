@@ -36,7 +36,6 @@ after_test:
   - ps: git config --global user.name $($env:name)
   - git fetch 
   - ps: git checkout pre
-  - git rm --cached -r .
   - git add -f dist 
   - ps: Move-Item -Path ./dist/* -Destination ./
   - ps: Remove-Item -Path dist
