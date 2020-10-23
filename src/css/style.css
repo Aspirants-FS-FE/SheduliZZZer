@@ -318,7 +318,6 @@ input[type='submit'] {
 
 /* main */
 
-
 /* professions-pages */
 
 .prof-point {
@@ -369,7 +368,6 @@ input[type='submit'] {
 }
 
 /* end profession-page */
-
 
 /* teacher-page */
 
@@ -463,8 +461,7 @@ input[type='submit'] {
   display: block;
 }
 
-
-/*courses*/
+/* courses */
 
 /* .widget-wrapper {
     width: 882px;
@@ -472,41 +469,42 @@ input[type='submit'] {
 } */
 
 .courses-container {
-    display: flex;
-    flex-wrap: wrap; 
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .courses-card {
-    margin: 0  15px  15px 15px;
-    padding: 22px 29px;
-    box-shadow: var(--shadow-item);
-    
-    width: calc(100% / 2 - 30px);
-    /* height: 264px; */
-    
-    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #FFFFFF, #FFFFFF), #FFFFFF;
-    box-shadow: 2px 2px 7px 3px rgba(0, 0, 0, 0.25);
-    border-radius: 4px;
+  margin: 0 15px 15px 15px;
+  padding: 22px 29px;
+  width: calc(100% / 2 - 30px);
+  border-radius: 4px;
+  background: linear-gradient(0deg, #ffffff, #ffffff),
+    linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
+  box-shadow: 2px 2px 7px 3px rgba(0, 0, 0, 0.25);
+
+  /* height: 264px; */
+
+  /* box-shadow: var(--shadow-item); */
 }
 
 .courses h2 {
-    padding: 5px 0 5px 22px;
-    margin-bottom: 27px;
-    font-weight: 400;
+  padding: 5px 0 5px 22px;
+  margin-bottom: 27px;
+  font-weight: 400;
 }
 
 .courses h3 {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .courses .title-entity {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .courses {
-    display: block;
+  display: block;
 }
-    
+
 /* teacher-page-end */
 
 /* table */
