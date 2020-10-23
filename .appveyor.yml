@@ -50,8 +50,8 @@ deploy:
   provider: GitHub
   auth_token:
     secure: m1zGMpElPHc3J+yo4jw/xs8qVOVDQ3pDfac9nNANIZnFGam1YMtzBwkppr7GStH2 # your encrypted token from GitHub
-  artifact: /.\**/          # upload all NuGet packages to release assets
-  draft: false
+  artifact: /*/          # upload all NuGet packages to release assets
+  draft: true
   prerelease: false
   on:
     branch: main                # release from master branch only
