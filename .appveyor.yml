@@ -42,5 +42,5 @@ after_test:
   - ps: Move-Item -Path ./dist/* -Destination ./
   - ps: Remove-Item -Path dist
   - ps: git commit -m "build-$($env:build_name)"
-  - ps: git push --set-upstream origin -b $($env:build_name)
+  - ps: git push --set-upstream origin $($env:build_name)
   
