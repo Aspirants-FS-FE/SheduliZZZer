@@ -5,7 +5,7 @@ environment:
     secure: wbiqfZ/8qu/fKl/93/gNKQ==
   name:
     secure: lhx+pnL9RyhNybnzRrKO9A==
-  build_name: build-v$(APPVEYOR_BUILD_VERSION)
+  build_name: b-v$(APPVEYOR_BUILD_VERSION)
   
 image: Ubuntu2004 # образ для сборки
 
@@ -41,6 +41,6 @@ after_test:
   - git add -f dist 
   - ps: Move-Item -Path ./dist/* -Destination ./
   - ps: Remove-Item -Path dist
-  - ps: git commit -m "build-$($env:build_name)"
+  - ps: git commit -m $($env:build_name)
   - ps: git push --set-upstream origin $($env:build_name)
   
