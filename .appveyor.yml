@@ -37,8 +37,6 @@ after_test:
   - ps: git config --global user.email $($env:email)
   - ps: git config --global user.name $($env:name)
   - ps: git checkout -b $($env:build_name) 
-  - ps: git rm --cached !dist
-  - ps: git add -f dist
-  - ps: git commit -m "adds $($env:build_name)" 
-  - ps: git push -u origin $($env:build_name)
-
+  - ps: git rm --cached
+  - ps: git status
+  
