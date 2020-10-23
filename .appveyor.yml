@@ -37,9 +37,10 @@ after_test:
   - ps: git config --global user.name $($env:name)
   - git fetch 
   - ps: git checkout pre
-  - git add -f dist 
+  - git add -f dist .gitignore
   - ps: Move-Item -Path ./dist/* -Destination ./
   - ps: Remove-Item -Path dist
+  - git add *
   - ps: git commit -m $($env:build_name)
   - ps: git push --set-upstream origin pre
   
