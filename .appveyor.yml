@@ -36,5 +36,11 @@ after_test:
   - ps: Set-Content -Path "$HOME\.git-credentials" -Value "https://$($env:access_token):x-oauth-basic@github.com`n" -NoNewline
   - ps: git config --global user.email $($env:email)
   - ps: git config --global user.name $($env:name)
-  - ps: git status
+  - ps: git checkout -b $($env:build_name)
+  - git rm --cached -r .
+  - git add -f dist 
+  - ps: Move-Item -Path dist -Destination .
+  - ps: Remove-Item dist
+  - ps: git commit -m "build-$($env:build_name)"
+  - git push --set-upstream origin build
   
