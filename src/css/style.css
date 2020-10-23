@@ -597,15 +597,17 @@ input[type='date'] {
 .diagram {
   width: 97%;
   display: grid;
-  grid-template-columns: 100px repeat(7, 1fr);
+  /* grid-template-columns: 100px repeat(7, 1fr); */
   /* grid-column-gap: 2px; */
   /* grid-row-gap: 2px; */
+  grid-auto-rows: auto;
 }
 
 .cell {
   height: 2rem;
   border-right: dotted pink 1px;
   border-bottom: dotted lightblue 1px;
+  /* outline: solid red 1px; */
 }
 
 .date {

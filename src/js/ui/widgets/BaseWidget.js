@@ -15,5 +15,8 @@ export default class BaseWidget {
   activateWidget() {
     this.deactivateAllWidgets();
     this.element.classList.add('active');
+    this.loadContent();
   }
+
+  loadContent() {}
 }
