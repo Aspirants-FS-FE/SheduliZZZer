@@ -15,7 +15,6 @@ stack: node 14 # окружение
 branches:
   only:
     - main # ветка git
-    - pre
 
 cache: node_modules # кеширование
 
@@ -36,13 +35,12 @@ after_test:
   - ps: git config --global user.email $($env:email)
   - ps: git config --global user.name $($env:name)
   - git fetch 
-  - git push -d origin pre
-  - git checkout pre 
+  - git checkout -b $($env:build_name)
   - git add -f dist
   - ps: Move-Item -Path ./dist/* -Destination ./
   - ps: Remove-Item -Path dist
   - ps: git commit -m $($env:build_name)
-  - ps: git push --set-upstream origin pre
+  - ps: git push -u origin $($env:build_name)
   
 deploy:
   release: myproduct-v$(APPVEYOR_BUILD_VERSION)
