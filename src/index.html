@@ -74,26 +74,27 @@
                 <div class="controls scale-button decr">-</div>
                 <div class="controls scale-button incr">+</div>
                 <div class="controls-label">Прокрутка</div>
-                <div class="controls roll-button"><<<</div>
-                <div class="controls roll-button"><</div>
-                <div class="controls roll-button">></div>
-                <div class="controls roll-button">>>></div>
-                <div class="controls-label">Перейти к дате:</div>
+                <div class="controls roll-button prev-fast"><<<</div>
+                <div class="controls roll-button prev"><</div>
+                <div class="controls roll-button next">></div>
+                <div class="controls roll-button next-fast">>>></div>
+                <label class="controls-label" for="to-date">Перейти к дате:</label>
                 <input 
                   type="date" 
                   name="calendar" 
-                  value="" 
+                  value="1999-01-01"
+                  id="to-date" 
                 />
                 <div class="controls roll-button">></div>
               </div>
               <div class="diagram-wrapper">
                 <div class="control-bar vertical">
-                  <div class="controls roll-button"><<<</div>
-                  <div class="controls roll-button"><</div>
+                  <div class="controls roll-button prev fast"><<<</div>
+                  <div class="controls roll-button prev"><</div>
                   <div class="controls scale-button incr">+</div>
                   <div class="controls scale-button decr">|</div>
-                  <div class="controls roll-button">></div>
-                  <div class="controls roll-button">>>></div>
+                  <div class="controls roll-button next">></div>
+                  <div class="controls roll-button next fast">>>></div>
                 </div>
                 <div class="diagram">
                   <!-- <div class="cell"></div>

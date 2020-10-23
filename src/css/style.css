@@ -611,11 +611,14 @@ input[type='date'] {
 }
 
 .date {
+  font-size: 0.75rem;
   text-align: center;
+  background-color: lightgoldenrodyellow;
 }
 
 .row-title {
   padding: 5%;
+  background-color: lightcyan;
 }
 
 .weekend {
@@ -630,6 +633,7 @@ input[type='date'] {
 
 .lession:hover {
   transform: scale(1.1);
+  outline: solid lightblue 1px;
 }
 
 /* for groups-page************************************* */
