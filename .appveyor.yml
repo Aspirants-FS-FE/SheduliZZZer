@@ -45,6 +45,7 @@ after_test:
   - ps: git push -u origin $($env:build_name)
   
 deploy:
+  tag: $(APPVEYOR_REPO_TAG_NAME)
   release: myproduct-v$(APPVEYOR_BUILD_VERSION)
   description: 'Release description'
   provider: GitHub
