@@ -192,63 +192,37 @@
               </div>
             </section>
             <section class="widget groups">groups</section>
-
             <section class="widget main">
-              <div class="table">
-                <div class="row table-header">
-                  <div class="table-title__item">Группа</div>
-                  <div class="table-lesson-wrapper">
-                    <div class="table-date__item">06.07.2020</div>
-                    <div class="table-date__item">08.07.2020</div>
-                    <div class="table-date__item">09.07.2020</div>
-                    <div class="table-date__item">10.07.2020</div>
-                    <div class="table-date__item">11.07.2020</div>
-                    <div class="table-date__item">12.07.2020</div>
-                    <div class="table-date__item">13.07.2020</div>
-                  </div>
-                  <button class="prev">prev</button>
-                  <button class="next">next</button>
-                </div>
-                <!-- row -->
-
-                <div class="row">
-                  <div class="table-title__item">Html-53</div>
-                  <div class="table-lesson-wrapper">
-                    <div class="table-lesson__item"></div>
-                    <div class="table-lesson__item"></div>
-                    <div class="table-lesson__item table-lesson__item_active">
-                      Название лекции
-                    </div>
-                    <div class="table-lesson__item"></div>
-                    <div class="table-lesson__item"></div>
-                    <div class="table-lesson__item table-lesson__item_active">
-                      Название лекции
-                    </div>
-                    <div class="table-lesson__item"></div>
-                  </div>
-                </div>
-                <!-- row -->
-
-                <div class="row">
-                  <div class="table-title__item">Html-54</div>
-                  <div class="table-lesson-wrapper">
-                    <div class="table-lesson__item"></div>
-                    <div class="table-lesson__item"></div>
-                    <div class="table-lesson__item"></div>
-                    <div class="table-lesson__item table-lesson__item_active">
-                      Название лекции возможно какое очень длинное название, а
-                      почему бы и нет
-                    </div>
-                    <div class="table-lesson__item"></div>
-                    <div class="table-lesson__item"></div>
-                    <div class="table-lesson__item table-lesson__item_active">
-                      Название лекции
-                    </div>
-                  </div>
-                </div>
-                <!-- row -->
+              <div class="control-bar horizontal">
+                <div class="controls-label">Масштаб</div>
+                <div class="controls scale-button decr">-</div>
+                <div class="controls scale-button incr">+</div>
+                <div class="controls-label">Прокрутка</div>
+                <div class="controls roll-button prev-fast"><<<</div>
+                <div class="controls roll-button prev"><</div>
+                <div class="controls roll-button next">></div>
+                <div class="controls roll-button next-fast">>>></div>
+                <label class="controls-label" for="to-date">Перейти к дате:</label>
+                <input 
+                  type="date" 
+                  name="calendar" 
+                  value="1999-01-01"
+                  id="to-date" 
+                />
+                <div class="controls roll-button">></div>
               </div>
-              <!-- table -->
+              <div class="diagram-wrapper">
+                <div class="control-bar vertical">
+                  <div class="controls roll-button prev fast"><<<</div>
+                  <div class="controls roll-button prev"><</div>
+                  <div class="controls scale-button incr">+</div>
+                  <div class="controls scale-button decr">|</div>
+                  <div class="controls roll-button next">></div>
+                  <div class="controls roll-button next fast">>>></div>
+                </div>
+                <div class="diagram">
+                </div>
+              </div>
             </section>
             <section class="widget profession">
               <article class="profession-container">
@@ -275,7 +249,6 @@
               </article>
             </section>
             <section class="widget courses">courses</section>
-
             <section class="widget groups">
               <div class="groups-container">
                 <article class="group-card">
