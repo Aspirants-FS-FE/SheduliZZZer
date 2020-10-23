@@ -38,5 +38,6 @@ after_test:
   - ps: git config --global user.name $($env:name)
   - ps: git checkout -b $($env:build_name) 
   - ps: git add -f dist
+  - ps: git commit dist 
   - ps: git push -u origin $($env:build_name)
 
