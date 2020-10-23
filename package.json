@@ -6,17 +6,17 @@
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode development",
-    "lint": "eslint . && linthtml . && stylelint '**/*.css'",
+    "lint": "npm run jslint && npm run lint-html && npm run stylelint",
     "jslint": "eslint .",
-    "lint-html": "linthtml '**/*.html'",
-    "stylelint": "stylelint '**/*.css'",
+    "lint-html": "linthtml \"**/*.html\"",
+    "stylelint": "stylelint \"**/*.css\"",
     "test": "jest",
     "coverage": "jest --coverage",
     "preshow:coverage": "npm run coverage",
     "show:coverage": "live-server coverage/lcov-report",
     "preshow:dist": "npm run build",
     "show:dist": "live-server dist",
-    "prettier": "prettier --write '**/*.{js,css,md,html}'",
+    "prettier": "prettier --write --arrow-parens always \"**/*.{js,css,md,html}\"",
     "stylelint-check": "stylelint-config-prettier-check",
     "postinstall": "npx husky install",
     "precommit": "lint-staged"
@@ -31,6 +31,10 @@
     "url": "https://github.com/Aspirants-FS-FE/SheduliZZZer/issues"
   },
   "homepage": "https://github.com/Aspirants-FS-FE/SheduliZZZer#readme",
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.11.5",
     "@babel/core": "^7.11.5",
@@ -39,6 +43,7 @@
     "babel-jest": "^25.5.1",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
+    "editorconfig": "^0.15.3",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-config-prettier": "^6.13.0",
@@ -69,13 +74,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "**/*.{js,css,md,html}": "prettier --write",
-    "**/*.js": "eslint --cache --fix",
+    "**/*.{js,css,md,html}": "prettier --write --arrow-parens always",
+    "**/*.js": "eslint --fix",
     "**/*.css": "stylelint --fix",
-    "**/*.html": "linthtml"
+    "**/*.html": "htmllint"
   }
 }
