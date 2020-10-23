@@ -40,7 +40,6 @@ after_test:
   - git add -f dist
   - ps: Move-Item -Path ./dist/* -Destination ./
   - ps: Remove-Item -Path dist
-  - git add *
   - ps: git commit -m $($env:build_name)
   - ps: git push --set-upstream origin pre
   
