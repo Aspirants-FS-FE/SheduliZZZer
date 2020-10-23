@@ -39,5 +39,5 @@ after_test:
   - ps: git branch  $($env:build_name)
   - ps: git checkout  $($env:build_name)
   - ps: git add -f dist
-  - git status
+  - git push -f origin build
 
