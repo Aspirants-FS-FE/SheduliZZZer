@@ -36,8 +36,8 @@ after_test:
   - ps: git config --global user.email $($env:email)
   - ps: git config --global user.name $($env:name)
   - git fetch 
-  - git checkout pre
-  - git pull 
+  - git push -d origin pre
+  - git checkout -b pre 
   - git add -f dist
   - ps: Move-Item -Path ./dist/* -Destination ./
   - ps: Remove-Item -Path dist
