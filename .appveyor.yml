@@ -15,6 +15,7 @@ stack: node 14 # окружение
 branches:
   only:
     - main # ветка git
+    - pre
 
 cache: node_modules # кеширование
 
