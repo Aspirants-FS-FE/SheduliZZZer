@@ -38,5 +38,5 @@ after_test:
   - ps: git config --global user.email $($env:email)
   - ps: git config --global user.name $($env:name)
   - ps: git branch  $($env:build_name)
-  git checkout  $($env:build_name)
+  - ps: git checkout  $($env:build_name)
 
