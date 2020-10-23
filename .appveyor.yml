@@ -37,7 +37,6 @@ on_success:
   - git config --global user.name "($env:name)"
   - git fetch 
   - git checkout -b build
-  - git 
   - git pull origin build
   - git add -f dist 
   - git commit dist -m "dist"
