@@ -39,7 +39,7 @@ after_test:
   - ps: git config --global user.name $($env:name)
   - git fetch 
   - ps: git checkout $($env:deploy_branch_name)
-  - ps: New-Item -Path . -Name ".version" -ItemType "file" -Value $($env:commit_message)
+  - ps: New-Item -Path . -Name ".version" -ItemType "file" -Value $($env:commit_message) -Force
   - git add .version
   - git add -f ./dist/*
   - git mv -f ./dist/* .
