@@ -481,10 +481,6 @@ input[type='submit'] {
   background: linear-gradient(0deg, #ffffff, #ffffff),
     linear-gradient(0deg, #ffffff, #ffffff), #ffffff;
   box-shadow: 2px 2px 7px 3px rgba(0, 0, 0, 0.25);
-
-  /* height: 264px; */
-
-  /* box-shadow: var(--shadow-item); */
 }
 
 .courses h2 {
@@ -499,10 +495,6 @@ input[type='submit'] {
 
 .courses .title-entity {
   margin-bottom: 5px;
-}
-
-.courses {
-  display: block;
 }
 
 /* teacher-page-end */
