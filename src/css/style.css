@@ -651,6 +651,7 @@ input[type='submit'] {
   background-color: var(--white-bg);
   border-radius: 10px;
   overflow: hidden;
+  z-index: 51;
 }
 
 .header-form {
