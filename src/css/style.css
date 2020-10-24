@@ -703,11 +703,15 @@ input[type='submit'] {
   margin-bottom: 0;
 }
 
-#auth {
+.auth {
   display: none;
 }
 
-#reg {
+.reg {
+  display: none;
+}
+
+#auth-reg {
   display: none;
 }
 
