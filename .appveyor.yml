@@ -1,6 +1,33 @@
-image: Ubuntu1804 # образ для сборки
+# Для начала работы заменить данные на свои.
+# Затем зайти в настройки нужного проекта на странице -> https://ci.appveyor.com/project/
+# Вкладка "General" и поставить галку на пункте: 
+#                Skip branches without appveyor.yml
+# После прокрутить страницу вниз - сохранить изменения
+# Эта настройка для того чтоб ветка deploy не запускала заново весь цикл AppVeyor.
 
-stack: node 10 # окружение
+environment:
+  access_token:
+    secure: m1zGMpElPHc3J+yo4jw/xs8qVOVDQ3pDfac9nNANIZnFGam1YMtzBwkppr7GStH2 # Token GitHub API(personal access tokken)
+    # Заменить на свой!!
+    # Получить здесь -> https://github.com/settings/tokens
+    # Далее в личном кабинете на сайте AppVeyor 
+    # токен нужно зашифровать -> https://ci.appveyor.com/tools/encrypt 
+    # И вставить в поле "secure:"
+  email:
+    secure: wbiqfZ/8qu/fKl/93/gNKQ== # email для подписи коммита, Заменить!
+    # Шифровать не обязательно, я шифровал там же где токен.
+
+  name:
+    secure: lhx+pnL9RyhNybnzRrKO9A== # name - для того же. Заменить!
+    # Шифровать не обязательно, я шифровал.
+
+  commit_message: b-v$(APPVEYOR_BUILD_VERSION)
+  deploy_branch_name: deploy
+  
+image: Ubuntu2004 # образ для сборки
+
+stack: node 14 # окружение
+
 
 branches:
   only:
@@ -8,13 +35,41 @@ branches:
 
 cache: node_modules # кеширование
 
+skip_tags: true
+
 install:
   - npm install # команда установки зависимостей
-
-build: off # отключаем встроенную в appveyor систему сборки
 
 build_script:
   - npm run build # команда сборки
 
 test_script:
   - npm run lint # && npm test  # скрипт тестирования
+
+after_test:
+  - git config --global credential.helper store
+  - ps: Set-Content -Path "$HOME\.git-credentials" -Value "https://$($env:access_token):x-oauth-basic@github.com`n" -NoNewline
+  - ps: git config --global user.email $($env:email)
+  - ps: git config --global user.name $($env:name)
+  - git fetch 
+  - ps: git checkout $($env:deploy_branch_name)
+  - ps: New-Item -Path . -Name ".version" -ItemType "file" -Value $($env:commit_message) -Force
+  - git add .version
+  - git add -f ./dist/*
+  - git mv -f ./dist/* .
+  - ps: git commit -m "Build - $($env:commit_message)"
+  - ps: git push -u origin $($env:deploy_branch_name)
+  
+deploy:
+  tag: $(APPVEYOR_REPO_TAG_NAME)
+  release: myproduct-v$(APPVEYOR_BUILD_VERSION)
+  description: 'Release description'
+  provider: GitHub
+  auth_token:
+    secure: $($env:access_token) # your encrypted token from GitHub
+  artifact: /.\*/          # upload all NuGet packages to release assets
+  draft: true
+  prerelease: false
+  on:
+    branch: main                # release from master branch only
+    APPVEYOR_REPO_TAG: true        # deploy on tag push only
