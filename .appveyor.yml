@@ -39,9 +39,9 @@ after_test:
   - ps: git config --global user.name $($env:name)
   - git fetch 
   - ps: git checkout $($env:deploy_branch_name)
+  - git rm --cashed -r .
   - git add -f ./dist/*
   - git mv ./dist/* .
-  - git add --all
   - ps: git commit -m "Build - $($env:build_name)"
   - ps: git push -u origin $($env:deploy_branch_name)
   
