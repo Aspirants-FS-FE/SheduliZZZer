@@ -5,7 +5,7 @@ environment:
     secure: wbiqfZ/8qu/fKl/93/gNKQ==
   name:
     secure: lhx+pnL9RyhNybnzRrKO9A==
-  build_name: b-v$(APPVEYOR_BUILD_VERSION)
+  commit_message: b-v$(APPVEYOR_BUILD_VERSION)
   deploy_branch_name: deploy
   
 image: Ubuntu2004 # образ для сборки
@@ -37,11 +37,13 @@ after_test:
   - ps: Set-Content -Path "$HOME\.git-credentials" -Value "https://$($env:access_token):x-oauth-basic@github.com`n" -NoNewline
   - ps: git config --global user.email $($env:email)
   - ps: git config --global user.name $($env:name)
+  - ps: New-Item -Path . -Name ".version" -ItemType "file" -Value $($env:commit_message)
+  - git add .version
   - git fetch 
   - ps: git checkout $($env:deploy_branch_name)
   - git add -f ./dist/*
   - git mv -f ./dist/* .
-  - ps: git commit -m "Build - $($env:build_name)"
+  - ps: git commit -m "Build - $($env:commit_message)"
   - ps: git push -u origin $($env:deploy_branch_name)
   
 deploy:
