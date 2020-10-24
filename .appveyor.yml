@@ -1,10 +1,26 @@
+# Для начала работы заменить данные на свои.
+# Затем зайти в настройки нужного проекта на странице -> https://ci.appveyor.com/project/
+# Вкладка "General" и поставить галку на пункте: 
+#                Skip branches without appveyor.yml
+# После прокрутить страницу вниз - сохранить изменения
+# Эта настройка для того чтоб ветка deploy не запускала заново весь цикл AppVeyor.
+
 environment:
   access_token:
-    secure: m1zGMpElPHc3J+yo4jw/xs8qVOVDQ3pDfac9nNANIZnFGam1YMtzBwkppr7GStH2
+    secure: m1zGMpElPHc3J+yo4jw/xs8qVOVDQ3pDfac9nNANIZnFGam1YMtzBwkppr7GStH2 # Token GitHub API(personal access tokken)
+    # Заменить на свой!!
+    # Получить здесь -> https://github.com/settings/tokens
+    # Далее в личном кабинете на сайте AppVeyor 
+    # токен нужно зашифровать -> https://ci.appveyor.com/tools/encrypt 
+    # И вставить в поле "secure:"
   email:
-    secure: wbiqfZ/8qu/fKl/93/gNKQ==
+    secure: wbiqfZ/8qu/fKl/93/gNKQ== # email для подписи коммита, Заменить!
+    # Шифровать не обязательно, я шифровал там же где токен.
+
   name:
-    secure: lhx+pnL9RyhNybnzRrKO9A==
+    secure: lhx+pnL9RyhNybnzRrKO9A== # name - для того же. Заменить!
+    # Шифровать не обязательно, я шифровал.
+
   commit_message: b-v$(APPVEYOR_BUILD_VERSION)
   deploy_branch_name: deploy
   
@@ -50,7 +66,7 @@ deploy:
   description: 'Release description'
   provider: GitHub
   auth_token:
-    secure: m1zGMpElPHc3J+yo4jw/xs8qVOVDQ3pDfac9nNANIZnFGam1YMtzBwkppr7GStH2 # your encrypted token from GitHub
+    secure: $($env:access_token) # your encrypted token from GitHub
   artifact: /.\*/          # upload all NuGet packages to release assets
   draft: true
   prerelease: false
