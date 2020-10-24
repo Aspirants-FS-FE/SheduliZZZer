@@ -6,6 +6,7 @@ environment:
   name:
     secure: lhx+pnL9RyhNybnzRrKO9A==
   build_name: b-v$(APPVEYOR_BUILD_VERSION)
+  deploy_branch_name: deploy
   
 image: Ubuntu2004 # образ для сборки
 
@@ -37,10 +38,10 @@ after_test:
   - ps: git config --global user.email $($env:email)
   - ps: git config --global user.name $($env:name)
   - git fetch 
-  - ps: git checkout build
+  - ps: git checkout $($env:deploy_branch_name)
   - git mv ./dist/* .
   - ps: git commit -m "Build - $($env:build_name)"
-  - ps: git push -u origin build
+  - ps: git push -u origin $($env:deploy_branch_name)
   
 deploy:
   tag: $(APPVEYOR_REPO_TAG_NAME)
