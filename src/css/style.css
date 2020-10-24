@@ -574,20 +574,6 @@ input[type='submit'] {
 
 /* end groups page */
 
-/* for groups-page************************************* */
-
-@media (max-width: 1400px) {
-  .time-group-start {
-    flex-basis: 100%;
-  }
-}
-
-@media (max-width: 1760px) {
-  .group-card {
-    flex-basis: 30%;
-  }
-}
-
 /* Containers Form */
 
 .overlay {
@@ -668,3 +654,110 @@ input[type='submit'] {
 }
 
 /* End Containers Form */
+
+/* start main widget */
+
+.diagram-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls {
+  font-weight: bold;
+  margin: 1rem;
+  padding-top: 0.5rem;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align: center;
+  color: var(--white-text);
+  background-color: var(--grey-bg);
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  width: 3%;
+  background-color: aquamarine;
+}
+
+.vertical > .controls {
+  transform: rotate(90deg);
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0.5rem;
+}
+
+.control-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px aquamarine;
+}
+
+.controls-label {
+  margin: 1rem;
+}
+
+.controls:hover {
+  background-color: var(--btn-bg-hover);
+}
+
+input[type='date'] {
+  display: block;
+  height: 2rem;
+}
+
+.diagram {
+  width: 97%;
+  display: grid;
+  grid-auto-rows: auto;
+}
+
+.cell {
+  height: 2rem;
+  border-right: dotted pink 1px;
+  border-bottom: dotted lightblue 1px;
+}
+
+.date {
+  font-size: 0.75rem;
+  text-align: center;
+  background-color: lightgoldenrodyellow;
+}
+
+.row-title {
+  padding: 5%;
+  background-color: lightcyan;
+}
+
+.weekend {
+  background-color: cornsilk;
+}
+
+.lession {
+  padding: 5%;
+  font-size: 0.5rem;
+  background-color: goldenrod;
+}
+
+.lession:hover {
+  transform: scale(1.1);
+  outline: solid lightblue 1px;
+}
+
+/* for groups-page************************************* */
+
+@media (max-width: 1400px) {
+  .time-group-start {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 1760px) {
+  .group-card {
+    flex-basis: 30%;
+  }
+}
+
+/* end main widget */
