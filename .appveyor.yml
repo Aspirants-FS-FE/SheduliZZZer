@@ -40,6 +40,7 @@ after_test:
   - git fetch 
   - ps: git checkout $($env:deploy_branch_name)
   - git mv ./dist/* .
+  - git add --all
   - ps: git commit -m "Build - $($env:build_name)"
   - ps: git push -u origin $($env:deploy_branch_name)
   
