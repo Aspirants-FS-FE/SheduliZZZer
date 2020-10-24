@@ -37,10 +37,10 @@ after_test:
   - ps: Set-Content -Path "$HOME\.git-credentials" -Value "https://$($env:access_token):x-oauth-basic@github.com`n" -NoNewline
   - ps: git config --global user.email $($env:email)
   - ps: git config --global user.name $($env:name)
-  - ps: New-Item -Path . -Name ".version" -ItemType "file" -Value $($env:commit_message)
-  - git add .version
   - git fetch 
   - ps: git checkout $($env:deploy_branch_name)
+  - ps: New-Item -Path . -Name ".version" -ItemType "file" -Value $($env:commit_message)
+  - git add .version
   - git add -f ./dist/*
   - git mv -f ./dist/* .
   - ps: git commit -m "Build - $($env:commit_message)"
