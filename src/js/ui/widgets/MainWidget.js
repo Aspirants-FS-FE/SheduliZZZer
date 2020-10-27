@@ -1,5 +1,6 @@
 import BaseWidget from './BaseWidget';
 import lessions from './testdata';
+import APIConnector from '../../api/APIConnector';
 
 export default class MainWidget extends BaseWidget {
   loadContent() {
@@ -79,7 +80,8 @@ export default class MainWidget extends BaseWidget {
     }
     this.cells = Array.from(this.diagramEl.children);
     this.mapDateRow();
-    this.mapGroupColumn();
+    APIConnector.getData(this.mapGroupColumn.bind(this));
+    // this.mapGroupColumn(data);
   }
   /* eslint no-param-reassign: "error" */
 
@@ -93,9 +95,11 @@ export default class MainWidget extends BaseWidget {
     });
   }
 
-  mapGroupColumn() {
-    const lessionList = JSON.parse(lessions);
-    const groupObj = this.getGroupObject(lessionList);
+  mapGroupColumn(data) {
+    console.log(data);
+    //const lessionList = JSON.parse(lessions);
+    // const groupObj = this.getGroupObject(lessionList);
+    const groupObj = this.getGroupObject(data.lessions);
     const groupCells = this.cells
       .filter((__, i) => !(i % (this.colNumber + 1)))
       .splice(1);
@@ -103,8 +107,10 @@ export default class MainWidget extends BaseWidget {
       element.classList.add('row-title');
     });
     Object.keys(groupObj).forEach((key, i) => {
-      groupCells[i].innerText = key;
-      this.mapLessions(i + 2, groupObj[key]);
+      if (groupCells[i]) {
+        groupCells[i].innerText = key;
+        this.mapLessions(i + 2, groupObj[key]);
+      }
     });
   }
 

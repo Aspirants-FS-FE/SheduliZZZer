@@ -764,6 +764,7 @@ input[type='date'] {
 
 .row-title {
   padding: 5%;
+  text-transform: uppercase;
   background-color: lightcyan;
 }
 
