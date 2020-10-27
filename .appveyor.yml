@@ -14,7 +14,7 @@ environment:
     # токен нужно зашифровать -> https://ci.appveyor.com/tools/encrypt 
     # И вставить в поле "secure:"
   email:
-    secure: 3FrN4d/vOe5YI82rHbfneYECAhNWE2sx+IyGhYTOMA0= # email для подписи коммита, Заменить!
+    secure: 3FrN4d/vOe5YI82rHbfneYECAhNWE2sx+IyGhYTOMA0= # email для подписи коммита,
     # Шифровать не обязательно, я шифровал там же где токен.
 
   name:
