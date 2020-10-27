@@ -7,7 +7,7 @@
 
 environment:
   access_token:
-    secure: RV5wLIHP/GWTHpgskFZvmp42vrdX/zQaK3/PKjIA8MAwuHgigIUKVfREzOIEXKCr # Token GitHub API(personal access tokken)
+    secure: c/tnRC40qb/r3WFQ63iBsInAL15UlFR81E0Gc0332lhM06C8y0yT0IBo9vOkWyDE # Token GitHub API(personal access tokken)
     # Заменить на свой!!
     # Получить здесь -> https://github.com/settings/tokens
     # Далее в личном кабинете на сайте AppVeyor 
