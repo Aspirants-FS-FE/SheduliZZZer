@@ -7,18 +7,21 @@
 
 environment:
   access_token:
-    secure: RV5wLIHP/GWTHpgskFZvmp42vrdX/zQaK3/PKjIA8MAwuHgigIUKVfREzOIEXKCr # Token GitHub API(personal access tokken)
+    secure: bLjLywaTOid5PNdbo8fX34UIxTrTdHtM2jx8WMuS2HD8J2vd8v42WseNDo69nuOj 
+    # Token GitHub API(personal access tokken)
     # Заменить на свой!!
     # Получить здесь -> https://github.com/settings/tokens
     # Далее в личном кабинете на сайте AppVeyor 
     # токен нужно зашифровать -> https://ci.appveyor.com/tools/encrypt 
     # И вставить в поле "secure:"
   email:
-    secure: 3FrN4d/vOe5YI82rHbfneYECAhNWE2sx+IyGhYTOMA0= # email для подписи коммита, Заменить!
+    secure: 3FrN4d/vOe5YI82rHbfneYECAhNWE2sx+IyGhYTOMA0= 
+    # email для подписи коммита, Заменить!
     # Шифровать не обязательно, я шифровал там же где токен.
 
   name:
-    secure: BG8K/j0gtQvag4WRUF8Dsg== # name - для того же. Заменить!
+    secure: BG8K/j0gtQvag4WRUF8Dsg== 
+    # name - для того же. Заменить!
     # Шифровать не обязательно, я шифровал.
 
   commit_message: b-v$(APPVEYOR_BUILD_VERSION)
