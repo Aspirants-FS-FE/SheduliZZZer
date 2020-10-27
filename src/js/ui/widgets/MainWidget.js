@@ -1,5 +1,5 @@
 import BaseWidget from './BaseWidget';
-import lessions from './testdata';
+// import lessions from './testdata';
 import APIConnector from '../../api/APIConnector';
 
 export default class MainWidget extends BaseWidget {
@@ -97,7 +97,7 @@ export default class MainWidget extends BaseWidget {
 
   mapGroupColumn(data) {
     console.log(data);
-    //const lessionList = JSON.parse(lessions);
+    // const lessionList = JSON.parse(lessions);
     // const groupObj = this.getGroupObject(lessionList);
     const groupObj = this.getGroupObject(data.lessions);
     const groupCells = this.cells
