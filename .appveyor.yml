@@ -26,7 +26,7 @@ environment:
   
 image: Ubuntu2004 # образ для сборки
 
-stack: node 14 # окружение
+stack: node 14 #  окружение
 
 
 branches:
