@@ -18,7 +18,7 @@ environment:
     # Шифровать не обязательно, я шифровал там же где токен.
 
   name:
-    secure: BG8K/j0gtQvag4WRUF8Dsg== # name - для того же. Заменить!
+    secure: BG8K/j0gtQvag4WRUF8Dsg== # name - для того же.
     # Шифровать не обязательно, я шифровал.
 
   commit_message: b-v$(APPVEYOR_BUILD_VERSION)
