@@ -18,7 +18,7 @@ environment:
     # Шифровать не обязательно, я шифровал там же где токен.
 
   name:
-    secure: OAuKCUcy9v2rrPFM5S9jhQ== # name - для того же.
+    secure: V7e5Ri2x9wywWs44eYFYyA== # name - для того же.
     # Шифровать не обязательно, я шифровал.
 
   commit_message: b-v$(APPVEYOR_BUILD_VERSION)
