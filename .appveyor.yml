@@ -38,7 +38,7 @@ cache: node_modules # кеширование
 skip_tags: true
 
 install:
-  - npm install # команда установки зависимостей
+  - npm install #  команда установки зависимостей
 
 build_script:
   - npm run build # команда сборки
