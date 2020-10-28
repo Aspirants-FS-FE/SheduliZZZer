@@ -1,10 +1,11 @@
 export default class BaseWidget {
-  constructor(element) {
+  constructor(element, api) {
     if (!element) {
       throw new Error('Element not found');
     } else {
       this.element = element;
     }
+    this.api = api;
   }
 
   deactivateAllWidgets() {

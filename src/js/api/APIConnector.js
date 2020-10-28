@@ -1,14 +1,20 @@
 export default class APIConnector {
-  static getData(call) {
-    const URL = 'https://shedu-api.azurewebsites.net';
-    const callback = function (data) {
-      console.log(call);
-      call(data);
-    };
+  constructor(URL) {
+    this.URL = URL;
+  }
 
-    fetch(`${URL}/get_data`, { method: 'GET' })
+  getData(additionalURL, params, callback) {
+    const fullURL = this.URL + additionalURL + this.encodeURL(params);
+    fetch(fullURL, { method: 'GET' })
       .then((response) => response.json())
       .then((data) => callback(data))
       .catch((error) => console.log(error));
+  }
+
+  encodeURL(params) {
+    const startSymbol = '?';
+    return startSymbol + Object.entries(params)
+      .map(([key, value]) => `${key}=${value}`)
+      .join('&');
   }
 }
