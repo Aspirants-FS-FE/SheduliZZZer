@@ -7,18 +7,18 @@
 
 environment:
   access_token:
-    secure: RV5wLIHP/GWTHpgskFZvmp42vrdX/zQaK3/PKjIA8MAwuHgigIUKVfREzOIEXKCr # Token GitHub API(personal access tokken)
+    secure: c/tnRC40qb/r3WFQ63iBsInAL15UlFR81E0Gc0332lhM06C8y0yT0IBo9vOkWyDE # Token GitHub API(personal access tokken)
     # Заменить на свой!!
     # Получить здесь -> https://github.com/settings/tokens
     # Далее в личном кабинете на сайте AppVeyor 
     # токен нужно зашифровать -> https://ci.appveyor.com/tools/encrypt 
     # И вставить в поле "secure:"
   email:
-    secure: 3FrN4d/vOe5YI82rHbfneYECAhNWE2sx+IyGhYTOMA0= # email для подписи коммита, Заменить!
+    secure: 3FrN4d/vOe5YI82rHbfneYECAhNWE2sx+IyGhYTOMA0= # email для подписи коммита,
     # Шифровать не обязательно, я шифровал там же где токен.
 
   name:
-    secure: BG8K/j0gtQvag4WRUF8Dsg== # name - для того же. Заменить!
+    secure: V7e5Ri2x9wywWs44eYFYyA== #   name - для того же.
     # Шифровать не обязательно, я шифровал.
 
   commit_message: b-v$(APPVEYOR_BUILD_VERSION)
@@ -26,7 +26,7 @@ environment:
   
 image: Ubuntu2004 # образ для сборки
 
-stack: node 14 # окружение
+stack: node 14 #    окружение
 
 
 branches:
@@ -38,7 +38,7 @@ cache: node_modules # кеширование
 skip_tags: true
 
 install:
-  - npm install # команда установки зависимостей
+  - npm install #  команда установки зависимостей
 
 build_script:
   - npm run build # команда сборки
