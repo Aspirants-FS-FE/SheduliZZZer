@@ -763,7 +763,7 @@ input[type='date'] {
 }
 
 .row-title {
-  padding: 5%;
+  padding: 5px;
   text-transform: uppercase;
   background-color: lightcyan;
 }
@@ -773,7 +773,7 @@ input[type='date'] {
 }
 
 .lession {
-  padding: 5%;
+  padding: 5px;
   font-size: 0.5rem;
   background-color: goldenrod;
 }
