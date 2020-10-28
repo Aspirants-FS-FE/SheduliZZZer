@@ -7,7 +7,7 @@
 
 environment:
   access_token:
-    secure: nd5fXNLGCQc4IqfeiDgn88vqB0xlGT8moQTykU4Tr2i+BTeG8jA8WxSU+1Aeo69h 
+    secure: 3Uy7IxOSybd6RMdTc+iQZw+beIeYeSadOOiZmF2e54M1deFIGi//FDarDcH/h1f7 
     # Token GitHub API(personal access tokken)
     # Заменить на свой!!
     # Получить здесь -> https://github.com/settings/tokens
