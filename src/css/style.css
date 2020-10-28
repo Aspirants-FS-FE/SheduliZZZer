@@ -764,6 +764,7 @@ input[type='date'] {
 
 .row-title {
   padding: 5px;
+  text-transform: uppercase;
   background-color: lightcyan;
 }
 
@@ -797,3 +798,5 @@ input[type='date'] {
     flex-basis: 30%;
   }
 }
+
+/* test update CSS */
