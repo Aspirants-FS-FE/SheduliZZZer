@@ -17,6 +17,7 @@ export default class AppController {
     this.sidebar = new Sidebar(sidebarElement, this.widgets);
     this.sidebar.addAction(this.updateHeader.bind(this));
     this.widgets.main.activateWidget();
+    // APIConnector.getData(main.mapGroupColumn.bind(main));
   }
 
   updateHeader(name) {
