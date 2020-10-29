@@ -1,5 +1,5 @@
 import BaseForm from './BaseForm';
 
-export default class ProfessionForm {
-  
+export default class ProfessionForm extends BaseForm {
+
 }

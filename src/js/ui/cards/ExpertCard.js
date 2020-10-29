@@ -1,4 +1,4 @@
-import BaseCard from './BaseCard'
+import BaseCard from './BaseCard';
 
 export default class ExpertCard extends BaseCard {
 

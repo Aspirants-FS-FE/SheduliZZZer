@@ -1,7 +1,7 @@
-import Form from '../ui/forms/Form';
+import BaseForm from '../ui/forms/BaseForm';
 
 const element = 'element';
-const form = new Form(element);
+const form = new BaseForm(element);
 
 test('create form', () => {
   expect(form.element).toBe(element);

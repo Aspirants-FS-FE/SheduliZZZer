@@ -1,4 +1,4 @@
-import BaseCard from './BaseCard'
+import BaseCard from './BaseCard';
 
 export default class EventCard extends BaseCard {
 
