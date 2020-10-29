@@ -8,12 +8,11 @@ export default class Sidebar {
     this.widgets = widgets;
     this.action = '';
     this.init();
-    this.initToggleButton();
-    this.initHiddenSidebar();
   }
 
   init() {
     const links = this.element.querySelectorAll('.menu-link');
+    this.initToggleButton();
     [...links].forEach((link) => {
       link.addEventListener('click', (event) => {
         const widgetClass = event.target.classList[1];
@@ -26,21 +25,15 @@ export default class Sidebar {
 
   initToggleButton() {
     const btn = document.querySelector('.header-humb');
-
     btn.addEventListener('click', () => {
       this.element.classList.toggle('sidebar-toggle');
       Sidebar.initToggleHumb();
     });
   }
 
-  initHiddenSidebar() {
-    this.element.classList.add('sidebar-toggle');
-  }
-
-  static initToggleHumb() {
+  initToggleHumb() {
     const btn = document.querySelector('.header-humb');
     const btnHumb = btn.lastElementChild;
-
     btnHumb.classList.toggle('header-humb-line');
     btnHumb.classList.toggle('header-humb-close');
   }
