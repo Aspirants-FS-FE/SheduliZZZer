@@ -763,7 +763,7 @@ input[type='date'] {
 }
 
 .row-title {
-  padding: 5%;
+  padding: 5px;
   text-transform: uppercase;
   background-color: lightcyan;
 }
@@ -773,7 +773,7 @@ input[type='date'] {
 }
 
 .lession {
-  padding: 5%;
+  padding: 5px;
   font-size: 0.5rem;
   background-color: goldenrod;
 }
@@ -785,7 +785,7 @@ input[type='date'] {
 
 /* end main widget */
 
-/* for groups-page */
+/* media for group */
 
 @media (max-width: 1400px) {
   .time-group-start {
@@ -799,4 +799,131 @@ input[type='date'] {
   }
 }
 
-/* test update CSS */
+/* end media for group */
+
+/* media animation sidebar */
+
+@media (max-width: 680px) {
+  .sidebar {
+    width: 30%;
+    padding: 25px 10px 30px 15px;
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+  }
+
+  .sidebar-toggle {
+    display: block;
+    width: 0;
+    padding: 25px 0 30px 0;
+    border: none;
+  }
+
+  .sidebar-logo {
+    margin-right: 3%;
+    width: 80%;
+  }
+
+  .menu {
+    overflow: hidden;
+  }
+  .button-sidebar {
+    width: 15%;
+  }
+}
+
+@media (min-width: 681px) {
+  .sidebar {
+    width: 30%;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+  }
+
+  .sidebar-toggle {
+    display: block;
+    width: 0;
+    padding: 25px 0 30px 0;
+    border: none;
+  }
+
+  .sidebar-logo {
+    margin-right: 3%;
+  }
+
+  .menu {
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 1025px) {
+  .sidebar {
+    width: 30%;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+  }
+
+  .sidebar-toggle {
+    display: block;
+    width: 0;
+    padding: 25px 0 30px 0;
+    border: none;
+  }
+
+  .sidebar-logo {
+    margin-right: 3%;
+  }
+  .menu {
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 1180px) {
+  .sidebar {
+    width: 20%;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+  }
+
+  .sidebar-toggle {
+    display: block;
+    width: 0;
+    padding: 25px 0 30px 0;
+    border: none;
+  }
+
+  .sidebar-logo {
+    margin-right: 3%;
+  }
+
+  .menu {
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 1401px) {
+  .sidebar {
+    width: 15%;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+  }
+
+  .sidebar-toggle {
+    display: block;
+    width: 0;
+    padding: 25px 0 30px 0;
+    border: none;
+  }
+
+  .sidebar-logo {
+    margin-right: 3%;
+  }
+  .menu {
+    overflow: hidden;
+  }
+}
+
+/* end media animation sidebar */

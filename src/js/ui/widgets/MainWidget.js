@@ -1,6 +1,6 @@
 import BaseWidget from './BaseWidget';
 // import lessions from './testdata';
-import APIConnector from '../../api/APIConnector';
+// import APIConnector from '../../api/APIConnector';
 
 export default class MainWidget extends BaseWidget {
   loadContent() {
@@ -55,6 +55,7 @@ export default class MainWidget extends BaseWidget {
     this.dateEl.addEventListener('input', (event) => {
       const day = 1000 * 60 * 60 * 24;
       const targetDate = event.target.value;
+      if (!targetDate) return null;
       const dateShift = Math.ceil(
         (new Date(targetDate) - new Date(this.today)) / day,
       ) - this.activeDay;
@@ -80,25 +81,30 @@ export default class MainWidget extends BaseWidget {
     }
     this.cells = Array.from(this.diagramEl.children);
     this.mapDateRow();
-    APIConnector.getData(this.mapGroupColumn.bind(this));
-    // this.mapGroupColumn(data);
+    const params = {
+      start_date: this.startDate.toISOString().substr(0, 10),
+      end_date: this.endDate.toISOString().substr(0, 10),
+    };
+    this.api.event.get(params, this.mapGroupColumn.bind(this));
   }
   /* eslint no-param-reassign: "error" */
 
   mapDateRow() {
-    const dateCells = this.cells.slice(1, this.colNumber + 1);
-    [...dateCells].forEach((element, i) => {
+    this.dateCells = this.cells.slice(1, this.colNumber + 1);
+    [...this.dateCells].forEach((element, i) => {
       element.classList.add('date');
-      const { dateStr, day } = this.getDate(i);
+      const { dateStr, day, date } = this.getDate(i);
       element.innerText = dateStr;
       this.mapWeekend(i, day);
+      if (i === 0) {
+        this.startDate = date;
+      } else if (i === this.colNumber - 1) {
+        this.endDate = date;
+      }
     });
   }
 
   mapGroupColumn(data) {
-    console.log(data);
-    // const lessionList = JSON.parse(lessions);
-    // const groupObj = this.getGroupObject(lessionList);
     const groupObj = this.getGroupObject(data.lessions);
     const groupCells = this.cells
       .filter((__, i) => !(i % (this.colNumber + 1)))
@@ -170,11 +176,11 @@ export default class MainWidget extends BaseWidget {
 
   getDate(offset) {
     const day = 1000 * 60 * 60 * 24;
-    const mean = Math.floor(this.colNumber / 2);
-    const date = new Date(this.today + (offset - mean + this.activeDay) * day);
+    const date = new Date(this.today + (offset + this.activeDay) * day);
     return {
       dateStr: this.getStringDate(date),
       day: date.getDay(),
+      date,
     };
   }
 
