@@ -9,6 +9,6 @@ on:
   pull_request:
     branches: [ main ]
 jobs:
-  staps:
+  steps:
     - name: hello world
-    - run: echo $GITHUB_REPOSITORY
+      run: echo $GITHUB_REPOSITORY
