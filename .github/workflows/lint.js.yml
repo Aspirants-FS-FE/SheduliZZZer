@@ -9,24 +9,6 @@ on:
   pull_request:
     branches: [ main ]
 
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version:  [14.x]
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run lint
-    - run: npm run build --if-present
-    - run: git status
-    - run: git remote -v 
-    - run: npm test
+staps:
+  - name: hello world
+    run: echo $GITHUB_REPOSITORY
