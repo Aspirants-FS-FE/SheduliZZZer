@@ -28,4 +28,5 @@ jobs:
     - run: npm run lint
     - run: npm run build --if-present
     - run: git status
+    - run: git remote -v 
     - run: npm test
