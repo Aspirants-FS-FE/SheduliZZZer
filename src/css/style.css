@@ -783,6 +783,21 @@ input[type='date'] {
   outline: solid lightblue 1px;
 }
 
+.progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  /* width: 500px;
+  height: 500px; */
+  background-image: url('../img/progress.gif');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 /* end main widget */
 
 /* media for group */
@@ -820,7 +835,7 @@ input[type='date'] {
   }
 
   .sidebar-logo {
-    margin-right: 3%;
+    margin-right: 30%;
     width: 80%;
   }
 
