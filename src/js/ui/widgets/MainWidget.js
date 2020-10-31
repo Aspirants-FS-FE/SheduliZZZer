@@ -1,6 +1,4 @@
 import BaseWidget from './BaseWidget';
-// import lessions from './testdata';
-// import APIConnector from '../../api/APIConnector';
 
 export default class MainWidget extends BaseWidget {
   loadContent() {
@@ -70,6 +68,7 @@ export default class MainWidget extends BaseWidget {
 
   createGrid() {
     this.diagramEl.innerHTML = '';
+    this.element.classList.add('progress');
     this.diagramEl.style['grid-template-columns'] = `100px repeat(${this.colNumber}, 2fr)`;
     for (let i = 0; i < (this.colNumber + 1) * this.rowNumber; i += 1) {
       const cellEl = document.createElement('div');
@@ -105,6 +104,7 @@ export default class MainWidget extends BaseWidget {
   }
 
   mapGroupColumn(data) {
+    this.element.classList.remove('progress');
     const groupObj = this.getGroupObject(data.lessions);
     const groupCells = this.cells
       .filter((__, i) => !(i % (this.colNumber + 1)))

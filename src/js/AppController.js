@@ -1,10 +1,19 @@
 import Sidebar from './ui/Sidebar';
+import Header from './ui/Header';
+import Modal from './ui/Modal';
 import CoursesWidget from './ui/widgets/CoursesWidget';
 import FaqWidget from './ui/widgets/FaqWidget';
 import GroupsWidget from './ui/widgets/GroupsWidget';
 import MainWidget from './ui/widgets/MainWidget';
 import TeachersWidget from './ui/widgets/TeachersWidget';
 import ProfessionWidget from './ui/widgets/ProfessionWidget';
+// import EventForm from './ui/forms/EventForm';
+// import ExpertForm from './ui/forms/ExpertForm';
+// import GroupForm from './ui/forms/GroupForm';
+// import LoginForm from './ui/forms/LoginForm';
+// import ProfessionForm from './ui/forms/ProfessionForm';
+// import RegisterForm from './ui/forms/RegisterForm';
+// import formTemplate from './ui/forms/formTemplate';
 import Event from './api/Event';
 import Coordinator from './api/Coordinator';
 import Course from './api/Course';
@@ -20,17 +29,27 @@ export default class AppController {
   }
 
   init() {
-    const sidebarElement = this.container.querySelector('.sidebar');
+    const headerEl = this.container.querySelector('.header-page');
+    const sidebarEl = this.container.querySelector('.sidebar');
+    const modalEl = this.container.querySelector('.overlay');
     this.initAPI();
     this.initWidgets();
-    this.sidebar = new Sidebar(sidebarElement, this.widgets);
-    this.sidebar.addAction(this.updateHeader.bind(this));
+    this.header = new Header(headerEl);
+    this.sidebar = new Sidebar(sidebarEl, this.widgets);
+    this.modal = new Modal(modalEl);
+    this.sidebar.bindOtherElement('header', this.header);
+    this.header.bindOtherElement('sidebar', this.sidebar);
+    this.header.bindOtherElement('modal', this.modal);
     this.widgets.main.activateWidget();
   }
 
   updateHeader(name) {
     this.headerTitle = this.container.querySelector('.header-title');
     this.headerTitle.textContent = name;
+  }
+
+  initControls() {
+
   }
 
   initWidgets() {

@@ -12,7 +12,8 @@
 
   <body>
     <div class="wrapper-page container">
-      <aside class="sidebar">
+      <div class="overlay"></div>
+      <aside class="sidebar sidebar-toggle">
         <header class="sidebar-header">
           <a class="sidebar-logo" href="#">
             <img src="img/logo-sidebar.svg" alt="Логотип" />
@@ -51,9 +52,9 @@
           <h1 class="header-title">Главная</h1>
           <div class="header-info">
             <div class="header-info-login">
-              <a class="header-info-link log" href="#">Авторизация</a>
+              <a class="header-info-link login" href="#">Авторизация</a>
               <span> / </span>
-              <a class="header-info-link reg" href="#">Регистрация</a>
+              <a class="header-info-link register" href="#">Регистрация</a>
             </div>
             <a class="header-meta" href="#">
               <div class="header-meta-picture">
@@ -206,7 +207,6 @@
                   value="1999-01-01"
                   id="to-date" 
                 />
-                <div class="controls roll-button">></div>
               </div>
               <div class="diagram-wrapper">
                 <div class="control-bar vertical">
@@ -511,107 +511,5 @@
       </a>
       <div class="copyright">&copy; 2020. Все права защищены</div>
     </footer>
-    <!-- Containers-form -->
-    <div class="container-form">
-      <div class="overlay" id="auth">
-        <form id="13" class="modal">
-          <header class="header-form">
-            <h1 class="form-title">Авторизация</h1>
-          </header>
-          <div class="fields">
-            <div class="form-field">
-              <label for="login">Логин:</label>
-              <input 
-                     type="text" 
-                     name="login" 
-                     id="login"
-                     />
-            </div>
-            <div class="form-field">
-              <label for="password">Пароль:</label>
-              <input type="password" name="password"
-                id="password"
-              />
-            </div>
-            <div class="form-control">
-              <button type="submit">Войти</button>
-              <button type="button">Отмена</button>
-            </div>
-          </div>
-        </form>
-      </div>
-      <!-- Login -->
-      <div class="overlay" id="reg">
-        <form id="12" class="modal">
-          <header class="header-form">
-            <h1 class="form-title">Регистрация</h1>
-          </header>
-          <div class="fields">
-            <div class="form-field">
-              <label for="surname">Фамилия:</label>
-              <input
-                type="text"
-                pattern="^[a-zA-ZА-Яа-яЁё]+$"
-                name="surname"
-                id="surname"
-                required
-              />
-            </div>
-            <div class="form-field">
-              <label for="first-name">Имя:</label>
-              <input
-                type="text"
-                pattern="^[a-zA-ZА-Яа-яЁё]+$"
-                name="first-name"
-                id="first-name"
-                required
-              />
-            </div>
-            <div class="form-field">
-              <label for="patronymic">Отчество:</label>
-              <input
-                type="text"
-                name="patronymic"
-                id="patronymic"
-                pattern="^[a-zA-ZА-Яа-яЁё]+$"
-              />
-            </div>
-            <div class="form-field">
-              <label for="email">Почта:</label>
-              <input 
-                type="email" 
-                name="email" 
-                id="email" 
-                required
-              />
-            </div>
-            <div class="form-field">
-              <label for="password-first">Пароль:</label>
-              <input
-                type="password"
-                name="password-first"
-                id="password-first"
-                required
-              />
-            </div>
-            <div class="form-field">
-              <label for="password-repeat">Повторите пароль:</label>
-              <input
-                type="password"
-                name="password-repeat"
-                id="password-repeat"
-                required
-              />
-            </div>
-            <div class="form-control">
-              <button type="submit">Зарегистрироваться</button>
-              <button type="button">Отмена</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-    <!-- Reg -->
-    <!-- End containers-form -->
   </body>
 </html>
