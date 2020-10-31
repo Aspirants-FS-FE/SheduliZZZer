@@ -32,7 +32,11 @@ jobs:
         git fetch 
         git checkout deploy
         git add -f ./dist/*
+        if [ -z "$(git status --porcelain)" ]; then
+          echo "No changes to commit"
+        else
         git mv -f ./dist/* .
         git commit -m "Build - version"
         git push -f origin deploy
+        fi
 
