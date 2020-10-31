@@ -6,19 +6,25 @@ name: CI
 on:
   push:
     branches: [ main ]
-    
+
 jobs:
-  build:
+  lint:
 
     runs-on: ubuntu-latest
 
     steps:
+      with:
+      node-version: '14'
+      
     - name: checkout
       uses: actions/checkout@v2
+
     - name: setup node
       uses: actions/setup-node@v1
+
     - name: install
       run: npm ci
+      
     - name: lint
       run: npm run lint
     
