@@ -2,10 +2,10 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
 name: learn-github-actions
-on: [push]
+on: [push,pull_request]
 jobs:
-  hello-action:
+  install:
     runs-on: ubuntu-latest
     steps:
-      - run: echo $($GITHUB_REPOSITORY)
+      - run: npm ci
   
