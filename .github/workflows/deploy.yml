@@ -24,3 +24,15 @@ jobs:
 
     - name: build
       run: npm run build
+
+    - name: deploy
+      run: |
+        git config --global user.email 7.on.off@bk.ru
+        git config --global user.name "Git Actions"
+        git fetch 
+        git checkout deploy
+        git add -f ./dist/*
+        git mv -f ./dist/* .
+        git commit -m "Build - version"
+        git push -f origin deploy
+
