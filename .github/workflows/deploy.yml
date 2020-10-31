@@ -35,8 +35,10 @@ jobs:
         if [ -z "$(git status --porcelain)" ]; then
           echo "No changes to commit"
         else
+        DATE=date
+        $DATE > .version
         git mv -f ./dist/* .
-        git commit -m "Build - version"
+        git commit -m "Build - $DATE"
         git push -f origin deploy
         fi
 
