@@ -30,7 +30,7 @@ jobs:
         git config --global user.email homutovan@live.com
         git config --global user.name "Git Actions"
         git fetch 
-        git checkout deploy
+        git checkout -b deploy
         git add -f ./dist/*
         if [ -z "$(git status --porcelain)" ]; then
           echo "No changes to commit"
