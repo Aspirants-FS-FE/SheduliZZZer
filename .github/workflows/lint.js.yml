@@ -15,8 +15,9 @@ jobs:
     steps:
     - name: checkout
     - uses: actions/checkout@v2
-    - name: install 
+    - name: setup node
     - uses: actions/setup-node@v1
+    - name: install
     - run: npm ci
     - name: lint
     - run: npm run lint
