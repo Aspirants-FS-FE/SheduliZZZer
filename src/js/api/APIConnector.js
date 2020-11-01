@@ -5,7 +5,9 @@ export default class APIConnector {
 
   getData(additionalURL, params, callback) {
     const fullURL = this.URL + additionalURL + this.encodeURL(params);
-    fetch(fullURL, { method: 'GET' })
+    fetch(fullURL, {
+      method: 'GET',
+    })
       .then((response) => response.json())
       .then((data) => callback(data))
       .catch((error) => console.log(error));

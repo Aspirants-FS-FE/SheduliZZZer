@@ -2,7 +2,7 @@ import APIConnector from './APIConnector';
 
 export default class Entity {
   constructor(additionalURL) {
-    this.api = new APIConnector('https://shedu-api.azurewebsites.net');
+    this.api = new APIConnector('https://shedulizzzer.azurewebsites.net');
     this.additionalURL = additionalURL;
   }
 
