@@ -5,15 +5,12 @@ import CoursesWidget from './ui/widgets/CoursesWidget';
 import FaqWidget from './ui/widgets/FaqWidget';
 import GroupsWidget from './ui/widgets/GroupsWidget';
 import MainWidget from './ui/widgets/MainWidget';
-import TeachersWidget from './ui/widgets/TeachersWidget';
+import ExpertsWidget from './ui/widgets/ExpertsWidget';
 import ProfessionWidget from './ui/widgets/ProfessionWidget';
-// import EventForm from './ui/forms/EventForm';
-// import ExpertForm from './ui/forms/ExpertForm';
-// import GroupForm from './ui/forms/GroupForm';
-// import LoginForm from './ui/forms/LoginForm';
-// import ProfessionForm from './ui/forms/ProfessionForm';
-// import RegisterForm from './ui/forms/RegisterForm';
-// import formTemplate from './ui/forms/formTemplate';
+import CourseCard from './ui/cards/CourseCard';
+import EventCard from './ui/cards/EventCard';
+import ExpertCard from './ui/cards/ExpertCard';
+import ProfessionCard from './ui/cards/ProfessionCard';
 import Event from './api/Event';
 import Coordinator from './api/Coordinator';
 import Course from './api/Course';
@@ -48,34 +45,36 @@ export default class AppController {
     this.headerTitle.textContent = name;
   }
 
-  initControls() {
-
-  }
-
   initWidgets() {
     this.widgets = {
       main: new MainWidget(
         this.container.querySelector('.main.widget'),
+        '',
         this.api,
       ),
       profession: new ProfessionWidget(
         this.container.querySelector('.profession.widget'),
+        ProfessionCard,
         this.api,
       ),
       courses: new CoursesWidget(
         this.container.querySelector('.courses.widget'),
+        CourseCard,
         this.api,
       ),
       groups: new GroupsWidget(
         this.container.querySelector('.groups.widget'),
+        '',
         this.api,
       ),
       faq: new FaqWidget(
         this.container.querySelector('.faq.widget'),
+        '',
         this.api,
       ),
-      teachers: new TeachersWidget(
-        this.container.querySelector('.teachers.widget'),
+      experts: new ExpertsWidget(
+        this.container.querySelector('.experts.widget'),
+        ExpertCard,
         this.api,
       ),
     };

@@ -1,12 +1,11 @@
-.teachers-container {
-  /* display: flex;
-  flex-wrap: wrap; */
-  
+.experts-container {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 20px 30px;
 }
 
-.teacher-card {
+.expert-card {
   position: relative;
   display: flex;
   width: 48%;
@@ -15,7 +14,7 @@
   font-size: 12px;
 }
 
-.teacher-btn {
+.expert-btn {
   position: absolute;
   right: 10px;
   top: 10px;
@@ -27,20 +26,20 @@
   padding: 7px 10px;
 }
 
-.teacher-btn:hover {
+.expert-btn:hover {
   background-color: var(--btn-del-bg-hover);
 }
 
-.teacher-card:nth-child(3n) {
+.expert-card:nth-child(3n) {
   margin-top: 20px;
 }
 
-.teacher-content {
+.expert-content {
   width: calc(100% - 50px);
   margin-left: 10px;
 }
 
-.teacher-photo {
+.expert-photo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,6 +76,6 @@
   border-radius: 10px;
 }
 
-.teacher-name {
+.expert-name {
   font-size: 1.3em;
 }

@@ -4,6 +4,7 @@
   padding: 25px 27px 25px 22px;
   background-color: var(--grey-bg);
   color: var(--white-text);
+  min-height: 10vh;
 }
 
 .header-humb {

@@ -44,11 +44,3 @@
 .prof-button:hover {
   background-color: var(--btn-del-bg-hover);
 }
-
-.widget {
-  display: none;
-}
-
-.active {
-  display: block;
-}

@@ -1,3 +1,4 @@
+import './css/style.css';
 import './css/header.css';
 import './css/sidebar.css';
 import './css/footer.css';
@@ -7,6 +8,5 @@ import './css/profession_widget.css';
 import './css/expert_widget.css';
 import './css/course_widget.css';
 import './css/group_widget.css';
-import './css/style.css';
 import './js/app';
 // import './img';

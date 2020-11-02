@@ -112,3 +112,13 @@ input[type='submit'] {
 .wrapper-content {
   flex: 1;
 }
+
+.widget {
+  display: none;
+  max-height: 80vh;
+  overflow-x: scroll;
+}
+
+.active {
+  display: block;
+}
