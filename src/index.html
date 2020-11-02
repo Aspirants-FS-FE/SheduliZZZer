@@ -542,41 +542,45 @@
       </a>
       <div class="copyright">&copy; 2020. Все права защищены</div>
     </footer>
+
     <!-- Containers-form -->
-    <div class="container-form">
-      <div class="overlay" id="auth-reg" ></div>
-      <div class="auth modal">
-        <form id="13" class="modal">
-          <header class="header-form">
-            <h1 class="form-title">Авторизация</h1>
-          </header>
-          <div class="fields">
-            <div class="form-field">
-              <label for="login">Логин:</label>
-              <input 
-                type="text"
-                name="login"
-                id="login"
-              />
-            </div>
-            <div class="form-field">
-              <label for="password">Пароль:</label>
-              <input 
-                type="password"
-                name="password"
-                id="password"
-              />
-            </div>
-            <div class="form-control">
-              <button type="submit">Войти</button>
-              <button type="button">Отмена</button>
-            </div>
+
+    <!--Authorization-->
+    <div class="overlay" id="modal-overlay"></div>
+       
+       <!--Authorization-->
+       <form id="" class="modal auth">
+        <header class="header-form">
+          <h1 class="form-title">Авторизация</h1>
+        </header>
+        <div class="fields">
+          <div class="form-field">
+            <label for="login">Логин:</label>
+            <input 
+              type="text"
+              name="login"
+              id="login"
+            />
           </div>
-        </form>
-      </div>
-      <!-- Login -->
-      <div class="reg modal">
-        <form id="12" class="modal">
+          <div class="form-field">
+            <label for="password">Пароль:</label>
+            <input 
+              type="password"
+              name="password"
+              id="password"
+            />
+          </div>
+          <div class="form-field form-field_right"><a href="#">Забыли пароль?</a></div>
+          <div class="form-control">
+            <button class="success" type="submit">Войти</button>
+            <button class="close" type="button">Отмена</button>
+          </div>
+        </div>
+      </form><!--End Authorization -->
+      
+      
+      <!--Registration-->
+        <form id="" class="modal reg">
           <header class="header-form">
             <h1 class="form-title">Регистрация</h1>
           </header>
@@ -638,14 +642,132 @@
               />
             </div>
             <div class="form-control">
-              <button type="submit">Зарегистрироваться</button>
-              <button type="button">Отмена</button>
+              <button class="success"  type="submit">Зарегистрироваться</button>
+              <button class="close" type="button">Отменить</button>
             </div>
           </div>
-        </form>
-      </div>
-    </div>
-    <!-- Reg -->
+        </form><!--End Registration-->
+
+        <!-- Add  lecture -->
+        <form id="" class="modal add_lecture">
+          <header class="header-form">
+            <h1 class="form-title">Добавить лекцию</h1>
+          </header>
+          <div class="fields">
+            <div class="form-field">
+              <label for="topic-title">Название лекции:</label>
+              <input 
+                type="text"
+                name="topic-title"
+                id="topic-title"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="topic-title">Описание лекции:</label>
+              <input 
+                type="text"
+                name="topic-title"
+                id="topic-title"
+              />
+            </div>
+            
+            <div class="form-control">
+              <button class="success"  type="submit">Сохранить</button> 
+              <button class="close" type="button">Отменить</button>
+            </div> 
+          </div>          
+        </form><!--End Add  lecture -->
+    
+       <!--add_course-->
+       <form id="" class="modal add_course">
+        <header class="header-form">
+          <h1 class="form-title">Добавить курс</h1>
+        </header>
+        <div class="fields">              
+          <div class="form-field">
+            <label for="name-course">Название курса</label>
+            <input 
+              type="text"
+              name="name-course"
+              id="name-course"
+            />
+          </div>
+          <div class="form-field">
+              <label for="coord-course">Координатор курса</label>
+              <input 
+                type="text"
+                name="coord-course"
+                id="coord-course"
+              />
+            </div>                         
+          <div class="form-control">
+            <button class="success"  type="submit">Сохранить</button> 
+            <button class="close" type="button">Отменить</button>
+          </div>
+        </div>
+      </form><!--end add_course-->
+
+
+        <!--add_a_lecturer-->
+      <form id="" class="modal add_a_lecturer">
+        <header class="header-form">
+          <h1 class="form-title">Добавить лектора</h1>
+        </header>
+        <div class="fields">
+          <div class="form-field">
+            <label for="surname-lecturer">Фамилия</label>
+            <input 
+              type="text"
+              name="surname-lecturer"
+              id="surname-lecturer"
+            />
+          </div>
+          <div class="form-field">
+            <label for="name-lecturer">Имя</label>
+            <input 
+              type="text"
+              name="name-lecturer"
+              id="name-lecturer"
+            />
+          </div>
+          <div class="form-field">
+            <label for="patronymic-lecturer">Отчество</label>
+            <input 
+                type="text"
+                name="patronymic-lecturer"
+                id="patronymic-lecturer"
+            />
+          </div>
+          <div class="form-control">
+            <button class="success"  type="submit">Сохранить</button> 
+            <button class="close" type="button">Закрыть</button>
+          </div>
+        </div>
+      </form><!--End add_a_lecturer-->
+      
+      <!--add_profession-->
+      <form id="" class="modal add_profession">
+        <header class="header-form">
+          <h1 class="form-title">Добавить профессию:</h1>
+        </header>
+        <div class="fields">
+          <div class="form-field">
+            <label for="name_profession">Название профессии:</label>
+            <input 
+              type="text"
+              name="name_profession"
+              id="name_profession"
+            />
+          </div>             
+          <div class="form-control">
+            <button class="success"  type="submit">Сохранить</button> 
+            <button class="close" type="button">Закрыть</button>
+          </div>
+        </div>
+      </form><!--end_add_profession-->
+    
+    
     <!-- End containers-form -->
   </body>
 </html>

@@ -6,6 +6,8 @@
   --btn-bg-hover: #343a40;
   --btn-del-bg: #ef3737;
   --btn-del-bg-hover: #862222;
+  --btn-success: #28a745;
+  --btn-close: #dc3545;
   --grey-bg: rgba(133, 131, 131, 0.89);
   --dark-bg: rgba(115, 112, 112, 0.89);
   --white-text: #e5e2e2;
@@ -686,11 +688,18 @@ input[type='submit'] {
 }
 
 .form-control button {
-  background-color: var(--dark-form);
   padding: 15px 40px;
   color: var(--white-text);
   border-radius: 5px;
   font-size: 16px;
+}
+
+.form-control .success {
+  background-color: var(--btn-success);
+}
+
+.form-control .close {
+  background-color: var(--btn-close);
 }
 
 .modal .fields {
@@ -711,8 +720,29 @@ input[type='submit'] {
   display: none;
 }
 
-#auth-reg {
+.add_lecture {
   display: none;
+}
+
+.add_course {
+  display: none;
+}
+
+.add_a_lecturer {
+  display: none;
+}
+
+.add_profession {
+  display: none;
+}
+
+
+#modal-overlay {
+  display: none;
+}
+
+.form-field_right {
+  text-align: right;
 }
 
 /* End Containers Form */
