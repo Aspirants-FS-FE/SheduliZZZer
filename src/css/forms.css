@@ -1,4 +1,4 @@
-.overlay {
+.modal {
   position: fixed;
   left: 0;
   top: 0;
@@ -9,11 +9,11 @@
   display: none;
 }
 
-.overlay-active {
+.modal-active {
   display: block;
 }
 
-.modal {
+.page-form {
   width: 550px;
   margin: auto;
   background-color: var(--white-bg);
@@ -61,7 +61,7 @@
   font-size: 16px;
 }
 
-.modal .fields {
+.page-form .fields {
   padding: 30px 25px 30px 25px;
   font-size: 19px;
 }
@@ -71,10 +71,6 @@
   margin-bottom: 0;
 }
 
-#auth {
-  display: none;
-}
-
-#reg {
-  display: none;
+.form-field_right {
+  text-align: right;
 }

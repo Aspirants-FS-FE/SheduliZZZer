@@ -1,12 +1,12 @@
 export default class BaseWidget {
-  constructor(element, card, api) {
+  constructor(element, Card, api) {
     if (!element) {
       throw new Error('Element not found');
     } else {
       this.element = element;
     }
-    if (card) {
-      this.card = new card(this.element);
+    if (Card) {
+      this.card = new Card(this.element);
     }
     this.api = api;
   }

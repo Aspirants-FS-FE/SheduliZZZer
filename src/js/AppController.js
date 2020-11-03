@@ -8,7 +8,7 @@ import MainWidget from './ui/widgets/MainWidget';
 import ExpertsWidget from './ui/widgets/ExpertsWidget';
 import ProfessionWidget from './ui/widgets/ProfessionWidget';
 import CourseCard from './ui/cards/CourseCard';
-import EventCard from './ui/cards/EventCard';
+// import EventCard from './ui/cards/EventCard';
 import ExpertCard from './ui/cards/ExpertCard';
 import ProfessionCard from './ui/cards/ProfessionCard';
 import Event from './api/Event';
@@ -28,7 +28,7 @@ export default class AppController {
   init() {
     const headerEl = this.container.querySelector('.header-page');
     const sidebarEl = this.container.querySelector('.sidebar');
-    const modalEl = this.container.querySelector('.overlay');
+    const modalEl = this.container.querySelector('.modal');
     this.initAPI();
     this.initWidgets();
     this.header = new Header(headerEl);

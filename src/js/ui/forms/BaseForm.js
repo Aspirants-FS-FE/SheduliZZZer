@@ -7,7 +7,6 @@ export default class BaseForm {
 
   registerEvents() {
     this.closeEl = this.element.querySelector('.close');
-    console.log(this.closeEl);
     this.element.onsubmit = (event) => {
       event.preventDefault();
       this.submit();

@@ -29,11 +29,11 @@ export default class Modal {
     form.close = this.close.bind(this);
     form.registerEvents();
     this.element.appendChild(form.element);
-    this.element.classList.add('overlay-active');
+    this.element.classList.add('modal-active');
   }
 
   close() {
     this.element.innerHTML = '';
-    this.element.classList.remove('overlay-active');
+    this.element.classList.remove('modal-active');
   }
 }
