@@ -83,11 +83,11 @@ export default class AppController {
 
   initAPI() {
     this.api = {
-      event: new Event('/get_data'),
+      event: new Event('/get_events'),
       coordinator: new Coordinator(''),
       course: new Course(''),
       direction: new Direction(''),
-      expert: new Expert(''),
+      expert: new Expert('/get_experts'),
       group: new Group(''),
       person: new Person(''),
       profession: new Profession(''),

@@ -105,7 +105,7 @@ export default class MainWidget extends BaseWidget {
 
   mapGroupColumn(data) {
     this.element.classList.remove('progress');
-    const groupObj = this.getGroupObject(data.lessions);
+    const groupObj = this.getGroupObject(data.events);
     const groupCells = this.cells
       .filter((__, i) => !(i % (this.colNumber + 1)))
       .splice(1);
@@ -120,13 +120,13 @@ export default class MainWidget extends BaseWidget {
     });
   }
 
-  mapLessions(rowNumber, lessionList) {
-    for (const lession of lessionList) {
+  mapLessions(rowNumber, eventsList) {
+    for (const event of eventsList) {
       const {
         date,
         lecture,
-        teacher,
-      } = lession;
+        expert,
+      } = event;
       const lowerBound = (rowNumber - 1) * (this.colNumber + 1) + 1;
       const upperBound = rowNumber * (this.colNumber + 1);
       const rowCells = this.cells.slice(lowerBound, upperBound);
@@ -136,7 +136,7 @@ export default class MainWidget extends BaseWidget {
         if (dateStr === lessionDate) {
           element.classList.add('lession');
           element.innerText = lecture;
-          element.title = teacher;
+          element.title = expert;
         }
       });
     }

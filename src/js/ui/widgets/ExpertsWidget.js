@@ -8,6 +8,11 @@ const experts = [
 
 export default class ExpertsWidget extends BaseWidget {
   loadContent() {
-    experts.forEach((expert) => this.card.createCard(expert));
+    this.api.expert.get({}, this.fillExperts.bind(this));
+  }
+
+  fillExperts(data) {
+    const expertsList = data.experts;
+    expertsList.forEach((expert) => this.card.createCard(expert));
   }
 }
