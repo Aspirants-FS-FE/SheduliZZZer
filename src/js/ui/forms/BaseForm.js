@@ -1,6 +1,7 @@
 export default class BaseForm {
   constructor(template) {
-    this.element = document.createElement('div');
+    this.element = document.createElement('form');
+    this.element.classList.add('page-form');
     this.element.innerHTML = template;
     this.close = '';
   }

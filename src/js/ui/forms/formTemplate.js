@@ -96,7 +96,7 @@ const register = `
   </form>`;
 
 const event = `
-  <form class="page-form add_lecture">
+  <form class="page-form">
     <header class="header-form">
       <h1 class="form-title">Добавить лекцию</h1>
     </header>
@@ -126,7 +126,7 @@ const event = `
   </form>`;
 
 const course = `
-  <form class="page-form add_course">
+  <form class="page-form">
     <header class="header-form">
       <h1 class="form-title">Добавить курс</h1>
     </header>
@@ -155,7 +155,7 @@ const course = `
   </form>`;
 
 const expert = `
-  <form class="page-form add_a_lecturer">
+  <form class="page-form">
     <header class="header-form">
       <h1 class="form-title">Добавить лектора</h1>
     </header>
@@ -192,7 +192,7 @@ const expert = `
   </form>`;
 
 const profession = `
-  <form class="page-form add_profession">
+  <form class="page-form">
     <header class="header-form">
       <h1 class="form-title">Добавить профессию:</h1>
     </header>

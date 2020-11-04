@@ -10,7 +10,7 @@
 }
 
 .modal-active {
-  display: block;
+  display: flex;
 }
 
 .page-form {

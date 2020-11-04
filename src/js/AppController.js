@@ -8,6 +8,7 @@ import MainWidget from './ui/widgets/MainWidget';
 import ExpertsWidget from './ui/widgets/ExpertsWidget';
 import ProfessionWidget from './ui/widgets/ProfessionWidget';
 import CourseCard from './ui/cards/CourseCard';
+import GroupCard from './ui/cards/GroupCard';
 // import EventCard from './ui/cards/EventCard';
 import ExpertCard from './ui/cards/ExpertCard';
 import ProfessionCard from './ui/cards/ProfessionCard';
@@ -64,7 +65,7 @@ export default class AppController {
       ),
       groups: new GroupsWidget(
         this.container.querySelector('.groups.widget'),
-        '',
+        GroupCard,
         this.api,
       ),
       faq: new FaqWidget(

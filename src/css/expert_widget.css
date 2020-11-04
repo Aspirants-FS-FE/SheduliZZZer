@@ -9,6 +9,7 @@
   position: relative;
   display: flex;
   width: 48%;
+  margin-top: 20px;
   padding: 40px 20px 20px;
   box-shadow: var(--shadow-item);
   font-size: 12px;
@@ -30,9 +31,9 @@
   background-color: var(--btn-del-bg-hover);
 }
 
-.expert-card:nth-child(3n) {
+/* .expert-card:nth-child(3n) {
   margin-top: 20px;
-}
+} */
 
 .expert-content {
   width: calc(100% - 50px);

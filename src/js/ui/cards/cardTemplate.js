@@ -8,7 +8,6 @@ const expert = `
   <div class="expert-content">
     <h2 class="expert-name">
       <a href="#0" class="expert-name-link link-unit">
-        Иванов Иван Иванович
       </a>
     </h2>
     <ul class="list">
@@ -73,8 +72,75 @@ const expert = `
   </div>
   <button class="expert-btn">удалить</button>`;
 
+const course = `
+  <h3>
+    <a href="#0" class="course-name-link">
+    </a>
+  </h3>
+  <div class="courses-content">
+    <ul class="list">
+      <li class="title-entity">
+        <a href="#0" class="title-entity-link">Название</a>
+        <div>
+          с:
+          <time datetime="2020-07-01" class="time">
+          01.07.2020
+          </time>
+        </div>
+        <div>
+          по:
+          <time datetime="2020-07-01" class="time">
+            01.09.2020
+          </time>
+        </div>
+      </li>
+      <li class="title-entity">
+        <a href="#0" class="title-entity-link">Название</a>
+        <div>
+          с:
+          <time datetime="2020-07-01" class="time">
+            01.07.2020
+          </time>
+        </div>
+        <div>
+          по:
+          <time datetime="2020-07-01" class="time">
+            01.09.2020
+          </time>
+        </div>
+      </li>
+    </ul>
+  </div>`;
+
+const group = `
+  <div class="group-content">
+    <ul class="list">
+      <li>
+        <ul class="list">
+          <li class="title-entity-group">
+            <a href="#0" class="link-unit-group"></a>
+            <div class="time-group-start">
+              с:
+              <time datetime="2020-07-01" class="time">
+                01.07.2020
+              </time>
+            </div>
+            <div class="time-group-end">
+              по:
+              <time datetime="2020-07-01" class="time">
+                01.09.2020
+              </time>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>`;
+
 const cardTemplates = {
+  course,
   expert,
+  group,
 };
 
 export default cardTemplates;

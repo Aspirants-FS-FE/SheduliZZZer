@@ -45,9 +45,9 @@
   .sidebar {
     width: 30%;
     padding: 25px 10px 30px 15px;
-    -webkit-transition: all linear 0.5s;
-    -moz-transition: all linear 0.5s;
-    transition: all linear 0.5s;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
   }
 
   .sidebar-toggle {
@@ -73,9 +73,9 @@
 @media (min-width: 681px) {
   .sidebar {
     width: 30%;
-    -webkit-transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    transition: all 0.5s linear;
+    -webkit-transition: width 0.5s linear;
+    -moz-transition: width 0.5s linear;
+    transition: width 0.5s linear;
   }
 
   .sidebar-toggle {
