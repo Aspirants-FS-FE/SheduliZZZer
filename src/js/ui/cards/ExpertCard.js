@@ -7,8 +7,7 @@ export default class ExpertCard extends BaseCard {
     this.cardEl = document.createElement('article');
     this.cardEl.classList.add('expert-card');
     this.cardEl.innerHTML = this.template.expert;
-    const container = this.parent.querySelector('.experts-container');
-    container.appendChild(this.cardEl);
+    this.parent.container.appendChild(this.cardEl);
     const expertPhotoEl = this.cardEl.querySelector('.expert-photo-img');
     const expertNameEl = this.cardEl.querySelector('.expert-name-link');
     expertPhotoEl.setAttribute('src', `data:image/gif;base64,${img}`);

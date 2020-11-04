@@ -88,7 +88,7 @@ export default class AppController {
       course: new Course(''),
       direction: new Direction(''),
       expert: new Expert('/get_experts'),
-      group: new Group(''),
+      group: new Group('/get_groups'),
       person: new Person(''),
       profession: new Profession(''),
     };

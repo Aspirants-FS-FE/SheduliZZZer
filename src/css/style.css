@@ -101,9 +101,9 @@ input[type='submit'] {
   list-style-type: none;
 }
 
-.container {
+/* .container {
   margin: 0 auto;
-}
+} */
 
 .wrapper-page {
   display: flex;

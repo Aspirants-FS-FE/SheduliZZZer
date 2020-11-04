@@ -6,8 +6,9 @@ export default class BaseWidget {
       this.element = element;
     }
     if (Card) {
-      this.card = new Card(this.element);
+      this.card = new Card(this);
     }
+    this.container = this.element.querySelector('.container');
     this.api = api;
   }
 
@@ -19,6 +20,7 @@ export default class BaseWidget {
   activateWidget() {
     this.deactivateAllWidgets();
     this.element.classList.add('active');
+    this.container.innerHTML = '';
     this.loadContent();
   }
 

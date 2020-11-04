@@ -12,7 +12,6 @@ export default class MainWidget extends BaseWidget {
   }
 
   initControls() {
-    this.diagramEl = this.element.querySelector('.diagram');
     this.dateEl = this.element.querySelector('input[type=date]');
     this.horizontalIncrEl = this.element.querySelector('.horizontal .incr');
     this.horizontalDecrEl = this.element.querySelector('.horizontal .decr');
@@ -67,18 +66,18 @@ export default class MainWidget extends BaseWidget {
   }
 
   createGrid() {
-    this.diagramEl.innerHTML = '';
+    this.container.innerHTML = '';
     this.element.classList.add('progress');
-    this.diagramEl.style['grid-template-columns'] = `100px repeat(${this.colNumber}, 2fr)`;
+    this.container.style['grid-template-columns'] = `100px repeat(${this.colNumber}, 2fr)`;
     for (let i = 0; i < (this.colNumber + 1) * this.rowNumber; i += 1) {
       const cellEl = document.createElement('div');
       cellEl.classList.add('cell');
       if (i && !(i % (this.colNumber + 1))) {
         cellEl.classList.add('row-title');
       }
-      this.diagramEl.appendChild(cellEl);
+      this.container.appendChild(cellEl);
     }
-    this.cells = Array.from(this.diagramEl.children);
+    this.cells = Array.from(this.container.children);
     this.mapDateRow();
     const params = {
       start_date: this.startDate.toISOString().substr(0, 10),
