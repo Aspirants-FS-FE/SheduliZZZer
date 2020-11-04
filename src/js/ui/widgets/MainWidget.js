@@ -114,18 +114,19 @@ export default class MainWidget extends BaseWidget {
     Object.keys(groupObj).forEach((key, i) => {
       if (groupCells[i]) {
         groupCells[i].innerText = key;
-        this.mapLessions(i + 2, groupObj[key]);
+        this.mapEvents(i + 2, groupObj[key]);
       }
     });
   }
 
-  mapLessions(rowNumber, eventsList) {
+  mapEvents(rowNumber, eventsList) {
     for (const event of eventsList) {
       const {
         date,
         lecture,
         expert,
       } = event;
+      console.log(event)
       const lowerBound = (rowNumber - 1) * (this.colNumber + 1) + 1;
       const upperBound = rowNumber * (this.colNumber + 1);
       const rowCells = this.cells.slice(lowerBound, upperBound);
@@ -148,7 +149,7 @@ export default class MainWidget extends BaseWidget {
         group,
         date,
         lecture,
-        teacher,
+        expert,
       } = lession;
       if (!groupObj[group]) {
         groupObj[group] = [];
@@ -156,7 +157,7 @@ export default class MainWidget extends BaseWidget {
       groupObj[group].push({
         date,
         lecture,
-        teacher,
+        expert,
       });
     }
     return groupObj;
