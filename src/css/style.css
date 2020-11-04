@@ -101,9 +101,10 @@ input[type='submit'] {
   list-style-type: none;
 }
 
-/* .container {
-  margin: 0 auto;
-} */
+.container {
+  position: relative;
+  min-height: 90vh;
+}
 
 .wrapper-page {
   display: flex;
@@ -123,4 +124,16 @@ input[type='submit'] {
 
 .active {
   display: block;
+}
+
+.progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../img/progress.gif');
+  background-repeat: no-repeat;
+  background-position: center center;
 }

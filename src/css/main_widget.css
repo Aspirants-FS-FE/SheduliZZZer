@@ -89,20 +89,3 @@ input[type='date'] {
   transform: scale(1.1);
   outline: solid lightblue 1px;
 }
-
-.progress::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  /* width: 500px;
-  height: 500px; */
-  background-image: url('../img/progress.gif');
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-/* end main widget */

@@ -24,5 +24,13 @@ export default class BaseWidget {
     this.loadContent();
   }
 
+  startProgress() {
+    this.container.classList.add('progress');
+  }
+
+  endProgress() {
+    this.container.classList.remove('progress');
+  }
+
   loadContent() {}
 }
