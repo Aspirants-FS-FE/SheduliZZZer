@@ -1,6 +1,8 @@
 .prof-point {
   box-shadow: var(--shadow-item);
   border-radius: 4px;
+  margin-left: 30px;
+  margin-right: 30px;
   padding-left: 30px;
   font-size: 24px;
   display: flex;
@@ -10,11 +12,11 @@
 }
 
 .prof-point:nth-child(1) {
-  margin-top: 54px;
+  margin-top: 50px;
 }
 
 .prof-point:nth-child(n + 2) {
-  margin-top: 31px;
+  margin-top: 30px;
 }
 
 .prof-link {

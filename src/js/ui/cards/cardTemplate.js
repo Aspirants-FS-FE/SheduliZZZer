@@ -137,10 +137,17 @@ const group = `
     </ul>
   </div>`;
 
+const profession = `
+  <div class="prof-point">
+    <a href="#0" class="prof-link"></a>
+    <button class="prof-button">удалить</button>
+  </div>`;
+
 const cardTemplates = {
   course,
   expert,
   group,
+  profession,
 };
 
 export default cardTemplates;
