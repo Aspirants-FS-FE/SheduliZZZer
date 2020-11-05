@@ -15,6 +15,7 @@ export default class MainWidget extends BaseWidget {
       start_date: this.getDate(0).dateISO,
       end_date: this.getDate(this.colNumber - 1).dateISO,
     };
+    this.startProgress();
     this.api.event.get(params, this.createGrid.bind(this));
   }
 
@@ -76,7 +77,6 @@ export default class MainWidget extends BaseWidget {
     this.rowNumber = new Set(data.events
       .map((event) => event.group)).size;
     this.container.innerHTML = '';
-    this.startProgress();
     this.container.style['grid-template-columns'] = `100px repeat(${this.colNumber}, 2fr)`;
     for (let i = 0; i < (this.colNumber + 1) * this.rowNumber; i += 1) {
       const cellEl = document.createElement('div');
