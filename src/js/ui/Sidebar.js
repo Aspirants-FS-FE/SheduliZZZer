@@ -14,12 +14,21 @@ export default class Sidebar {
     const links = this.element.querySelectorAll('.menu-link');
     [...links].forEach((link) => {
       link.addEventListener('click', (event) => {
+        this.selectItem(event.target);
         const widgetClass = event.target.classList[1];
         const widgetName = event.target.textContent;
         this.widgets[widgetClass].activateWidget();
         this.otherElements.header.updateTitle(widgetName);
       });
     });
+  }
+
+  selectItem(target) {
+    if (this.selected) {
+      this.selected.classList.remove('selected');
+    }
+    this.selected = target.closest('.menu-list-item');
+    this.selected.classList.add('selected');
   }
 
   minimize() {

@@ -39,6 +39,10 @@
   color: var(--white-text);
 }
 
+.selected {
+  padding-left: 30px;
+}
+
 /* media animation sidebar */
 
 @media (max-width: 680px) {

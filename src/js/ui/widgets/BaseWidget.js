@@ -18,6 +18,7 @@ export default class BaseWidget {
   }
 
   activateWidget() {
+    if (this.element.classList.contains('active')) return null;
     this.deactivateAllWidgets();
     this.element.classList.add('active');
     this.container.innerHTML = '';

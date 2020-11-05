@@ -4,11 +4,18 @@ export default class MainWidget extends BaseWidget {
   loadContent() {
     this.initControls();
     this.colNumber = 7;
-    this.rowNumber = 15;
     this.activeDay = 0;
     this.today = Date.now();
-    this.dateEl.value = new Date(this.today).toISOString().substr(0, 10);
-    this.createGrid();
+    this.dateEl.value = this.getDate(0).dateISO;
+    this.fillEvents();
+  }
+  
+  fillEvents() {
+    const params = {
+      start_date: this.getDate(0).dateISO,
+      end_date: this.getDate(this.colNumber - 1).dateISO,
+    };
+    this.api.event.get(params, this.createGrid.bind(this));
   }
 
   initControls() {
@@ -23,19 +30,19 @@ export default class MainWidget extends BaseWidget {
     this.verticalDecrEl = this.element.querySelector('.vertical .decr');
     this.horizontalIncrEl.addEventListener('click', () => {
       this.colNumber -= (this.colNumber - 1) ? 1 : 0;
-      this.createGrid();
+      this.this.fillEvents();
     });
     this.horizontalDecrEl.addEventListener('click', () => {
       this.colNumber += 1;
-      this.createGrid();
+      this.fillEvents();
     });
     this.verticalIncrEl.addEventListener('click', () => {
       this.rowNumber -= 1;
-      this.createGrid();
+      this.fillEvents();
     });
     this.verticalDecrEl.addEventListener('click', () => {
       this.rowNumber += 1;
-      this.createGrid();
+      this.fillEvents();
     });
     this.horizontalPrevEl.addEventListener('click', () => {
       this.rollDays(-1);
@@ -62,10 +69,12 @@ export default class MainWidget extends BaseWidget {
 
   rollDays(shifting) {
     this.activeDay += shifting;
-    this.createGrid();
+    this.fillEvents();
   }
 
-  createGrid() {
+  createGrid(data) {
+    this.rowNumber = new Set(data.events
+      .map((event) => event.group)).size;
     this.container.innerHTML = '';
     this.startProgress();
     this.container.style['grid-template-columns'] = `100px repeat(${this.colNumber}, 2fr)`;
@@ -125,16 +134,16 @@ export default class MainWidget extends BaseWidget {
         date,
         lecture,
         expert,
+        time,
       } = event;
-      console.log(event)
       const lowerBound = (rowNumber - 1) * (this.colNumber + 1) + 1;
       const upperBound = rowNumber * (this.colNumber + 1);
       const rowCells = this.cells.slice(lowerBound, upperBound);
       rowCells.forEach((element, i) => {
         const { dateStr } = this.getDate(i);
-        const lessionDate = this.getStringDate(new Date(date));
-        if (dateStr === lessionDate) {
-          element.classList.add('lession');
+        const eventDate = this.getStringDate(new Date(date));
+        if (dateStr === eventDate) {
+          element.classList.add('event');
           element.innerText = lecture;
           element.title = expert;
         }
@@ -142,15 +151,15 @@ export default class MainWidget extends BaseWidget {
     }
   }
 
-  getGroupObject(lessionList) {
+  getGroupObject(eventList) {
     const groupObj = {};
-    for (const lession of lessionList) {
+    for (const event of eventList) {
       const {
         group,
         date,
         lecture,
         expert,
-      } = lession;
+      } = event;
       if (!groupObj[group]) {
         groupObj[group] = [];
       }
@@ -179,6 +188,7 @@ export default class MainWidget extends BaseWidget {
     const date = new Date(this.today + (offset + this.activeDay) * day);
     return {
       dateStr: this.getStringDate(date),
+      dateISO: date.toISOString().substr(0, 10),
       day: date.getDay(),
       date,
     };
