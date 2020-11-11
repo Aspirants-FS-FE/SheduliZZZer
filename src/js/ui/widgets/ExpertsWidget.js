@@ -7,7 +7,7 @@ export default class ExpertsWidget extends BaseWidget {
   }
 
   fillExperts(data) {
-    this.endProgress;
+    this.endProgress();
     const expertsList = data.experts;
     expertsList.forEach((expert) => this.card.createCard(expert));
   }

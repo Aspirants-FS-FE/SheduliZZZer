@@ -1,9 +1,13 @@
 export default class BaseForm {
   constructor(template) {
-    this.element = document.createElement('form');
-    this.element.classList.add('page-form');
-    this.element.innerHTML = template;
-    this.close = '';
+    if (!template) {
+      throw new Error('Element not found');
+    } else {
+      this.element = document.createElement('form');
+      this.element.classList.add('page-form');
+      this.element.innerHTML = template;
+      this.close = '';
+    }
   }
 
   registerEvents() {
