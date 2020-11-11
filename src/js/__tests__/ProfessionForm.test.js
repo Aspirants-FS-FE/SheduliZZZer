@@ -1,8 +1,8 @@
-import BaseForm from '../ui/forms/BaseForm';
+import ProfessionForm from '../ui/forms/ProfessionForm';
 
-describe('Test class BaseForm: ', () => {
+describe('Test class ExpertForm: ', () => {
   const element = 'element';
-  const form = new BaseForm(element);
+  const form = new ProfessionForm(element);
   const expected = `<form class="page-form">${element}</form>`;
   test('should be create object', () => {
     expect(form).toBeDefined();
@@ -14,7 +14,7 @@ describe('Test class BaseForm: ', () => {
   // eslint-disable-next-line func-names
   const formNotCreated = function () {
     try {
-      return new BaseForm();
+      return new ProfessionForm();
     } catch (e) {
       throw new Error(e);
     }
