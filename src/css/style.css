@@ -10,12 +10,14 @@
   --btn-close: #dc3545;
   --grey-bg: rgba(133, 131, 131, 0.89);
   --dark-bg: rgba(115, 112, 112, 0.89);
-  --white-text: #e5e2e2;
+  --white-text: #FDFEFF;
   --grey-text: #736f6f;
   --black-text: #000000;
   --blue-text: #3B4AC9;
   --blue-bg: #2791FE;
+  --persic-bg: #FFB97E;
   --white-bg: #ffffff;
+  --border-cell: solid #444444 0.01em;
   --shadow-item: 2px 2px 7px 3px rgba(0, 0, 0, 0.09);
   --dark-border-1px: 1px solid rgba(0, 0, 0, 0.09);
   --overlay-bg: rgba(0, 0, 0, 0.9);
