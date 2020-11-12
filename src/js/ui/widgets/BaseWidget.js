@@ -8,8 +8,12 @@ export default class BaseWidget {
     if (Card) {
       this.card = new Card(this);
     }
+    if (api) {
+      this.api = api;
+    } else {
+      throw new Error('Api not found');
+    }
     this.container = this.element.querySelector('.container');
-    this.api = api;
   }
 
   deactivateAllWidgets() {
