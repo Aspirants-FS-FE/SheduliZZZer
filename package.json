@@ -24,7 +24,10 @@
   },
   "jest": {
     "collectCoverage": true,
-    "coverageReporters": ["json", "html"]
+    "coverageReporters": [
+      "json",
+      "html"
+    ]
   },
   "repository": {
     "type": "git",
@@ -86,6 +89,9 @@
     "**/*.{js,css,md}": "prettier --write --arrow-parens always",
     "**/*.js": "eslint --fix",
     "**/*.css": "stylelint --fix",
-    "**/*.html": ["prettier --write --arrow-parens always","npm run pre-commit-html-lint"]
+    "**/*.html": [
+      "prettier --write --arrow-parens always",
+      "npm run pre-commit-html-lint"
+    ]
   }
 }

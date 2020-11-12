@@ -13,6 +13,8 @@
   --white-text: #e5e2e2;
   --grey-text: #736f6f;
   --black-text: #000000;
+  --blue-text: #3B4AC9;
+  --blue-bg: #2791FE;
   --white-bg: #ffffff;
   --shadow-item: 2px 2px 7px 3px rgba(0, 0, 0, 0.09);
   --dark-border-1px: 1px solid rgba(0, 0, 0, 0.09);
@@ -119,6 +121,7 @@ input[type='submit'] {
 .widget {
   display: none;
   max-height: 80vh;
+  padding: 20px;
   overflow-x: scroll;
 }
 

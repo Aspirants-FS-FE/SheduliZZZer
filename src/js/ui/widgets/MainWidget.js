@@ -31,36 +31,36 @@ export default class MainWidget extends BaseWidget {
     this.horizontalNextFastEl = this.element.querySelector(
       '.horizontal .next-fast',
     );
-    this.verticalIncrEl = this.element.querySelector('.vertical .incr');
-    this.verticalDecrEl = this.element.querySelector('.vertical .decr');
-    this.horizontalIncrEl.addEventListener('click', () => {
-      this.colNumber -= this.colNumber - 1 ? 1 : 0;
-      this.this.fillEvents();
-    });
-    this.horizontalDecrEl.addEventListener('click', () => {
-      this.colNumber += 1;
-      this.fillEvents();
-    });
-    this.verticalIncrEl.addEventListener('click', () => {
-      this.rowNumber -= 1;
-      this.fillEvents();
-    });
-    this.verticalDecrEl.addEventListener('click', () => {
-      this.rowNumber += 1;
-      this.fillEvents();
-    });
-    this.horizontalPrevEl.addEventListener('click', () => {
-      this.rollDays(-1);
-    });
-    this.horizontalNextEl.addEventListener('click', () => {
-      this.rollDays(1);
-    });
-    this.horizontalPrevFastEl.addEventListener('click', () => {
-      this.rollDays(-this.colNumber);
-    });
-    this.horizontalNextFastEl.addEventListener('click', () => {
-      this.rollDays(this.colNumber);
-    });
+    // this.verticalIncrEl = this.element.querySelector('.vertical .incr');
+    // this.verticalDecrEl = this.element.querySelector('.vertical .decr');
+    // this.horizontalIncrEl.addEventListener('click', () => {
+    //   this.colNumber -= this.colNumber - 1 ? 1 : 0;
+    //   this.this.fillEvents();
+    // });
+    // this.horizontalDecrEl.addEventListener('click', () => {
+    //   this.colNumber += 1;
+    //   this.fillEvents();
+    // });
+    // this.verticalIncrEl.addEventListener('click', () => {
+    //   this.rowNumber -= 1;
+    //   this.fillEvents();
+    // });
+    // this.verticalDecrEl.addEventListener('click', () => {
+    //   this.rowNumber += 1;
+    //   this.fillEvents();
+    // });
+    // this.horizontalPrevEl.addEventListener('click', () => {
+    //   this.rollDays(-1);
+    // });
+    // this.horizontalNextEl.addEventListener('click', () => {
+    //   this.rollDays(1);
+    // });
+    // this.horizontalPrevFastEl.addEventListener('click', () => {
+    //   this.rollDays(-this.colNumber);
+    // });
+    // this.horizontalNextFastEl.addEventListener('click', () => {
+    //   this.rollDays(this.colNumber);
+    // });
     this.dateEl.addEventListener('input', (event) => {
       const day = 1000 * 60 * 60 * 24;
       const targetDate = event.target.value;
