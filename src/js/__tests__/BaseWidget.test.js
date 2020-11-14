@@ -18,9 +18,9 @@ describe('Test class BaseWidget: ', () => {
   const api = {
     test: 'test',
   };
-  const form = new BaseWidget(elWidget1, '', api);
+  const widget1 = new BaseWidget(elWidget1, '', api);
   test('should find an element with a selector ".container"', () => {
-    expect(form.container.classList.contains('container')).toBeTruthy();
+    expect(widget1.container.classList.contains('container')).toBeTruthy();
   });
   function formNotCreated() {
     try {
@@ -48,34 +48,34 @@ describe('Test class BaseWidget: ', () => {
     class Test {
       test() {}
     }
-    const form2 = new BaseWidget(elWidget1, Test, api);
+    const widget2 = new BaseWidget(elWidget1, Test, api);
     // eslint-disable-next-line no-prototype-builtins
-    expect(form2.hasOwnProperty('card')).toBeTruthy();
+    expect(widget2.hasOwnProperty('card')).toBeTruthy();
   });
   test('api must be an object', () => {
     expect(
-      Object.prototype.toString.call(form.api) === '[object Object]',
+      Object.prototype.toString.call(widget1.api) === '[object Object]',
     ).toBeTruthy();
   });
   test('the method should remove the class "active"', () => {
-    form.deactivateAllWidgets();
+    widget1.deactivateAllWidgets();
     const deletedItems = document.querySelectorAll('.active');
     expect(deletedItems.length).toBe(0);
   });
   test('should set the active class to the selected element', () => {
-    form.activateWidget();
-    expect(form.element.classList.contains('active')).toBeTruthy();
+    widget1.activateWidget();
+    expect(widget1.element.classList.contains('active')).toBeTruthy();
   });
   test('must return null if the element contains an active class', () => {
-    form.element.classList.add('active');
-    expect(form.activateWidget()).toBeNull();
+    widget1.element.classList.add('active');
+    expect(widget1.activateWidget()).toBeNull();
   });
   test('should add class progress', () => {
-    form.startProgress();
-    expect(form.container.classList.contains('progress')).toBeTruthy();
+    widget1.startProgress();
+    expect(widget1.container.classList.contains('progress')).toBeTruthy();
   });
   test('should remove class progress', () => {
-    form.endProgress();
-    expect(form.container.classList.contains('progress')).not.toBeTruthy();
+    widget1.endProgress();
+    expect(widget1.container.classList.contains('progress')).not.toBeTruthy();
   });
 });
