@@ -35,7 +35,7 @@ export default class MainWidget extends BaseWidget {
     this.verticalDecrEl = this.element.querySelector('.vertical .decr');
     this.horizontalIncrEl.addEventListener('click', () => {
       this.colNumber -= this.colNumber - 1 ? 1 : 0;
-      this.this.fillEvents();
+      this.fillEvents();
     });
     this.horizontalDecrEl.addEventListener('click', () => {
       this.colNumber += 1;
