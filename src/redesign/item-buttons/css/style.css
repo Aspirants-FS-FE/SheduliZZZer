@@ -31,6 +31,8 @@
   --bg-btn-close: #dc3545;
   --bg-menu: #2791FE;
   /* фон сайдбара и шапки таблицы */
+  --bg-footer: #F2F2F2;
+  /* фон футера */
   --bg-sidebar-item-hover: #ffffff;
   /* цвет фона элемента меню в сайдбаре при наведении */
   --bg-primary: #ffffff;
