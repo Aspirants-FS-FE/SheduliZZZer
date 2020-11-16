@@ -38,8 +38,12 @@ describe('Test class MainWidget', () => {
       },
     },
   };
-  const widget = new MainWidget(container, '', api);
-  widget.loadContent();
+  let widget = new MainWidget(container, '', api);
+  beforeEach(() => {
+    widget = new MainWidget(container, '', api);
+    widget.loadContent();
+  });
+
   test('colNumber should be 7', () => {
     expect(widget.colNumber).toBe(7);
   });
@@ -185,5 +189,90 @@ describe('Test class MainWidget', () => {
     widget.rollDays = jest.fn((x) => x);
     expect(widget.rollDays('test')).toBe('test');
     expect(widget.rollDays).toHaveBeenCalledTimes(1);
+  });
+  test('when you enter Date, the rollDays() should be called', () => {
+    const e = new Event('input');
+    widget.dateEl.dispatchEvent(e);
+    widget.rollDays = jest.fn((x) => x);
+    expect(widget.rollDays('test')).toBe('test');
+    expect(widget.rollDays).toHaveBeenCalledTimes(1);
+  });
+  test('if the date is missing it will return null', () => {
+    const e = new Event('input');
+    widget.dateEl.value = null;
+    widget.dateEl.dispatchEvent(e);
+    expect(widget.dateEl.value).toBe('');
+  });
+  test('indirect check of the handler logic', () => {
+    widget.activeDay = 0;
+    const e = new Event('input');
+    widget.dateEl.value = new Date(+new Date() + 86400000)
+      .toISOString()
+      .substring(0, 10);
+    widget.dateEl.dispatchEvent(e);
+    expect(widget.activeDay).toBe(1);
+  });
+  test('method rollDays must be increase activeDay', () => {
+    widget.activeDay = 0;
+    widget.rollDays(1);
+    expect(widget.activeDay).toBe(1);
+  });
+  test('method rollDays must be called fillEvents', () => {
+    widget.fillEvents = jest.fn();
+    widget.rollDays();
+    expect(widget.fillEvents).toBeCalled();
+  });
+  test('check the number of lines in the rowNumber', () => {
+    const testData = {
+      events: [
+        {
+          group: 'an_13_and',
+        },
+        {
+          group: 'an_13_and',
+        },
+        {
+          group: 'virt-2',
+        },
+      ],
+    };
+    widget.createGrid(testData);
+    expect(widget.rowNumber).toBe(2);
+  });
+  test('check the number of created cells', () => {
+    const testData = {
+      events: [
+        {
+          group: 'an_13_and',
+        },
+        {
+          group: 'an_13_and',
+        },
+        {
+          group: 'virt-2',
+        },
+      ],
+    };
+    widget.createGrid(testData);
+    expect(widget.cells.length).toBe(16);
+  });
+  test('check for class presence "date"', () => {
+    const testData = {
+      events: [
+        {
+          group: 'an_13_and',
+        },
+        {
+          group: 'an_13_and',
+        },
+        {
+          group: 'virt-2',
+        },
+      ],
+    };
+    widget.createGrid(testData);
+    [...widget.dateCells].forEach((item) => {
+      expect([...item.classList]).toContain('date');
+    });
   });
 });
