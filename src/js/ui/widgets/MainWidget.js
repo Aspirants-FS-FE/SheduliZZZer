@@ -85,6 +85,10 @@ export default class MainWidget extends BaseWidget {
     for (let i = 0; i < (this.colNumber + 1) * this.rowNumber; i += 1) {
       const cellEl = document.createElement('div');
       cellEl.classList.add('cell');
+      if (i === 0) {
+        cellEl.classList.add('date');
+        cellEl.textContent = 'Группы';
+      }
       if (i && !(i % (this.colNumber + 1))) {
         cellEl.classList.add('row-title');
       }
