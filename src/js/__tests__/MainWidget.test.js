@@ -275,4 +275,75 @@ describe('Test class MainWidget', () => {
       expect([...item.classList]).toContain('date');
     });
   });
+  test('check method mapDateRow and startDate', () => {
+    const testData = {
+      events: [
+        {
+          group: 'an_13_and',
+        },
+        {
+          group: 'an_13_and',
+        },
+        {
+          group: 'virt-2',
+        },
+      ],
+    };
+    widget.createGrid(testData);
+    const testDate = widget.startDate.toISOString().substring(0, 10);
+    const currentDate = new Date().toISOString().substring(0, 10);
+    expect(testDate).toBe(currentDate);
+  });
+  test('check method mapDateRow and endDate', () => {
+    const testData = {
+      events: [
+        {
+          group: 'an_13_and',
+        },
+        {
+          group: 'an_13_and',
+        },
+        {
+          group: 'virt-2',
+        },
+      ],
+    };
+    widget.createGrid(testData);
+    const day = 86400000;
+    const testDate = widget.endDate.toISOString().substring(0, 10);
+    const testEndDate = new Date(+new Date() + 6 * day)
+      .toISOString()
+      .substring(0, 10);
+    expect(testDate).toBe(testEndDate);
+  });
+  test('check method getGroupObject', () => {
+    const testData = {
+      events: [
+        {
+          id: '3d6788b0-03c8-11eb-b6ee-1dfad808df3d',
+          group: 'an_13_and',
+          expert: 'Анатолий Спитченко',
+          lecture: 'Fragments, FragmentManager',
+          date: '2020-11-16',
+          time: '20:00',
+        },
+      ],
+    };
+    const testObject = widget.getGroupObject(testData.events);
+    const expectObject = {
+      an_13_and: [
+        {
+          date: '2020-11-16',
+          expert: 'Анатолий Спитченко',
+          lecture: 'Fragments, FragmentManager',
+        },
+      ],
+    };
+    expect(testObject).toEqual(expectObject);
+  });
+  test('check method getStringDate', () => {
+    const testDate = new Date('2020-11-11');
+    const expectDate = widget.getStringDate(testDate);
+    expect(expectDate).toBe('11.11.2020');
+  });
 });
