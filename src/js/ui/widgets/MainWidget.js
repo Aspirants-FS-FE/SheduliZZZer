@@ -8,6 +8,7 @@ export default class MainWidget extends BaseWidget {
     this.today = Date.now();
     this.dateEl.value = this.getDate(0).dateISO;
     this.fillEvents();
+    this.outputUpdate();
   }
 
   fillEvents() {
@@ -204,6 +205,14 @@ export default class MainWidget extends BaseWidget {
       year: 'numeric',
       month: 'numeric',
       day: 'numeric',
+    });
+  }
+
+  outputUpdate() {
+    const input = document.getElementById('range_scroll');
+    input.addEventListener('input', () => {
+      const output = document.getElementById('volume');
+      output.value = `${input.value}%`;
     });
   }
 }
