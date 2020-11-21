@@ -1,0 +1,169 @@
+/*
+ --grey-bg: rgba(133, 131, 131, 0.89);
+ --dark-bg: rgba(115, 112, 112, 0.89);
+ --white-text: #ffffff; /*#e5e2e2;
+ --grey-text: #736f6f;
+ --black-text: #000000;
+
+ --dark-border-1px: 1px solid rgba(0, 0, 0, 0.09);
+ --overlay-bg: rgba(0, 0, 0, 0.9);
+ --dark-form: #444242;
+}
+*/
+
+:root {
+  --color-link: #25ade7;
+  --link-hover: #0f3f53;
+  --link-active: #0f3f53;
+
+  --color-btn: #e5e2e2;   /* цвет текста кнопки */
+
+  --bg-btn-hover: #343a40;
+
+  --bg-btn: #6c757d;      /* цвет фона кнопки */
+  --bg-del-btn: #EB5757;  /* цвет кнопки "удалить" */
+  --bg-del-btn-hover: #862222;
+
+  --bg-edit-btn: #2791FE; /* цвет кнопки редактировать */
+  --bg-add-btn: #ffffff;  /* пока ее нет, цвет для примера. Добавить */
+
+  --bg-btn-success: #28a745;
+  --bg-btn-close: #dc3545;
+
+  --bg-menu: #2791FE; /* фон сайдбара и шапки таблицы */
+
+  --bg-sidebar-item-hover: #ffffff; /* цвет фона элемента меню в сайдбаре при наведении */
+  --bg-primary: #ffffff;  /* основной фон страницы: шапка, футер, нижняя часть сайдбара */
+  --text-primary: #FF7B33; /* текст страницы, кроме сайдбара и таблицы */
+  --text-menu: #ffffff; /* цвет текста сайдбара */
+
+  --text-menu-hover: #2791FE;
+
+  --bg-menu-line: #ffffff; /* цвет текста линий в сайдбаре */
+  --text-cells-table: #444444; /* цвет текста в первой ячейке таблицы main */
+  --bg-filter: #828282; /* цвет фильтра */
+  --text-widget-prof: #2791FE; /* цвет текста виджета профессий, если понадобится, то и других виджетов. */
+  --text-caption-table-hover: #3B4AC9; /* цвет текста названия таблицы - "расписание" */
+  --text-choice-calendar-hover: #3B4AC9; /*  цвет текста у выбора даты календаря */
+  --bg-cell-event: #FFB97E; /* фон заполненной ячейки контента таблицы */
+  --bg-border-table: #444444; /* рамка таблицы */
+  --bg-title-cell: #e0ffff;  /* фон ячейки с названиями курсов (первая) */
+  --bg-cell-date: #fafad2;   /* фон ячейки с датой */
+  --bg-control-bar: #7fffd4; /* фон контрол бара */
+  --shadow-item: 2px 2px 7px 3px rgba(0, 0, 0, 0.09); /* тени у карточек виджетов */
+
+  --border-control-footer: #3B4AC9;
+  --bg-background-mage: #ffffff;
+  --fill-icon: #ffffff;
+  --fill-icon-hover: #2791FE;
+  --bg-footer: #F2F2F2;  /* фон футера */
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.list {
+  padding-left: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+  color: var(--color-link);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, p {
+  margin-top: 0;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.btn {
+  color: var(--color-btn);
+  background-color: var(--bg-btn);
+}
+
+.btn:hover {
+  background-color: var(--bg-btn-hover);
+}
+
+.btn-item {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 15px;
+  padding: 5px;
+}
+
+input[type='text'], input[type='tel'], input[type='email'], input[type='button'], input[type='submit'] {
+  -webkit-appearance: none;
+  border-radius: 0;
+  border: none;
+}
+
+.item {
+  box-shadow: var(--shadow-item);
+}
+
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+}
+
+.wrapper-page {
+  height: 100%;
+}
+
+.wrapper-content {
+  flex: 1;
+}
+
+.main {
+  height: calc(100% - 78px - 79px); /* 100% - высота хедера и футера, после внесения изменений измерить высоту шапки и хедера в инспекторе и вычесть новые значения */
+}
+
+
+
+
+
+
+
+
+
+
+
+
