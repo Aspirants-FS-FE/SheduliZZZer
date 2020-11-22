@@ -39,9 +39,6 @@ describe('Test class Header', () => {
   test('should be create object', () => {
     expect(header).toBeDefined();
   });
-  test('should be create object', () => {
-    expect(header).toBeDefined();
-  });
   test('initialization is correct', () => {
     const expectTitle = '<h1 class="header-title">Главная</h1>';
     const expectLogin = '<a class="header-info-link login" href="#">Авторизация</a>';
