@@ -23,7 +23,11 @@ import Profession from './api/Profession';
 
 export default class AppController {
   constructor(container) {
-    this.container = container;
+    if (!container) {
+      throw new Error('Element not found');
+    } else {
+      this.container = container;
+    }
   }
 
   init() {
