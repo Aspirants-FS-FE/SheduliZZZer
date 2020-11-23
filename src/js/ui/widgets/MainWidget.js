@@ -212,7 +212,9 @@ export default class MainWidget extends BaseWidget {
     const input = document.getElementById('range_scroll');
     input.addEventListener('input', () => {
       const output = document.getElementById('volume');
-      output.value = `${input.value}%`;
+      output.value = input.value;
+      this.colNumber = +input.value;
+      this.fillEvents();
     });
   }
 }
