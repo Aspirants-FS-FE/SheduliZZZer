@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Tomorrow";
+  src: url(../../../fonts/Tomorrow/Tomorrow-SemiBold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+.footer {
+    background-color: var(--bg-footer);
+    display: flex;
+    align-items: center;
+    padding: 30px 61px;
+    color: #FF7B33;
+  }
+  
+  .footer__logo {
+    display: block;
+    width: 144px;
+    font-family: Tomorrow;
+    color: #FF7B33;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1em;
+  }
+  
+  .footer__copy {
+    flex: 1;
+    text-align: center;
+  }
