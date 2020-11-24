@@ -1,0 +1,221 @@
+.sidebar {
+  flex-direction: column;
+  width: 110px;
+}
+
+.sidebar__header {
+  padding: 10px;
+  background-color: var(--bg-menu);
+}
+
+.logo-link {
+  display: block;
+  width: 90px;
+  height: 60px;
+  background-image: url("../svg/logo.svg");
+  background-color: var(--bg-menu);
+  background-size: cover;
+  background-position: center;
+}
+
+.sidebar-menu {
+  flex: 1;
+  background-color: var(--bg-menu);
+}
+
+.sidebar-menu__list-item{
+  text-align: center;
+  padding-top: 8px;
+}
+
+.sidebar-menu__list-item:hover {
+  background-color: #ffffff;
+  color: var(--text-menu-hover);
+}
+
+.sidebar-menu__list-item:first-child {
+  padding-top: 0;
+}
+
+.sidebar-menu__list-item:first-child::before {
+  margin-bottom: 7px;
+}
+
+.sidebar-menu__list-item:first-child::before, .sidebar-menu__list-item::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 96px;
+  background-color: var(--bg-menu-line);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.sidebar-menu__list-item::after {
+  margin-top: 8px;
+}
+
+.sidebar-menu__item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-menu);
+}
+
+.sidebar-menu__item-icon {
+  margin-bottom: 5px;
+  width: auto;
+  height: 50px;
+  background-color: transparent;
+}
+
+/*
+.sidebar-menu__item-main {
+  background-image: url("../svg/icon-main.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 50px;
+}
+
+.sidebar-menu__item-prof {
+  background-image: url("../svg/icon-prof.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 50px;
+}
+
+
+.sidebar-menu__item-courses {
+  background-image: url(#);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 50px;
+}
+
+.sidebar-menu__item-groups {
+  background-image: url(#);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px auto;
+}
+
+.sidebar-menu__item-experts {
+  width: 60px;
+  background-image: url(#);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 50px;
+}
+
+*/
+
+.icon-main {
+  fill: var(--fill-icon);
+}
+
+.sidebar-menu__item-container:hover .icon-main {
+  fill: var(--fill-icon-hover);
+}
+
+.icon-prof {
+  stroke: var(--fill-icon);
+}
+
+.sidebar-menu__item-container:hover .icon-prof {
+  stroke: var(--fill-icon-hover);
+}
+
+.icon-courses {
+  stroke: var(--fill-icon);
+  fill: var(--fill-icon);
+}
+
+.sidebar-menu__item-container:hover .icon-courses {
+  fill: var(--fill-icon-hover);
+  stroke: var(--fill-icon-hover);
+}
+
+.icon-groups {
+  fill: var(--fill-icon);
+}
+
+.sidebar-menu__item-container:hover .icon-groups {
+  fill: var(--fill-icon-hover);
+}
+
+.icon-teacher {
+  fill: var(--fill-icon);
+}
+
+.sidebar-menu__item-container:hover .icon-teacher {
+  fill: var(--fill-icon-hover);
+}
+
+.sidebar-menu__item-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 0.875;
+  color: inherit;
+}
+
+.sidebar-control {
+  position: relative;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 93px;
+  background-color: var(--bg-primary);
+}
+
+.sidebar-control__btn {
+  font-size: 0;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  padding: 0;
+}
+
+.sidebar-control__btn:last-child {
+  margin-bottom: 0;
+}
+
+
+/*
+.sidebar-control__search {
+  width: 30px;
+  height: 30px;
+  background-image: url(#);
+  background-size: auto 30px;
+  background-position: center center;
+}
+
+.sidebar-control__chat {
+  background-image: url("../svg/icon-chat.svg");
+  background-size: auto auto;
+}
+
+
+.sidebar-control__add {
+  background-image: url(#);
+  background-repeat: no-repeat;
+  background-size: auto 50px;
+  background-position: center center;
+}
+
+ */
+
+.sidebar-control::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: var(--border-control-footer);
+  display: block;
+}
