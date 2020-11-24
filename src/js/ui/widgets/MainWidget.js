@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import BaseWidget from './BaseWidget';
 
 export default class MainWidget extends BaseWidget {
@@ -7,8 +8,10 @@ export default class MainWidget extends BaseWidget {
     this.activeDay = 0;
     this.today = Date.now();
     this.dateEl.value = this.getDate(0).dateISO;
+    this.select = document.querySelector('.select');
     this.fillEvents();
     this.outputUpdate();
+    this.changeSelect();
   }
 
   fillEvents() {
@@ -87,8 +90,8 @@ export default class MainWidget extends BaseWidget {
       const cellEl = document.createElement('div');
       cellEl.classList.add('cell');
       if (i === 0) {
+        this.select.value === 'group' ? cellEl.textContent = 'Группы' : cellEl.textContent = 'Эксперты';
         cellEl.classList.add('date');
-        cellEl.textContent = 'Группы';
       }
       if (i && !(i % (this.colNumber + 1))) {
         cellEl.classList.add('row-title');
@@ -139,23 +142,44 @@ export default class MainWidget extends BaseWidget {
   }
 
   mapEvents(rowNumber, eventsList) {
-    for (const event of eventsList) {
-      const {
-        date, lecture, expert, time,
-      } = event;
-      const lowerBound = (rowNumber - 1) * (this.colNumber + 1) + 1;
-      const upperBound = rowNumber * (this.colNumber + 1);
-      const rowCells = this.cells.slice(lowerBound, upperBound);
-      rowCells.forEach((element, i) => {
-        const { dateStr } = this.getDate(i);
-        const eventDate = this.getStringDate(new Date(date));
-        if (dateStr === eventDate) {
-          element.classList.add('event');
-          element.innerText = lecture;
-          element.title = expert;
-          element.time = time;
-        }
-      });
+    if (this.select.value === 'experts') {
+      for (const event of eventsList) {
+        const {
+          date, lecture, group, time,
+        } = event;
+        const lowerBound = (rowNumber - 1) * (this.colNumber + 1) + 1;
+        const upperBound = rowNumber * (this.colNumber + 1);
+        const rowCells = this.cells.slice(lowerBound, upperBound);
+        rowCells.forEach((element, i) => {
+          const { dateStr } = this.getDate(i);
+          const eventDate = this.getStringDate(new Date(date));
+          if (dateStr === eventDate) {
+            element.classList.add('event');
+            element.innerText = lecture;
+            element.title = group;
+            element.time = time;
+          }
+        });
+      }
+    } else {
+      for (const event of eventsList) {
+        const {
+          date, lecture, expert, time,
+        } = event;
+        const lowerBound = (rowNumber - 1) * (this.colNumber + 1) + 1;
+        const upperBound = rowNumber * (this.colNumber + 1);
+        const rowCells = this.cells.slice(lowerBound, upperBound);
+        rowCells.forEach((element, i) => {
+          const { dateStr } = this.getDate(i);
+          const eventDate = this.getStringDate(new Date(date));
+          if (dateStr === eventDate) {
+            element.classList.add('event');
+            element.innerText = lecture;
+            element.title = expert;
+            element.time = time;
+          }
+        });
+      }
     }
   }
 
@@ -165,14 +189,25 @@ export default class MainWidget extends BaseWidget {
       const {
         group, date, lecture, expert,
       } = event;
-      if (!groupObj[group]) {
-        groupObj[group] = [];
+      if (this.select.value === 'experts') {
+        if (!groupObj[expert]) {
+          groupObj[expert] = [];
+        }
+        groupObj[expert].push({
+          date,
+          lecture,
+          group,
+        });
+      } else {
+        if (!groupObj[group]) {
+          groupObj[group] = [];
+        }
+        groupObj[group].push({
+          date,
+          lecture,
+          expert,
+        });
       }
-      groupObj[group].push({
-        date,
-        lecture,
-        expert,
-      });
     }
     return groupObj;
   }
@@ -214,6 +249,13 @@ export default class MainWidget extends BaseWidget {
       const output = document.getElementById('volume');
       output.value = input.value;
       this.colNumber = +input.value;
+      this.fillEvents();
+    });
+  }
+
+  changeSelect() {
+    this.select.addEventListener('change', () => {
+      console.log(this.select.value);
       this.fillEvents();
     });
   }

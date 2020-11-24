@@ -19,6 +19,10 @@
 
 .control-bar__title {
   margin-bottom: 0;
+  margin-right: auto;
+}
+.select {
+  margin-right: auto;
 }
 
 .control {
@@ -250,5 +254,5 @@ input[type='range']:focus::-ms-fill-upper {
 
 #volume {
   position: absolute;
-  bottom: 30px;
+  bottom: 37px;
 }
