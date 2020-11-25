@@ -8,7 +8,9 @@ describe('Test class Entity', () => {
   });
   test('', () => {
     const entity = new Entity('/get_groups');
-    entity.get = jest.fn().mockImplementation((data) => 42 + data);
-    expect(entity.get(1)).toBe(43);
+    const testData = { test: 'test' };
+    const testFunction = jest.fn((data) => data);
+    entity.get = testFunction(testData);
+    expect(entity.get).toEqual({ test: 'test' });
   });
 });
