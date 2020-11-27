@@ -3,6 +3,9 @@ import APIConnector from '../api/APIConnector';
 jest.mock('../api/APIConnector');
 
 describe('test class APIConnector', () => {
+  beforeEach(() => {
+    APIConnector.mockClear();
+  });
   test('method "encodeURL" must be return correctly string', () => {
     const testObj = {
       one: 'first',
