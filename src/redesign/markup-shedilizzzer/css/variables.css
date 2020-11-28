@@ -1,0 +1,18 @@
+:root {
+  --primary-text:#FF7B33;
+  --text-menu: #FFFFFF;
+  --link-hover:#86401b;
+
+  --shadow-header: 1px 2px 2px rgba(0, 0, 0, 0.25);
+  --shadow-item: 2px 2px 7px 3px rgba(0, 0, 0, 0.1);
+
+  --bg-footer: #F2F2F2;
+  --bg-sidebar-control: #F2F2F2;
+  --bg-sidebar: #2791FE;
+
+  --border-menu: 2px solid #FFFFFF;
+  --border-menu-hover: 2px solid #2791FE;
+
+  --fill-icon: #ffffff;
+  --fill-icon-hover: #2791FE;
+}
