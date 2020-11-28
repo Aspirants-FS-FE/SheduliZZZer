@@ -1,0 +1,61 @@
+.header-page {
+  display: flex;
+  align-items: center;
+  padding: 26px 50px 26px 50px;  
+  box-shadow: var(--shadow-header);
+}
+
+.header a, .header span {
+  color: #FF7B33; /* цвет поменять на var - у меня почему-то он не встаёт */
+}
+
+.main-title {
+  margin-bottom: 0;
+  flex: 1;
+  font-size: 24px;
+  color: var(--primary-text);
+}
+
+.header__hamb {
+  padding: 0;
+  margin-right: 70px;
+  background: none;
+}
+
+.header__hamb_line {
+  display: flex;
+  flex-direction: column;
+  width: 45px;
+  height: 1px;
+  margin-top: 7px;
+  border: 2px solid var(--primary-text);  /* цвет поменять на var - у меня почему-то он не встаёт */
+}
+
+.header__hamb_line:first-child {
+  margin-top: 0;
+}
+
+.header__authorization-avatar {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.header__authorization-data {
+  display: flex;
+  align-items: center;
+}
+
+.header__authorization-avatar img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header__authorization-data {
+  display: none;
+}

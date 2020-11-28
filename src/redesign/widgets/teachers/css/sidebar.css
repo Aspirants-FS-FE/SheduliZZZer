@@ -1,0 +1,133 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 110px;
+  background-color: var(--bg-sidebar);
+  box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.25);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border-bottom: var(--border-menu);
+}
+
+.sidebar a{
+  color: var(--text-menu);
+}
+
+.main-menu__item {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  border-bottom: var(--border-menu);
+  transition: background-color 0.3s ease;
+}
+
+.main-menu__item:hover {  
+  border-bottom: var(--border-menu-hover);
+  background-color: #FFFFFF;
+}
+
+.main-menu__item .main-menu__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-menu__item:hover .main-menu__title{
+  color: #2791FE;
+}
+
+.main-menu__title {
+  margin-bottom: 0;
+  transition: color 0.3s ease;
+}
+
+.sidebar-control {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var( --bg-sidebar-control);
+  padding: 20px 0;
+}
+
+.sidebar-control__item {
+  margin-bottom: 20px;
+}
+
+.sidebar-control__btn {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.sidebar-control__btn_chat {
+  background-image: url(../svg/icon-chat.svg);
+  width: 30px;
+  height: 30px;
+}
+
+.sidebar-control__btn_search {
+  background-image: url(../svg/icon-search.svg);
+  width: 30px;
+  height: 30px;
+}
+
+.sidebar-control__btn_add {
+  background-image: url(../svg/icon-add.svg);
+  width: 50px;
+  height: 50px;
+}
+
+/* svg style */
+
+.icon {
+  margin-bottom: 5px;
+}
+
+.icon-main {
+  fill: var(--fill-icon);
+}
+
+.main-menu__item:hover  .icon-main{
+  fill: var(--fill-icon-hover);
+}
+
+.icon-prof {
+  stroke: var(--fill-icon);
+}
+
+.main-menu__item:hover .icon-prof {
+  stroke: var(--fill-icon-hover);
+}
+
+.icon-courses {
+  stroke: var(--fill-icon);
+  fill: var(--fill-icon);
+}
+
+.main-menu__item:hover .icon-courses {
+  fill: var(--fill-icon-hover);
+  stroke: var(--fill-icon-hover);
+}
+
+.icon-groups {
+  fill: var(--fill-icon);
+}
+
+.main-menu__item:hover .icon-groups {
+  fill: var(--fill-icon-hover);
+}
+
+.icon-teacher {
+  fill: var(--fill-icon);
+}
+
+.main-menu__item:hover .icon-teacher {
+  fill: var(--fill-icon-hover);
+}
+/* svg style end */
+
