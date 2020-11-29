@@ -26,9 +26,9 @@
   display: flex;
   flex-direction: column;
   width: 45px;
-  height: 1px;
+  height: 4px;
   margin-top: 7px;
-  border: 2px solid var(--primary-text);  /* цвет поменять на var - у меня почему-то он не встаёт */
+  background-color: var(--primary-text);  /* цвет поменять на var - у меня почему-то он не встаёт */
 }
 
 .header__hamb_line:first-child {
