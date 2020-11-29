@@ -178,6 +178,13 @@
   justify-content: space-between;
   margin-top: 4px;
   margin-bottom: 4px;
+  border-bottom: 1px solid #449df738;
+  padding-bottom: 4px;
+}
+
+.title-entity:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .col-2 {
