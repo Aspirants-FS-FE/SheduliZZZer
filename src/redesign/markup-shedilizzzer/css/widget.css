@@ -151,11 +151,16 @@
   height: 0;
   font-size: 14px;
   overflow: hidden;
-  transition: height 0.3s ease;
+  transition: all 1s ease;
+  opacity:0;
 }
 
 .open_accordion .item__content {
- height: auto;
+  visibility: visible;
+  height:auto;
+  overflow:none;
+  opacity:1;
+  padding:10px;
 }
 
 .sub-list {
