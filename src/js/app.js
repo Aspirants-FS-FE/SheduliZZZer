@@ -5,3 +5,5 @@ import AppController from './AppController';
 const container = document.querySelector('.wrapper-page.container');
 const controller = new AppController(container);
 controller.init();
+
+export default controller;
