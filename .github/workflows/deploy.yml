@@ -31,6 +31,7 @@ jobs:
         git config --global user.name "Git Actions"
         git fetch 
         git checkout -b deploy
+        git rm -rf --cached .
         git add -f ./dist/*
         if [ -z "$(git status --porcelain)" ]; then
           echo "No changes to commit"
