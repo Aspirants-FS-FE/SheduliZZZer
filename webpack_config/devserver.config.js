@@ -2,20 +2,18 @@ const { merge } = require('webpack-merge');
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-module.exports = (props = {}) => merge(
-  {
-    devServer: {
-      contentBase: path.resolve('src'),
-      historyApiFallback: true,
-      writeToDisk: true,
-      open: true,
-      hot: true,
-      inline: true,
-      compress: true,
-      progress: true,
-      port: 9000,
-    },
-    plugins: [new CleanWebpackPlugin()],
+module.exports = (props = {}) => merge({
+  devServer: {
+    contentBase: path.resolve('src'),
+    historyApiFallback: true,
+    writeToDisk: true,
+    open: true,
+    hot: true,
+    inline: true,
+    compress: true,
+    progress: true,
+    port: 9000,
   },
-  props,
-);
+  plugins: [new CleanWebpackPlugin()],
+},
+props);

@@ -17,6 +17,10 @@
     "show:coverage": "live-server coverage/lcov-report",
     "postinstall": "npx husky install"
   },
+  "jest": {
+    "collectCoverage": true,
+    "coverageReporters": ["json", "html"]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Aspirants-FS-FE/SheduliZZZer.git"

@@ -1,20 +1,25 @@
 import BaseWidget from './BaseWidget';
-// import lessions from './testdata';
-// import APIConnector from '../../api/APIConnector';
 
 export default class MainWidget extends BaseWidget {
   loadContent() {
     this.initControls();
     this.colNumber = 7;
-    this.rowNumber = 15;
     this.activeDay = 0;
     this.today = Date.now();
-    this.dateEl.value = new Date(this.today).toISOString().substr(0, 10);
-    this.createGrid();
+    this.dateEl.value = this.getDate(0).dateISO;
+    this.fillEvents();
+  }
+
+  fillEvents() {
+    const params = {
+      start_date: this.getDate(0).dateISO,
+      end_date: this.getDate(this.colNumber - 1).dateISO,
+    };
+    this.startProgress();
+    this.api.event.get(params, this.createGrid.bind(this));
   }
 
   initControls() {
-    this.diagramEl = this.element.querySelector('.diagram');
     this.dateEl = this.element.querySelector('input[type=date]');
     this.horizontalIncrEl = this.element.querySelector('.horizontal .incr');
     this.horizontalDecrEl = this.element.querySelector('.horizontal .decr');
@@ -30,19 +35,19 @@ export default class MainWidget extends BaseWidget {
     this.verticalDecrEl = this.element.querySelector('.vertical .decr');
     this.horizontalIncrEl.addEventListener('click', () => {
       this.colNumber -= this.colNumber - 1 ? 1 : 0;
-      this.createGrid();
+      this.fillEvents();
     });
     this.horizontalDecrEl.addEventListener('click', () => {
       this.colNumber += 1;
-      this.createGrid();
+      this.fillEvents();
     });
     this.verticalIncrEl.addEventListener('click', () => {
       this.rowNumber -= 1;
-      this.createGrid();
+      this.fillEvents();
     });
     this.verticalDecrEl.addEventListener('click', () => {
       this.rowNumber += 1;
-      this.createGrid();
+      this.fillEvents();
     });
     this.horizontalPrevEl.addEventListener('click', () => {
       this.rollDays(-1);
@@ -60,8 +65,7 @@ export default class MainWidget extends BaseWidget {
       const day = 1000 * 60 * 60 * 24;
       const targetDate = event.target.value;
       if (!targetDate) return null;
-      const dateShift =
-        Math.ceil((new Date(targetDate) - new Date(this.today)) / day) -
+      const dateShift = Math.ceil((new Date(targetDate) - new Date(this.today)) / day) -
         this.activeDay;
       this.rollDays(dateShift);
     });
@@ -69,12 +73,13 @@ export default class MainWidget extends BaseWidget {
 
   rollDays(shifting) {
     this.activeDay += shifting;
-    this.createGrid();
+    this.fillEvents();
   }
 
-  createGrid() {
-    this.diagramEl.innerHTML = '';
-    this.diagramEl.style[
+  createGrid(data) {
+    this.rowNumber = new Set(data.events.map((event) => event.group)).size;
+    this.container.innerHTML = '';
+    this.container.style[
       'grid-template-columns'
     ] = `100px repeat(${this.colNumber}, 2fr)`;
     for (let i = 0; i < (this.colNumber + 1) * this.rowNumber; i += 1) {
@@ -83,9 +88,9 @@ export default class MainWidget extends BaseWidget {
       if (i && !(i % (this.colNumber + 1))) {
         cellEl.classList.add('row-title');
       }
-      this.diagramEl.appendChild(cellEl);
+      this.container.appendChild(cellEl);
     }
-    this.cells = Array.from(this.diagramEl.children);
+    this.cells = Array.from(this.container.children);
     this.mapDateRow();
     const params = {
       start_date: this.startDate.toISOString().substr(0, 10),
@@ -93,6 +98,7 @@ export default class MainWidget extends BaseWidget {
     };
     this.api.event.get(params, this.mapGroupColumn.bind(this));
   }
+
   /* eslint no-param-reassign: "error" */
 
   mapDateRow() {
@@ -111,7 +117,8 @@ export default class MainWidget extends BaseWidget {
   }
 
   mapGroupColumn(data) {
-    const groupObj = this.getGroupObject(data.lessions);
+    this.endProgress();
+    const groupObj = this.getGroupObject(data.events);
     const groupCells = this.cells
       .filter((__, i) => !(i % (this.colNumber + 1)))
       .splice(1);
@@ -121,40 +128,41 @@ export default class MainWidget extends BaseWidget {
     Object.keys(groupObj).forEach((key, i) => {
       if (groupCells[i]) {
         groupCells[i].innerText = key;
-        this.mapLessions(i + 2, groupObj[key]);
+        this.mapEvents(i + 2, groupObj[key]);
       }
     });
   }
 
-  mapLessions(rowNumber, lessionList) {
-    for (const lession of lessionList) {
-      const { date, lecture, teacher } = lession;
+  mapEvents(rowNumber, eventsList) {
+    for (const event of eventsList) {
+      const { date, lecture, expert, time } = event;
       const lowerBound = (rowNumber - 1) * (this.colNumber + 1) + 1;
       const upperBound = rowNumber * (this.colNumber + 1);
       const rowCells = this.cells.slice(lowerBound, upperBound);
       rowCells.forEach((element, i) => {
         const { dateStr } = this.getDate(i);
-        const lessionDate = this.getStringDate(new Date(date));
-        if (dateStr === lessionDate) {
-          element.classList.add('lession');
+        const eventDate = this.getStringDate(new Date(date));
+        if (dateStr === eventDate) {
+          element.classList.add('event');
           element.innerText = lecture;
-          element.title = teacher;
+          element.title = expert;
+          element.time = time;
         }
       });
     }
   }
 
-  getGroupObject(lessionList) {
+  getGroupObject(eventList) {
     const groupObj = {};
-    for (const lession of lessionList) {
-      const { group, date, lecture, teacher } = lession;
+    for (const event of eventList) {
+      const { group, date, lecture, expert } = event;
       if (!groupObj[group]) {
         groupObj[group] = [];
       }
       groupObj[group].push({
         date,
         lecture,
-        teacher,
+        expert,
       });
     }
     return groupObj;
@@ -177,6 +185,7 @@ export default class MainWidget extends BaseWidget {
     const date = new Date(this.today + (offset + this.activeDay) * day);
     return {
       dateStr: this.getStringDate(date),
+      dateISO: date.toISOString().substr(0, 10),
       day: date.getDay(),
       date,
     };
