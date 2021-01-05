@@ -1,6 +1,11 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "extends": ["stylelint-config-standard"],
+  "plugins": ["stylelint-no-unsupported-browser-features"],
   "rules": {
-    "color-hex-length": "long"
+    "color-hex-length": "long",
+    "plugin/no-unsupported-browser-features": [true, {
+      "severity": "warning"
+    }]
+
   }
 }

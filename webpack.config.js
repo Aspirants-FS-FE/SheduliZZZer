@@ -1,57 +1,19 @@
-const path = require('path');
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-// const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const { merge } = require('webpack-merge');
+const ConfigParts = require('./webpack_config/webpack.parts');
 
-module.exports = {
-  entry: './src/index.js',
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-  },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
-      },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-          },
-        ],
-      },
-      {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
-      },
-      {
-        test: /\.(png|jpg|svg|gif)$/i,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192,
-            },
-          },
-        ],
-      },
-    ],
-  },
-  plugins: [
-    new HtmlWebPackPlugin({
-      template: './src/index.html',
-      filename: './index.html',
-      favicon: './src/img/favicon.jpeg',
-    }),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css',
-    }),
-    // new FaviconsWebpackPlugin('./src/img/characters/daemon.png'),
-  ],
+module.exports = (env, argv) => {
+  const DEV_MODE = argv.mode !== 'production';
+  return merge(
+    ConfigParts.base(),
+    ConfigParts.babel(),
+    ConfigParts.images(),
+    ConfigParts.fonts(),
+    ConfigParts.media(),
+    ConfigParts.style({}, DEV_MODE),
+    ConfigParts.html(),
+    ConfigParts.optimization(),
+    ConfigParts.devserver(),
+    ConfigParts.linters(),
+    ConfigParts.log(),
+  );
 };
