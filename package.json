@@ -15,7 +15,7 @@
     "coverage": "jest --coverage",
     "preshow:coverage": "npm run coverage",
     "show:coverage": "live-server coverage/lcov-report",
-    "postinstall": "husky install"
+    "postinstall": "npx husky install"
   },
   "repository": {
     "type": "git",
