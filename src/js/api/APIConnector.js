@@ -13,8 +13,11 @@ export default class APIConnector {
 
   encodeURL(params) {
     const startSymbol = '?';
-    return startSymbol + Object.entries(params)
-      .map(([key, value]) => `${key}=${value}`)
-      .join('&');
+    return (
+      startSymbol +
+      Object.entries(params)
+        .map(([key, value]) => `${key}=${value}`)
+        .join('&')
+    );
   }
 }

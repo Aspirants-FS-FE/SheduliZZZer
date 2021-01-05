@@ -51,10 +51,7 @@ export default class AppController {
         this.container.querySelector('.groups.widget'),
         this.api,
       ),
-      faq: new FaqWidget(
-        this.container.querySelector('.faq.widget'),
-        this.api,
-      ),
+      faq: new FaqWidget(this.container.querySelector('.faq.widget'), this.api),
       teachers: new TeachersWidget(
         this.container.querySelector('.teachers.widget'),
         this.api,

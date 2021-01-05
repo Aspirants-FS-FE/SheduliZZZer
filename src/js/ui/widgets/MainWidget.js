@@ -20,12 +20,16 @@ export default class MainWidget extends BaseWidget {
     this.horizontalDecrEl = this.element.querySelector('.horizontal .decr');
     this.horizontalPrevEl = this.element.querySelector('.horizontal .prev');
     this.horizontalNextEl = this.element.querySelector('.horizontal .next');
-    this.horizontalPrevFastEl = this.element.querySelector('.horizontal .prev-fast');
-    this.horizontalNextFastEl = this.element.querySelector('.horizontal .next-fast');
+    this.horizontalPrevFastEl = this.element.querySelector(
+      '.horizontal .prev-fast',
+    );
+    this.horizontalNextFastEl = this.element.querySelector(
+      '.horizontal .next-fast',
+    );
     this.verticalIncrEl = this.element.querySelector('.vertical .incr');
     this.verticalDecrEl = this.element.querySelector('.vertical .decr');
     this.horizontalIncrEl.addEventListener('click', () => {
-      this.colNumber -= (this.colNumber - 1) ? 1 : 0;
+      this.colNumber -= this.colNumber - 1 ? 1 : 0;
       this.createGrid();
     });
     this.horizontalDecrEl.addEventListener('click', () => {
@@ -56,9 +60,9 @@ export default class MainWidget extends BaseWidget {
       const day = 1000 * 60 * 60 * 24;
       const targetDate = event.target.value;
       if (!targetDate) return null;
-      const dateShift = Math.ceil(
-        (new Date(targetDate) - new Date(this.today)) / day,
-      ) - this.activeDay;
+      const dateShift =
+        Math.ceil((new Date(targetDate) - new Date(this.today)) / day) -
+        this.activeDay;
       this.rollDays(dateShift);
     });
   }
@@ -70,7 +74,9 @@ export default class MainWidget extends BaseWidget {
 
   createGrid() {
     this.diagramEl.innerHTML = '';
-    this.diagramEl.style['grid-template-columns'] = `100px repeat(${this.colNumber}, 2fr)`;
+    this.diagramEl.style[
+      'grid-template-columns'
+    ] = `100px repeat(${this.colNumber}, 2fr)`;
     for (let i = 0; i < (this.colNumber + 1) * this.rowNumber; i += 1) {
       const cellEl = document.createElement('div');
       cellEl.classList.add('cell');
@@ -122,11 +128,7 @@ export default class MainWidget extends BaseWidget {
 
   mapLessions(rowNumber, lessionList) {
     for (const lession of lessionList) {
-      const {
-        date,
-        lecture,
-        teacher,
-      } = lession;
+      const { date, lecture, teacher } = lession;
       const lowerBound = (rowNumber - 1) * (this.colNumber + 1) + 1;
       const upperBound = rowNumber * (this.colNumber + 1);
       const rowCells = this.cells.slice(lowerBound, upperBound);
@@ -145,12 +147,7 @@ export default class MainWidget extends BaseWidget {
   getGroupObject(lessionList) {
     const groupObj = {};
     for (const lession of lessionList) {
-      const {
-        group,
-        date,
-        lecture,
-        teacher,
-      } = lession;
+      const { group, date, lecture, teacher } = lession;
       if (!groupObj[group]) {
         groupObj[group] = [];
       }
@@ -166,8 +163,9 @@ export default class MainWidget extends BaseWidget {
   mapWeekend(index, day) {
     if ([0, 6].includes(day)) {
       const position = (index % (this.colNumber + 1)) + 1;
-      const weekends = this.cells
-        .filter((__, i) => i % (this.colNumber + 1) === position);
+      const weekends = this.cells.filter(
+        (__, i) => i % (this.colNumber + 1) === position,
+      );
       weekends.forEach((element) => {
         element.classList.add('weekend');
       });
@@ -185,13 +183,10 @@ export default class MainWidget extends BaseWidget {
   }
 
   getStringDate(date) {
-    return date.toLocaleString(
-      'ru',
-      {
-        year: 'numeric',
-        month: 'numeric',
-        day: 'numeric',
-      },
-    );
+    return date.toLocaleString('ru', {
+      year: 'numeric',
+      month: 'numeric',
+      day: 'numeric',
+    });
   }
 }

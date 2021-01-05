@@ -1,5 +1,3 @@
 import Entity from './Entity';
 
-export default class Expert extends Entity {
-
-}
+export default class Expert extends Entity {}

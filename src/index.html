@@ -195,30 +195,37 @@
                 <div class="controls scale-button decr">-</div>
                 <div class="controls scale-button incr">+</div>
                 <div class="controls-label">Прокрутка</div>
-                <div class="controls roll-button prev-fast"><<<</div>
-                <div class="controls roll-button prev"><</div>
-                <div class="controls roll-button next">></div>
-                <div class="controls roll-button next-fast">>>></div>
+                <div class="controls roll-button prev-fast">
+                  &#60;&#60;&#60;
+                </div>
+                <div class="controls roll-button prev">&#60;</div>
+                <div class="controls roll-button next">&#62;</div>
+                <div class="controls roll-button next-fast">
+                  &#62;&#62;&#62;
+                </div>
                 <label class="controls-label" for="to-date">Перейти к дате:</label>
-                <input 
-                  type="date" 
-                  name="calendar" 
+                <input
+                  type="date"
+                  name="calendar"
                   value="1999-01-01"
-                  id="to-date" 
+                  id="to-date"
                 />
-                <div class="controls roll-button">></div>
+                <div class="controls roll-button">&#62;</div>
               </div>
               <div class="diagram-wrapper">
                 <div class="control-bar vertical">
-                  <div class="controls roll-button prev fast"><<<</div>
-                  <div class="controls roll-button prev"><</div>
+                  <div class="controls roll-button prev fast">
+                    &#60;&#60;&#60;
+                  </div>
+                  <div class="controls roll-button prev">&#60;</div>
                   <div class="controls scale-button incr">+</div>
                   <div class="controls scale-button decr">|</div>
-                  <div class="controls roll-button next">></div>
-                  <div class="controls roll-button next fast">>>></div>
+                  <div class="controls roll-button next">&#62;</div>
+                  <div class="controls roll-button next fast">
+                    &#62;&#62;&#62;
+                  </div>
                 </div>
-                <div class="diagram">
-                </div>
+                <div class="diagram"></div>
               </div>
             </section>
             <section class="widget profession">
@@ -521,17 +528,17 @@
           <div class="fields">
             <div class="form-field">
               <label for="login">Логин:</label>
-              <input 
-                     type="text" 
-                     name="login" 
-                     id="login"
-                     />
+              <input
+                type="text"
+                name="login"
+                id="login" />
             </div>
             <div class="form-field">
               <label for="password">Пароль:</label>
-              <input type="password" name="password"
-                id="password"
-              />
+              <input
+                type="password"
+                name="password"
+                id="password" />
             </div>
             <div class="form-control">
               <button type="submit">Войти</button>
@@ -578,12 +585,10 @@
             </div>
             <div class="form-field">
               <label for="email">Почта:</label>
-              <input 
-                type="email" 
-                name="email" 
-                id="email" 
-                required
-              />
+              <input
+                type="email"
+                name="email"
+                id="email" required />
             </div>
             <div class="form-field">
               <label for="password-first">Пароль:</label>
