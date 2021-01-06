@@ -6,7 +6,6 @@ module.exports = (props = {}) => merge({
   devServer: {
     contentBase: path.resolve('src'),
     historyApiFallback: true,
-    writeToDisk: true,
     open: true,
     hot: true,
     inline: true,

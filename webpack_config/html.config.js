@@ -7,11 +7,6 @@ module.exports = (props = {}) => merge({
       {
         test: /\.html$/,
         exclude: /(node_modules)/,
-        use: 'htmllint-loader',
-      },
-      {
-        test: /\.html$/,
-        exclude: /(node_modules)/,
         use: 'html-loader',
       },
     ],
