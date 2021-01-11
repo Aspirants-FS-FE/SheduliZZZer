@@ -8,4 +8,3 @@ exports.fonts = require('./fonts.config');
 exports.optimization = require('./optimization.config');
 exports.media = require('./media.config');
 exports.linters = require('./linters.config');
-exports.log = require('./log.config');
