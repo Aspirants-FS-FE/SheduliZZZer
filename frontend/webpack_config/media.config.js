@@ -1,15 +1,13 @@
 const { merge } = require('webpack-merge');
-const path = require('path');
 
 module.exports = (props = {}) => merge({
   module: {
     rules: [
       {
-        test: /\.(png|jpe?g|svg|gif|webp)$/i,
-        include: path.resolve('src/img'),
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
         type: 'asset/resource',
         parser: { dataUrlCondition: { maxSize: 8192 } },
-        generator: { filename: 'img/[name].[contenthash:8][ext][query]' },
+        generator: { filename: 'media/[name].[contenthash:8][ext][query]' },
       },
     ],
   },

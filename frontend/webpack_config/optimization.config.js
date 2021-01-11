@@ -15,11 +15,12 @@ module.exports = (props = {}) => merge({
         },
       },
     },
+    minimize: true,
     minimizer: [
       '...',
+      new CssMinimizerPlugin(),
       new ImageMinimizerPlugin({
         test: /\.(png|jpe?g|svg|gif|webp)$/i,
-        exclude: 'src/fonts',
         minimizerOptions: {
           plugins: [
             ['gifsicle', { interlaced: true }],
@@ -29,7 +30,6 @@ module.exports = (props = {}) => merge({
           ],
         },
       }),
-      new CssMinimizerPlugin(),
     ],
   },
 },

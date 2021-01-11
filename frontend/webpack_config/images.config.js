@@ -4,10 +4,10 @@ module.exports = (props = {}) => merge({
   module: {
     rules: [
       {
-        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+        test: /\.(png|jpe?g|svg|gif|webp)$/i,
         type: 'asset',
         parser: { dataUrlCondition: { maxSize: 8192 } },
-        generator: { filename: 'media/[name].[contenthash:8][ext][query]' },
+        generator: { filename: 'img/[name].[contenthash:8][ext][query]' },
       },
     ],
   },

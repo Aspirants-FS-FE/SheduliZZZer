@@ -1,5 +1,6 @@
 const { merge } = require('webpack-merge');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = (props = {}) => merge({
   module: {
@@ -17,6 +18,7 @@ module.exports = (props = {}) => merge({
       filename: 'index.html',
       favicon: './src/img/favicon.jpeg',
     }),
+    new MiniCssExtractPlugin({ filename: 'css/[name][contenthash:8].css' }),
   ],
 },
 props);

@@ -13,7 +13,7 @@ module.exports = () => merge({
     ],
   },
   plugins: [
-    new StylelintPlugin(),
-    new ESLintPlugin(),
+    new StylelintPlugin({ files: 'src/**/*.css' }),
+    new ESLintPlugin({ files: 'src/**/*.js' }),
   ],
 });

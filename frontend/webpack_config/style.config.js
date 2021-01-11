@@ -2,13 +2,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const { merge } = require('webpack-merge');
 
-module.exports = (props = {}, dev = true) => merge({
+module.exports = (props = {}) => merge({
   module: {
     rules: [
       {
         test: /\.css$/i,
         use: [
-          { loader: dev ? 'style-loader' : MiniCssExtractPlugin.loader },
+          { loader: MiniCssExtractPlugin.loader },
           { loader: 'css-loader' },
           {
             loader: 'postcss-loader',
@@ -32,8 +32,5 @@ module.exports = (props = {}, dev = true) => merge({
       },
     ],
   },
-  plugins: [
-    new MiniCssExtractPlugin({ filename: 'css/[name].[contenthash:8].css' }),
-  ],
 },
 props);

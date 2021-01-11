@@ -1,5 +1,6 @@
 dist
-static
+**/static
+**/coverage
 doc
 .idea
 
