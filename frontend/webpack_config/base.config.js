@@ -7,7 +7,7 @@ module.exports = (props = {}) => merge({
   output: {
     path: path.resolve('./backend/static'),
     filename: 'js/[name].[chunkhash:8].js',
-    publicPath: '/',
+    publicPath: './',
   },
   optimization: { minimize: false },
 },
