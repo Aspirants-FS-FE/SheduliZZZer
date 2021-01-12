@@ -9,7 +9,7 @@ module.exports = () => merge(
   ConfigParts.media(),
   ConfigParts.style(),
   ConfigParts.html(),
-  // ConfigParts.optimization(),
+  ConfigParts.optimization(),
   ConfigParts.devserver(),
   ConfigParts.linters(),
 );
